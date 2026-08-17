@@ -1,0 +1,25 @@
+reason_code,reason_description,credit_type,approval_threshold,documentation_required_flag,supervisor_approval_required_flag,active_flag
+RC01,Verified duplicate charge,Duplicate-charge correction,50,1,0,1
+RC02,Documented billing calculation error,Billing-error credit,100,1,0,1
+RC03,Confirmed service interruption under four hours,Service-interruption credit,25,1,0,1
+RC04,Confirmed service interruption four to twelve hours,Service-interruption credit,75,1,0,1
+RC05,Confirmed extended service interruption,Service-interruption credit,150,1,1,1
+RC06,One-time customer courtesy,Courtesy credit,25,1,0,1
+RC07,Retention goodwill adjustment,Goodwill adjustment,75,1,0,1
+RC08,Promotional commitment correction,Promotional adjustment,100,1,0,1
+RC09,Refund for canceled installation,Refund,150,1,1,1
+RC10,Refund for returned equipment,Refund,250,1,1,1
+RC11,Late fee waiver with documented payment timing,Late-fee waiver,15,1,0,1
+RC12,Equipment fee assessed in error,Equipment-fee reversal,100,1,0,1
+RC13,Unauthorized payment correction,Payment reversal,500,1,1,1
+RC14,Confirmed account takeover adjustment,Fraud-related adjustment,750,1,1,1
+RC15,Price-plan migration correction,Billing-error credit,125,1,1,1
+RC16,Tax calculation correction,Billing-error credit,50,1,0,1
+RC17,Technician missed appointment concession,Courtesy credit,50,1,0,1
+RC18,Incorrect reconnection fee,Billing-error credit,40,1,0,1
+RC19,Incorrect upgrade fee,Billing-error credit,75,1,0,1
+RC20,Autopay promotion not applied,Promotional adjustment,30,1,0,1
+RC21,Seasonal promotion not applied,Promotional adjustment,40,1,0,1
+RC22,Regulatory complaint settlement,Refund,1000,1,1,1
+RC23,Supervisor-authorized exceptional adjustment,Goodwill adjustment,500,1,1,1
+RC24,Payment processor duplication,Payment reversal,500,1,1,1

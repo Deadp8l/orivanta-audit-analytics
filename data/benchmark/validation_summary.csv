@@ -1,0 +1,4 @@
+matching_grain,true_positives,false_positives,false_negatives,precision,recall,detected_unique_keys,answer_key_unique_keys
+exact record/category,286,1215,195,0.1905396402398401,0.5945945945945946,1501,481
+unique record/control,298,1016,183,0.2267884322678843,0.6195426195426196,1314,481
+record-only partial match,323,768,152,0.29605866177818513,0.68,1091,475

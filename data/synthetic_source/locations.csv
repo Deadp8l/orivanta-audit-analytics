@@ -1,0 +1,9 @@
+location_id,location_name,region,state,location_type,manager_name,open_date,active_flag
+LOC001,Central Lantern Operations,South,TX,Service Center,Talia Delmaris,2020-04-09,1
+LOC002,Harbor Crest Support Hub,Southeast,FL,Service Center,Owen Orsino,2023-07-23,1
+LOC003,Copper Meadow Contact Center,South,GA,Contact Center,Nia Ardena,2021-07-14,1
+LOC004,Juniper North Virtual Office,Northeast,PA,Virtual Office,Priya Lunet,2023-11-09,1
+LOC005,Silver Mesa Resolution Center,West,AZ,Contact Center,Caleb Rivaro,2017-05-30,1
+LOC006,Oak Meridian Operations,Mountain,CO,Service Center,Camila Valeon,2021-01-21,1
+LOC007,Pine Crossing Remote Hub,Southeast,NC,Virtual Office,Julian Lunet,2020-11-24,1
+LOC008,Aurora Bend Customer Care,West,WA,Contact Center,Micah Navero,2020-05-15,1

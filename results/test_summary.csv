@@ -1,0 +1,41 @@
+test_id,test_name,exception_class,severity,confidence,rows,gross_flagged_amount,direct_measurable_amount,investigative_amount
+T01,Credits above authority without approval,Control exception,High,High,32,4837.46,0.0,4837.46
+T02,Missing required approval,Control exception,High,High,31,4303.22,0.0,4303.22
+T03,Approval decision after posting,Control exception,High,Moderate,14,249.32,0.0,249.32
+T04,Approved versus posted amount mismatch,Control exception,High,High,11,797.93,491.79,0.0
+T05,Credit exceeds original charge,Control exception,Critical,High,238,16463.82,8614.57,0.0
+T06,Exact duplicate credits,Control exception,High,High,5,160.56,160.56,0.0
+T07,Near-duplicate credits,Behavioral risk indicator,Moderate,Moderate,32,2530.16,0.0,2530.16
+T08,Potential split-credit threshold avoidance,Behavioral risk indicator,High,Moderate,40,4646.52,0.0,4646.52
+T09,Invalid or inactive reason code,Data-quality issue,Moderate,High,15,334.62,0.0,334.62
+T10,Reason code and credit type mismatch,Control exception,Moderate,High,0,0.0,0.0,0.0
+T11,Missing case support,Control exception,High,High,5,147.8,0.0,147.8
+T12,Missing interaction support,Control exception,High,High,8,160.5,0.0,160.5
+T13,Missing required documentation,Control exception,High,High,89,3161.38,0.0,3161.38
+T14,Posted credit not communicated,Control exception,Moderate,High,46,1410.07,0.0,1410.07
+T15,Authentication failure,Control exception,Critical,High,30,1122.41,0.0,1122.41
+T16,Manual override without approval,Control exception,High,High,54,1431.25,0.0,1431.25
+T17,After-hours credit without review,Control exception,Moderate,Moderate,33,1401.05,0.0,1401.05
+T18,Inactive employee activity,Control exception,Critical,Moderate,10,181.58,0.0,181.58
+T19,Self-approval,Control exception,Critical,High,10,333.73,0.0,333.73
+T20,Customer-account mismatch,Control exception,Critical,High,12,261.79,0.0,261.79
+T21,Agent credit concentration,Behavioral risk indicator,Moderate,Low,3,0.0,0.0,0.0
+T22,Repeated customer credits,Behavioral risk indicator,Moderate,Low,19,0.0,0.0,0.0
+T23,Agent-customer pairing concentration,Behavioral risk indicator,Moderate,Low,2,0.0,0.0,0.0
+T24,Promised adjustment not completed,Control exception,High,Moderate,93,2113.97,0.0,2113.97
+T25,Promised amount mismatch,Control exception,High,Moderate,109,5078.7,3480.95,0.0
+T26,Promise completed after due date,Control exception,Moderate,Moderate,89,2087.47,0.0,2087.47
+T27,Transcript refund request without posted credit,NLP review lead,Moderate,Low,147,0.0,0.0,0.0
+T28,Transcript promise not completed,NLP review lead,Moderate,Low,97,1415.38,0.0,1415.38
+T29,Transcript lacks authentication evidence,NLP review lead,Moderate,Low,3,108.39,0.0,108.39
+T30,Transcript contradicts agent notes,NLP review lead,Moderate,Low,6,0.0,0.0,0.0
+T31,Summary inconsistent with interaction,Data-quality issue,Moderate,Moderate,15,0.0,0.0,0.0
+T32,Copied notes across cases,NLP review lead,Low,Low,45,0.0,0.0,0.0
+T33,Closed case without resolution evidence,Control exception,Moderate,High,15,782.59,0.0,782.59
+T34,Promotion outside effective period,Control exception,Moderate,High,3,72.61,0.0,72.61
+T35,Service credit lacks outage evidence,Control exception,High,High,51,1451.46,0.0,1451.46
+T36,Payment reversal invalid original,Data-quality issue,High,High,12,803.44,0.0,803.44
+T37,Charge reversal invalid original,Data-quality issue,High,High,10,372.28,0.0,372.28
+T38,Duplicate charges,Control exception,High,High,17,1166.44,1166.44,0.0
+T39,Account reconciliation difference,Control exception,Critical,High,20,1575.0,1575.0,0.0
+T40,Negative or impossible balance condition,Data-quality issue,High,Moderate,10,0.0,0.0,0.0

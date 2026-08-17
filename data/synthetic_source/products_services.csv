@@ -1,0 +1,21 @@
+product_service_id,product_name,product_category,monthly_price,one_time_price,taxable_flag,active_flag,effective_start_date,effective_end_date
+PS001,Orivanta Essential Link,Monthly Service Plan,49.00,0.00,1,1,2024-01-01,
+PS002,Orivanta Flex Plus,Monthly Service Plan,69.00,0.00,1,1,2024-01-01,
+PS003,Orivanta Complete Home,Monthly Service Plan,94.00,0.00,1,1,2024-01-01,
+PS004,SignalPod Rental,Equipment Rental,12.00,0.00,1,1,2024-02-01,
+PS005,RoomReach Extender,Equipment Rental,8.00,0.00,1,1,2024-02-01,
+PS006,SafeNest Monitor,Equipment Rental,18.00,0.00,1,1,2024-03-01,
+PS007,Standard Installation,Installation,0.00,79.00,1,1,2024-01-01,
+PS008,Complex Installation,Installation,0.00,149.00,1,1,2024-01-01,
+PS009,Priority Support Add-On,Service Add-On,11.00,0.00,1,1,2024-04-01,
+PS010,Usage Boost Pack,Usage Package,0.00,24.00,1,1,2024-04-01,
+PS011,Plan Upgrade Processing,Upgrade,0.00,35.00,1,1,2024-01-01,
+PS012,Reconnect Service,Account Fee,0.00,40.00,0,1,2024-01-01,
+PS013,Late Payment Fee,Account Fee,0.00,15.00,0,1,2024-01-01,
+PS014,Seasonal Welcome Offer,Promotion,0.00,20.00,0,1,2025-03-01,2025-05-31
+PS015,Autopay Enrollment Offer,Promotion,0.00,10.00,0,1,2025-01-01,2026-12-31
+PS016,Device Replacement,Equipment,0.00,95.00,1,1,2024-01-01,
+PS017,Expedited Visit,Service Fee,0.00,55.00,1,1,2024-01-01,
+PS018,Temporary Service Hold,Account Service,0.00,8.00,0,1,2024-01-01,
+PS019,Premium Equipment Care,Service Add-On,9.00,0.00,1,1,2024-06-01,
+PS020,Manual Billing Correction,Manual Adjustment,0.00,0.00,0,1,2024-01-01,

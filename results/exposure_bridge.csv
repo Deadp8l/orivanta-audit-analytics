@@ -1,0 +1,7 @@
+exposure_class,amount,definition
+Gross overlapping flagged amount,60962.9,Sum of all exception-row flagged amounts before overlap removal.
+Overlap removed,26381.72,Repeated underlying-record amounts removed using the documented record hierarchy.
+Record-level deduplicated flagged amount,34581.18,Largest flagged amount per underlying record; not confirmed loss.
+Direct measurable amount,14756.86,"Calculable differences only, deduplicated by underlying record."
+Investigative amount,23139.04,Transaction value requiring review but not measurable as loss.
+Confirmed loss,0.0,Confirmed financial loss was not established.

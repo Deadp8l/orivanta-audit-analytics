@@ -1,0 +1,41 @@
+test_id,sql_supported,sql_row_count,python_row_count,row_count_difference,record_id_symmetric_difference,sql_gross_amount,python_gross_amount,gross_amount_difference,sql_direct_amount,python_direct_amount,direct_amount_difference,status,explanation
+T01,Yes,32,32,0,0,4837.46,4837.46,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T02,Yes,31,31,0,0,4303.22,4303.22,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T03,Yes,14,14,0,0,249.32,249.32,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T04,Yes,11,11,0,0,797.93,797.93,0.0,491.79,491.79,0.0,PASS,Equivalent SQL and Python record-level logic.
+T05,Yes,238,238,0,0,16463.82,16463.82,0.0,8614.57,8614.57,0.0,PASS,Equivalent SQL and Python record-level logic.
+T06,Yes,5,5,0,0,160.56,160.56,0.0,160.56,160.56,0.0,PASS,Equivalent SQL and Python record-level logic.
+T07,Yes,32,32,0,0,2530.16,2530.16,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T08,Yes,40,40,0,0,4646.52,4646.52,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T09,Yes,15,15,0,0,334.62,334.62,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T10,Yes,0,0,0,0,0,0.0,0.0,0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T11,Yes,5,5,0,0,147.8,147.8,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T12,Yes,8,8,0,0,160.5,160.5,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T13,Yes,89,89,0,0,3161.38,3161.38,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T14,Yes,46,46,0,0,1410.07,1410.07,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T15,Yes,30,30,0,0,1122.41,1122.41,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T16,Yes,54,54,0,0,1431.25,1431.25,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T17,Yes,33,33,0,0,1401.05,1401.05,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T18,Yes,10,10,0,0,181.58,181.58,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T19,Yes,10,10,0,0,333.73,333.73,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T20,Yes,12,12,0,0,261.79,261.79,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T21,Python-primary,,3,,,,0.0,,,0.0,,N/A,Percentile-based peer-group calculation is implemented and tested in pandas.
+T22,Python-primary,,19,,,,0.0,,,0.0,,N/A,Percentile-based peer-group calculation is implemented and tested in pandas.
+T23,Python-primary,,2,,,,0.0,,,0.0,,N/A,Percentile-based peer-group calculation is implemented and tested in pandas.
+T24,Yes,93,93,0,0,2113.97,2113.97,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T25,Yes,109,109,0,0,5078.7,5078.7,0.0,3480.95,3480.95,0.0,PASS,Equivalent SQL and Python record-level logic.
+T26,Yes,89,89,0,0,2087.47,2087.47,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T27,Yes,147,147,0,0,0.0,0.0,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T28,Yes,97,97,0,0,1415.38,1415.38,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T29,Yes,3,3,0,0,108.39,108.39,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T30,Yes,6,6,0,0,0.0,0.0,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T31,Yes,15,15,0,0,0.0,0.0,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T32,Yes,45,45,0,0,0.0,0.0,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T33,Yes,15,15,0,0,782.59,782.59,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T34,Yes,3,3,0,0,72.61,72.61,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T35,Yes,51,51,0,0,1451.46,1451.46,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T36,Yes,12,12,0,0,803.44,803.44,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T37,Yes,10,10,0,0,372.28,372.28,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T38,Yes,17,17,0,0,1166.44,1166.44,0.0,1166.44,1166.44,0.0,PASS,Equivalent SQL and Python record-level logic.
+T39,Yes,20,20,0,0,1575.0,1575.0,0.0,1575.0,1575.0,0.0,PASS,Equivalent SQL and Python record-level logic.
+T40,Yes,10,10,0,0,0.0,0.0,0.0,0.0,0.0,0.0,PASS,Equivalent SQL and Python record-level logic.

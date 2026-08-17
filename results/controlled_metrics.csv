@@ -1,0 +1,12 @@
+metric,value,interpretation
+Audit tests,40,Number of audit procedures implemented.
+Exception and review-lead rows,"1,481","Includes control exceptions, data-quality issues, behavioral indicators, and review leads."
+Critical / High / Moderate / Low,320 / 591 / 525 / 45,Severity distribution of the independent results.
+Gross overlapping flagged amount,"$60,962.90",Sum before overlap removal; not loss.
+Record-level deduplicated flagged amount,"$34,581.18",One amount per underlying record; not loss.
+Direct measurable differences,"$14,756.86",Calculable differences only; not confirmed loss.
+Investigative transaction value,"$23,139.04",Transaction value requiring review.
+Confirmed financial loss,$0.00 / not established,No confirmed loss conclusion was made.
+Reconciliation result,"20 exceptions; $1,575.00 gross; $175.00 net",Account-level reconciliation exceptions.
+SQL/Python reconciliation,37 of 37 supported tests passed,Record-level reconciliation between tools.
+Power BI status,Dashboard design and specification; no PBIX,No functioning PBIX included.

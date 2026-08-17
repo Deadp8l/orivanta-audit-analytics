@@ -1,0 +1,9 @@
+supervisor_id,supervisor_name,team_id,location_id,approval_limit,hire_date,employment_status
+SUP001,Maya Lunet,TEAM01,LOC001,500.00,2016-12-21,Active
+SUP002,Julian Ibarrax,TEAM02,LOC002,500.00,2019-06-24,Active
+SUP003,Rina Marent,TEAM03,LOC003,750.00,2015-06-15,Active
+SUP004,Priya Veyra,TEAM04,LOC004,1000.00,2022-01-25,Active
+SUP005,Rowan Bellune,TEAM05,LOC005,750.00,2019-07-17,Active
+SUP006,Zara Trevell,TEAM06,LOC006,1000.00,2019-11-22,Active
+SUP007,Camila Valeris,TEAM07,LOC007,250.00,2017-09-01,Active
+SUP008,Elena Ilyan,TEAM08,LOC008,250.00,2019-02-23,Active
