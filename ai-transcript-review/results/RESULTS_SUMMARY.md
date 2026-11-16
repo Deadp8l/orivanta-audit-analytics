@@ -7,7 +7,8 @@ Claude reviewer: the official script (`ai_review/run_claude_review.py`, Claude O
 
 | Check | Keyword baseline | Claude (v1.3) |
 |---|---|---|
-| Problems caught (recall) | 23% | **100%** (50 of 50 planted) |
+| Planted problems caught | 32% (16 of 50) | **100%** (50 of 50) |
+| All problems in Billy's labels caught (recall, 69 calls) | 23% | **100%** |
 | Precision on flagged problems | 100% | **100%** |
 | False alarms on clean calls | 0 | **0** |
 | Q1 promise agreement | 100%* | **100%** |
@@ -26,7 +27,7 @@ Claude reviewer: the official script (`ai_review/run_claude_review.py`, Claude O
 5. Vague notes that still get the outcome right and don't weaken the customer's claim are Q3 = Match (for example, "Unable to determine cause. No action taken."). Resolved MC0089 and MC0119.
 6. Record fields are read literally only when they overstate the call. A general field that is true but less specific ("Investigate" for an adjustment request) is Q3 = Match. Resolved MC0073, MC0085 and MC0114.
 
-The rubric was run four times on Nov 16 (after rulings 1-4, after narrowing ruling 2, after ruling 5 and after ruling 6). Numbers above are from the fourth run.
+The rubric was run five times on Nov 16: after rulings 1-4, after narrowing ruling 2, after ruling 5, after ruling 6, and once more with no changes to check repeatability. Numbers above are from the fifth run. In that run, one call (MC0041) failed on a connection error and was rerun on its own with the same script.
 
 ## Remaining disagreement (1 call, not a real error)
 
@@ -35,7 +36,8 @@ The rubric was run four times on Nov 16 (after rulings 1-4, after narrowing ruli
 | MC0109 | Contradicts, field = Promised action | Contradicts, field = Notes | Both fields are wrong on this call; Claude named both in its explanation, but the schema holds one field. |
 
 ## Limits
-- Results vary slightly between runs on borderline calls (3 calls changed between the second and third runs, before ruling 6 settled them).
+- Repeatability: the fourth and fifth runs used the same rubric and gave the same answer on every scored field for all 150 calls. Confidence changed on 25 of 600 answers, with no change in human-review routing. This is one repeat, not a full variance study. Earlier, while the rules were changing, 3 borderline calls shifted between runs until ruling 6 settled them.
+- Human-review agreement compares routing from Claude's answers with routing from Billy's labels under the same code rules. Billy's labels carry no confidence levels, so the reference never routes a call for low confidence.
 - The rubric was refined on these same 150 calls, so these numbers measure agreement on the tuning set, not on unseen calls. A fresh, held-out set is needed to measure real accuracy.
 - All data is synthetic and generated from templates, so wording repeats far more than in real calls.
 - Two-thirds of calls go to human review because the set was built with many planted problems.
@@ -43,6 +45,8 @@ The rubric was run four times on Nov 16 (after rulings 1-4, after narrowing ruli
 ---
 
 # Results: rubric v1.2, 150 synthetic calls (Nov 11, 2026)
+
+*Historical: scored against Billy's labels as of Nov 11. The keyword baseline's 29% is recall on the 55 problems in those labels; it caught 16 of 50 planted problems (32%).*
 
 Reference labels: Billy's own labels for all 150 calls.
 Claude reviewer: 10 fresh Claude Opus 5.5 helper sessions (Claude Code), each given only rubric v1.2, the output schema and 15 calls. No tools, no answer key, no prior conversation. Human-review routing was applied by code.

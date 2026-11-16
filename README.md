@@ -104,6 +104,7 @@ data/                Synthetic source data and synthetic benchmark data
 results/             Selected validated outputs supporting public claims
 methodology/         Evidence and financial-interpretation definitions
 validation/          Captured test-run evidence and validation guidance
+ai-transcript-review/ AI reviewer for synthetic customer-care calls, scored against hand labels (separate data set)
 ```
 
 ## Reproduce the analytical run

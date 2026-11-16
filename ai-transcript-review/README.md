@@ -2,7 +2,7 @@
 
 An AI reviewer that reads synthetic customer-care calls, checks them against a written rubric, and routes risky calls to a person. It is scored against my own labels for all 150 calls.
 
-> **Synthetic data only.** Orivanta Home Services is fictional. No employer, client or proprietary data, criteria or templates are used.
+> **Synthetic data only.** Orivanta Home Services is fictional. No employer, client or proprietary data, criteria or templates are used. This module uses its own 150 matched calls, separate from the main project's transcript tests (T27–T30). As in the main project, AI output routes calls to a person; it is not audit evidence.
 
 **Start with the [case study](CASE_STUDY.md).** Full results are in [`results/RESULTS_SUMMARY.md`](results/RESULTS_SUMMARY.md).
 
@@ -10,7 +10,8 @@ An AI reviewer that reads synthetic customer-care calls, checks them against a w
 
 | Check | Keyword rules | Claude |
 |---|---|---|
-| Planted problems caught | 23% | 100% (50 of 50) |
+| Planted problems caught | 32% (16 of 50) | 100% (50 of 50) |
+| All problems in my labels caught (69 calls) | 23% | 100% |
 | False alarms on clean calls | 0 | 0 |
 | Human-review decision agrees with my labels | 83% | 100% |
 
@@ -25,7 +26,7 @@ The rubric was refined on these same 150 calls, so these numbers show agreement 
 - `ai_review/collect_helper_reviews.py`: collects the v1.2 helper-session outputs in `results/helper_raw/`
 - `Orivanta_Matched_Labeling_Sheet_BILLY.xlsx`: reference labels for all 150 calls, manually reviewed by Billy
 - `data/`: 150 matched synthetic calls (records and transcripts) and the answer key of planted problems. The key was kept closed while labeling and is used only to report which planted problems were caught.
-- `generate_matched_calls.py`: the script that generated the calls. Labeling later found 5 calls where it wrote the wrong "customer asked for a credit" value; the key in `data/` has those corrections.
+- `generate_matched_calls.py`: the script that generated the calls (it reproduces the calls in `data/` exactly). Labeling later found 5 calls where the generated notes said the customer asked about a credit when they hadn't, but the generated key marked the notes as correct; the key in `data/` has those corrections.
 - `results/`: predictions, scores and every disagreement
 
 ## Run it (from this folder)

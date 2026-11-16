@@ -10,7 +10,7 @@ When a customer calls about a bill, three things can go wrong after the call end
 - The record says more than the agent did. For example, it says "Issue credit" when the agent only sent a request.
 - The call is marked resolved when the customer is still waiting.
 
-Auditors catch these by reading calls one at a time, which is slow, so only a small sample gets checked. I wanted to see whether an AI reviewer could read every call, flag the risky ones and send them to a person, while matching how a human auditor would judge them.
+Auditors catch these by reading calls one at a time, which is slow, so usually only a sample gets checked. I wanted to see whether an AI reviewer could read every call, flag the risky ones and send them to a person, while matching how a human auditor would judge them.
 
 ## 2. Who it's for
 
@@ -39,7 +39,9 @@ Each answer also gets a confidence level (high, medium or low). If unsure, the r
 - **50 planted problems** of 7 types: missing notes, notes that contradict the call, a promise left out of the notes, a wrong amount, a record that overstates the promise, a record that says "no promise" when there was one, and a summary that says "resolved" when it wasn't.
 - **8 edge cases** with vague promises, such as "Let me see what I can do about a credit."
 
-**I labeled all 150 calls myself**, without the answer key. My labels are the reference the AI is scored against. Labeling also turned up 5 calls where the generated answer key was wrong: it said the customer asked for a credit when they hadn't. I corrected the key.
+**I labeled all 150 calls myself**, without the answer key. My labels are the reference the AI is scored against. Labeling also turned up 5 calls where the answer key was wrong: the generated notes said the customer asked about a credit when they hadn't, but the key marked those notes as correct. I corrected the key.
+
+By the end, my labels mark **69 calls** as having a notes or record problem: the 50 planted ones, those 5, and 14 more from a ruling described in section 7.
 
 ## 5. The comparison: keyword rules
 
@@ -51,14 +53,17 @@ The AI reviewer is Claude (Opus 5.5). Each call is reviewed in a separate reques
 
 | Check | Keyword rules | Claude, rubric v1.2 | Claude, rubric v1.3 |
 |---|---|---|---|
-| Planted problems caught | 23% | 96% | **100%** (50 of 50) |
+| Planted problems caught | 32% (16 of 50) | 96% (48 of 50) | **100%** (50 of 50) |
+| All problems in my labels caught | 23% (16 of 69) | † | **100%** (69 of 69) |
 | Flagged calls that really had a problem | 100% | 96% | **100%** |
 | False alarms on clean calls | 0 | 2 | **0** |
 | Notes check (Q3) agrees with my labels | 65% | 97% | **100%** |
 | Resolved check (Q4) agrees with my labels | 83% | 88% | **100%** |
-| Human-review decision agrees with my labels | 83% | 96% | **100%** |
+| Human-review decision agrees with my labels‡ | 83% | 96% | **100%** |
 
 The keyword rules miss most problems, because they can't tell whether the notes mean the same thing as the call. Claude catches all 50.
+
+†Not comparable: v1.2 was scored before 14 labels changed. ‡Routing from the AI's answers compared with routing from my labels, using the same code rules.
 
 *The v1.2 column was scored on Nov 11, before the label changes described in section 7, and used 10 separate Claude sessions of 15 calls each instead of one request per call. The keyword rules' promise score (100%) is inflated, because I wrote its phrases knowing this data set's fixed wording.*
 
@@ -83,7 +88,7 @@ The most useful part was reading every call where Claude and I disagreed. Almost
 
 - **Measured on the calls I tuned it on.** I refined the rubric using these same 150 calls, so 100% shows how closely Claude follows my rules, not how accurate it would be on new calls. A fresh set of labeled calls is the real test.
 - **Synthetic, template-based data.** Wording repeats far more than in real calls.
-- **Small run-to-run variation.** Between two runs with no rubric change, 3 borderline calls changed answers. A later ruling settled them.
+- **Repeat runs agree, but this was only one repeat.** I ran the final rubric twice. Every scored answer on all 150 calls was the same both times; the confidence level changed on 25 of 600 answers, and none of those changed which calls went to a person. Earlier, while the rules were still changing, 3 borderline calls shifted between runs until a ruling settled them.
 - **Heavy review load.** Two-thirds of calls go to human review, because the test set was built with many planted problems.
 - **Not a production system.** It's one script on one laptop, about 35 minutes for 150 calls.
 
