@@ -1,0 +1,46 @@
+call_id,check,reference,predicted,planted_problem,scenario
+MC0146,Q1 promise,No,Unclear,NOTES_CONTRADICT_CALL,callback
+MC0058,Q1 promise,No,Yes (conditional),NOTES_MISSING,callback
+MC0121,Q1 promise,No,Yes (conditional),,callback
+MC0094,Q1 promise,No,Yes (conditional),NOTES_MISSING,callback
+MC0103,Q1 promise,No,Yes (conditional),NOTES_CONTRADICT_CALL,callback
+MC0150,Q1 promise,No,Unclear,,callback
+MC0005,Q1 promise,No,Yes (conditional),NOTES_CONTRADICT_CALL,callback
+MC0124,Q1 promise,No,Yes (conditional),,callback
+MC0061,Q1 promise,No,Yes (conditional),NOTES_CONTRADICT_CALL,callback
+MC0093,Q3 notes,Contradicts,Match,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0045,Q3 notes,Match,Contradicts,,followup_review
+MC0138,Q3 notes,Match,Contradicts,,followup_review
+MC0098,Q3 notes,Contradicts,Match,RECORD_OVERSTATES_PROMISE,followup_review
+MC0093,Q3 field at issue,Promised action,None,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0045,Q3 field at issue,None,Notes,,followup_review
+MC0138,Q3 field at issue,None,Notes,,followup_review
+MC0098,Q3 field at issue,Promised action,None,RECORD_OVERSTATES_PROMISE,followup_review
+MC0093,Q3 coaching,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0045,Q3 coaching,No,Yes,,followup_review
+MC0138,Q3 coaching,No,Yes,,followup_review
+MC0098,Q3 coaching,Yes,No,RECORD_OVERSTATES_PROMISE,followup_review
+MC0071,Q4 resolved,Resolved - follow-up pending,Resolved,RECORD_AMOUNT_MISMATCH,refund_processed
+MC0063,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0135,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0102,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0004,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0049,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0111,Q4 resolved,Resolved - follow-up pending,Resolved,RECORD_AMOUNT_MISMATCH,refund_processed
+MC0106,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0022,Q4 resolved,Resolved - follow-up pending,Resolved,RECORD_AMOUNT_MISMATCH,refund_processed
+MC0017,Q4 resolved,Resolved - follow-up pending,Resolved,NOTES_MISSING,refund_processed
+MC0007,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0067,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0012,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0092,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0108,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0148,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0126,Q4 resolved,Resolved - follow-up pending,Resolved,RECORD_SAYS_NO_PROMISE,refund_processed
+MC0099,Q4 resolved,Resolved - follow-up pending,Resolved,,refund_processed
+MC0058,Needs human review,No,Yes,NOTES_MISSING,callback
+MC0093,Needs human review,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0121,Needs human review,No,Yes,,callback
+MC0094,Needs human review,No,Yes,NOTES_MISSING,callback
+MC0150,Needs human review,No,Yes,,callback
+MC0124,Needs human review,No,Yes,,callback

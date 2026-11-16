@@ -1,0 +1,122 @@
+[
+  {
+    "call_id": "MC0031",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "Medium"},
+    "q2": {"answer": "Yes", "disputed_item": "$148.36 installation fee for an installation that never happened", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "I was charged $148.36 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and fields reflect a callback by Thursday after checking with the installation team, with no credit offered.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 8, "evidence_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $148.36 installation fee and asked for a credit; agent scheduled a Thursday callback after checking with the installation team, no credit mentioned."
+  },
+  {
+    "call_id": "MC0032",
+    "q1": {"answer": "Yes (firm)", "amount": 139.68, "type": "Credit", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $139.68 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$139.68 late fee while on autopay", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "There's a $139.68 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, promised action, amount and disposition all reflect the $139.68 credit applied.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $139.68 credit, and it shows on your account now.", "confidence": "High"},
+    "one_line_summary": "Autopay customer disputed a $139.68 late fee; agent confirmed the error and applied a $139.68 credit on the call."
+  },
+  {
+    "call_id": "MC0033",
+    "q1": {"answer": "Yes (firm)", "amount": 92.58, "type": "Promotion", "turn": 8, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $92.58 discount, and it's on the account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Missing $92.58 monthly discount", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "My $92.58 monthly discount isn't on this bill.", "confidence": "High"},
+    "q3": {"answer": "Incomplete", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes only say the promotion was discussed and omit that the $92.58 discount was reapplied.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $92.58 discount, and it's on the account now.", "confidence": "High"},
+    "one_line_summary": "Customer's $92.58 discount was missing after renewal; agent reapplied it on the call, but notes omit the reapplied discount."
+  },
+  {
+    "call_id": "MC0034",
+    "q1": {"answer": "Yes (firm)", "amount": 128.58, "type": "Credit", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $128.58 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$128.58 installation fee for an installation that never happened", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $128.58 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and fields all reflect the $128.58 credit applied.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $128.58 credit, and it shows on your account now.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $128.58 installation fee; agent confirmed the error and applied a $128.58 credit."
+  },
+  {
+    "call_id": "MC0035",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $33.04 charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $33.04 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Missing", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Agent notes are blank.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "High"},
+    "one_line_summary": "Customer questioned an unrecognized $33.04 charge; agent scheduled a Thursday callback after checking with billing operations, and notes are blank."
+  },
+  {
+    "call_id": "MC0036",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$55.87 late fee while on autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $55.87 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes say the customer reported no billing concern, but the customer called to dispute a $55.87 late fee.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 5, "evidence_quote": "I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time.", "confidence": "High"},
+    "one_line_summary": "Customer questioned a $55.87 autopay late fee; agent explained the declined payment made it valid, but notes wrongly say no billing concern was raised."
+  },
+  {
+    "call_id": "MC0037",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$13.56 late fee while on autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $13.56 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and fields reflect that the fee was explained as valid with no credit offered.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 5, "evidence_quote": "I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time.", "confidence": "High"},
+    "one_line_summary": "Customer questioned a $13.56 autopay late fee; agent explained the bank declined the payment so the fee is valid."
+  },
+  {
+    "call_id": "MC0038",
+    "q1": {"answer": "Yes (conditional)", "amount": 100.49, "type": "Other", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $100.49 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $100.49 charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $100.49 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, amount and disposition reflect the $100.49 adjustment request and the 5-business-day email.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $100.49 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Customer questioned an unrecognized $100.49 charge; agent submitted a $100.49 adjustment request with an email expected within five business days."
+  },
+  {
+    "call_id": "MC0039",
+    "q1": {"answer": "Yes (firm)", "amount": 129.25, "type": "Promotion", "turn": 8, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $129.25 discount, and it's on the account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Missing $129.25 monthly discount", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "My $129.25 monthly discount isn't on this bill.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and fields reflect the $129.25 discount reapplied after renewal.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $129.25 discount, and it's on the account now.", "confidence": "High"},
+    "one_line_summary": "Customer's $129.25 discount was missing after renewal; agent reapplied it on the call."
+  },
+  {
+    "call_id": "MC0040",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$6.92 installation fee for an installation that never happened", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $6.92 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and fields reflect a callback by Thursday after checking with the installation team, with no credit offered.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $6.92 installation fee; agent scheduled a Thursday callback after checking with the installation team."
+  },
+  {
+    "call_id": "MC0041",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Credit", "turn": 7, "evidence_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.", "confidence": "Medium"},
+    "q2": {"answer": "Yes", "disputed_item": "Billed $137.72 for the month despite a two-day outage", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "My service was out for two days and I'm still billed $137.72 for the month.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes say the customer asked about a credit, but the customer never asked for one; the agent raised the credit.", "confidence": "High"},
+    "q4": {"answer": "Unclear", "turn": 7, "evidence_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.", "confidence": "High"},
+    "one_line_summary": "Customer complained about being billed $137.72 despite a two-day outage; agent vaguely offered to see about a credit, and notes wrongly say the customer asked for one."
+  },
+  {
+    "call_id": "MC0042",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $123.69 charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $123.69 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and fields reflect that the charge was explained as valid with no credit offered.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 5, "evidence_quote": "That charge is the new streaming add-on that was added on the account last month. It's billed correctly, and you can remove it anytime.", "confidence": "High"},
+    "one_line_summary": "Customer questioned an unrecognized $123.69 charge; agent explained it is a streaming add-on billed correctly."
+  },
+  {
+    "call_id": "MC0043",
+    "q1": {"answer": "Yes (firm)", "amount": 36.74, "type": "Credit", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $36.74 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$36.74 installation fee for an installation that never happened", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $36.74 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and fields all reflect the $36.74 credit applied.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $36.74 credit, and it shows on your account now.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $36.74 installation fee; agent confirmed the error and applied a $36.74 credit."
+  },
+  {
+    "call_id": "MC0044",
+    "q1": {"answer": "Yes (firm)", "amount": 68.58, "type": "Promotion", "turn": 6, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $68.58 discount, and it's on the account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Missing $68.58 monthly discount", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "My $68.58 monthly discount isn't on this bill.", "confidence": "High"},
+    "q3": {"answer": "Incomplete", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes only say the promotion was discussed and omit that the $68.58 discount was reapplied.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 6, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $68.58 discount, and it's on the account now.", "confidence": "High"},
+    "one_line_summary": "Customer's $68.58 discount was missing after renewal; agent reapplied it, but notes omit the reapplied discount."
+  },
+  {
+    "call_id": "MC0045",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Credit", "turn": 7, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Billed $29.60 for the month despite a two-day outage", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "My service was out for two days and I'm still billed $29.60 for the month.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes say the agent could not confirm the service outage, but the agent only said they could not confirm a credit yet; the call does not support an unconfirmed outage.", "confidence": "Medium"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "one_line_summary": "Customer complained about a $29.60 bill despite a two-day outage; agent opened a billing review for a possible credit, but notes misstate that the outage could not be confirmed."
+  }
+]

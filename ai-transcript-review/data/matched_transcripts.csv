@@ -1,0 +1,1449 @@
+call_id,turn_number,speaker,utterance
+MC0001,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0001,2,Customer,"There's a $39.50 late fee, but I'm on autopay."
+MC0001,3,Agent,I understand. Give me a moment to open the billing history.
+MC0001,4,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0001,5,Agent,Let me see what I can do about a credit on that. I'll make a note on the account.
+MC0001,6,Customer,Okay. I hope something actually happens this time.
+MC0001,7,Agent,Is there anything else I can help with today?
+MC0001,8,Customer,Okay. Thanks for your help.
+MC0002,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0002,2,Customer,My service was out for two days and I'm still billed $31.35 for the month.
+MC0002,3,Customer,I'd like that refunded.
+MC0002,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0002,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0002,6,Customer,"Sure, it ends in 3752."
+MC0002,7,Agent,I can see the charge on the March statement. Let me compare it with your payment history.
+MC0002,8,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0002,9,Customer,So nothing is happening? That's frustrating.
+MC0002,10,Agent,Thanks for your patience. Anything else on the account?
+MC0002,11,Customer,Okay. Thanks for your help.
+MC0003,1,Agent,"Orivanta Home Services billing, this is Priya. What can I look at for you?"
+MC0003,2,Customer,My $39.98 monthly discount isn't on this bill.
+MC0003,3,Customer,I'd like that refunded.
+MC0003,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0003,5,Agent,"For security, can you confirm the service address city?"
+MC0003,6,Customer,"Yes, it's North Ember."
+MC0003,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0003,8,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $39.98 discount, and it's on the account now."
+MC0003,9,Customer,"Thank you, that's what I needed."
+MC0003,10,Agent,Thanks for your patience. Anything else on the account?
+MC0003,11,Customer,Okay. Thanks for your help.
+MC0004,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0004,2,Customer,"I returned the modem last month, but I'm still being charged $64.09 for it."
+MC0004,3,Customer,Can you credit that back?
+MC0004,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0004,5,Agent,"For security, can you confirm the service address city?"
+MC0004,6,Customer,"Yes, it's Lake Briar."
+MC0004,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0004,8,Agent,I've processed a refund of $64.09 to your card. It will show in five to seven business days.
+MC0004,9,Customer,"Okay, I'll keep an eye out."
+MC0004,10,Agent,Thanks for your patience. Anything else on the account?
+MC0004,11,Customer,Okay. Thanks for your help.
+MC0005,1,Agent,"Orivanta Home Services billing, this is Lena. What can I look at for you?"
+MC0005,2,Customer,There's a $94.95 charge on my bill that I don't recognize.
+MC0005,3,Customer,I'd like that refunded.
+MC0005,4,Agent,I understand. Give me a moment to open the billing history.
+MC0005,5,Agent,"For security, can you confirm the service address city?"
+MC0005,6,Customer,"Yes, it's Riverglass."
+MC0005,7,Agent,I can see the charge on the August statement. Let me compare it with your payment history.
+MC0005,8,Agent,I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.
+MC0005,9,Customer,Thursday works.
+MC0005,10,Agent,Is there anything else I can help with today?
+MC0005,11,Customer,"That's it, thanks."
+MC0006,1,Agent,"Orivanta Home Services billing, this is Victor. What can I look at for you?"
+MC0006,2,Customer,"There's a $46.81 late fee, but I'm on autopay."
+MC0006,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0006,4,Agent,I can see the charge on the August statement. Let me compare it with your payment history.
+MC0006,5,Agent,"You're right, that was our error. I've applied a $46.81 credit, and it shows on your account now."
+MC0006,6,Customer,"Great, I can see it. Thank you."
+MC0006,7,Agent,Is there anything else I can help with today?
+MC0006,8,Customer,"That's it, thanks."
+MC0007,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0007,2,Customer,I was charged $36.22 twice on this bill.
+MC0007,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0007,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0007,5,Agent,I've processed a refund of $36.22 to your card. It will show in five to seven business days.
+MC0007,6,Customer,"Okay, I'll keep an eye out."
+MC0007,7,Agent,Thanks for your patience. Anything else on the account?
+MC0007,8,Customer,Okay. Thanks for your help.
+MC0008,1,Agent,"Orivanta Home Services billing, this is Lena. What can I look at for you?"
+MC0008,2,Customer,I was charged $14.52 for an installation that never happened.
+MC0008,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0008,4,Agent,"For security, can you confirm the service address city?"
+MC0008,5,Customer,"Yes, it's Riverglass."
+MC0008,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0008,7,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0008,8,Customer,Fine. Please make sure someone actually calls.
+MC0008,9,Agent,Is there anything else I can help with today?
+MC0008,10,Customer,"No, that's all. Thank you."
+MC0009,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0009,2,Customer,"There's a $79.25 late fee, but I'm on autopay."
+MC0009,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0009,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0009,5,Customer,"Sure, it ends in 9017."
+MC0009,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0009,7,Agent,"I can't apply it myself, but I'm submitting a $79.25 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0009,8,Customer,Okay. I'll watch for the email.
+MC0009,9,Agent,Is there anything else I can help with today?
+MC0009,10,Customer,"That's it, thanks."
+MC0010,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0010,2,Customer,There's a $119.25 charge on my bill that I don't recognize.
+MC0010,3,Customer,I'd like that refunded.
+MC0010,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0010,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0010,6,Agent,Let me see what I can do about a credit on that. I'll make a note on the account.
+MC0010,7,Customer,Okay. I hope something actually happens this time.
+MC0010,8,Agent,Thanks for your patience. Anything else on the account?
+MC0010,9,Customer,Okay. Thanks for your help.
+MC0011,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0011,2,Customer,I was charged $114.56 for an installation that never happened.
+MC0011,3,Customer,Can you take that off the bill?
+MC0011,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0011,5,Agent,"For security, can you confirm the service address city?"
+MC0011,6,Customer,"Yes, it's North Ember."
+MC0011,7,Agent,I can see the charge on the July statement. Let me compare it with your payment history.
+MC0011,8,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0011,9,Customer,Fine. Please make sure someone actually calls.
+MC0011,10,Agent,Thanks for your patience. Anything else on the account?
+MC0011,11,Customer,Okay. Thanks for your help.
+MC0012,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0012,2,Customer,"I returned the modem last month, but I'm still being charged $73.52 for it."
+MC0012,3,Customer,Can you take that off the bill?
+MC0012,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0012,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0012,6,Agent,I've processed a refund of $73.52 to your card. It will show in five to seven business days.
+MC0012,7,Customer,"Okay, I'll keep an eye out."
+MC0012,8,Agent,Is there anything else I can help with today?
+MC0012,9,Customer,"No, that's all. Thank you."
+MC0013,1,Agent,"Orivanta Home Services billing, this is Victor. What can I look at for you?"
+MC0013,2,Customer,My service was out for two days and I'm still billed $75.60 for the month.
+MC0013,3,Agent,I understand. Give me a moment to open the billing history.
+MC0013,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0013,5,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0013,6,Customer,Fine. Please make sure someone actually calls.
+MC0013,7,Agent,Thanks for your patience. Anything else on the account?
+MC0013,8,Customer,Okay. Thanks for your help.
+MC0014,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0014,2,Customer,I was charged $134.16 twice on this bill.
+MC0014,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0014,4,Agent,"For security, can you confirm the service address city?"
+MC0014,5,Customer,"Yes, it's Lake Briar."
+MC0014,6,Agent,I can see the charge on the August statement. Let me compare it with your payment history.
+MC0014,7,Agent,"I can't apply it myself, but I'm submitting a $134.16 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0014,8,Customer,Okay. I'll watch for the email.
+MC0014,9,Agent,Thanks for your patience. Anything else on the account?
+MC0014,10,Customer,"No, that's all. Thank you."
+MC0015,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0015,2,Customer,I was charged $44.18 twice on this bill.
+MC0015,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0015,4,Agent,I can see the charge on the August statement. Let me compare it with your payment history.
+MC0015,5,Agent,"I can't apply it myself, but I'm submitting a $44.18 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0015,6,Customer,Okay. I'll watch for the email.
+MC0015,7,Agent,Is there anything else I can help with today?
+MC0015,8,Customer,"That's it, thanks."
+MC0016,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0016,2,Customer,There's a $64.15 charge on my bill that I don't recognize.
+MC0016,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0016,4,Agent,"For security, can you confirm the service address city?"
+MC0016,5,Customer,"Yes, it's North Ember."
+MC0016,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0016,7,Agent,"You're right, that was our error. I've applied a $64.15 credit, and it shows on your account now."
+MC0016,8,Customer,"Great, I can see it. Thank you."
+MC0016,9,Agent,Thanks for your patience. Anything else on the account?
+MC0016,10,Customer,"No, that's all. Thank you."
+MC0017,1,Agent,"Orivanta Home Services billing, this is Lena. What can I look at for you?"
+MC0017,2,Customer,I was charged $133.71 twice on this bill.
+MC0017,3,Agent,I understand. Give me a moment to open the billing history.
+MC0017,4,Agent,I can see the charge on the March statement. Let me compare it with your payment history.
+MC0017,5,Agent,I've processed a refund of $133.71 to your card. It will show in five to seven business days.
+MC0017,6,Customer,"Okay, I'll keep an eye out."
+MC0017,7,Agent,Thanks for your patience. Anything else on the account?
+MC0017,8,Customer,"That's it, thanks."
+MC0018,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0018,2,Customer,"I returned the modem last month, but I'm still being charged $156.84 for it."
+MC0018,3,Customer,Can you credit that back?
+MC0018,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0018,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0018,6,Customer,"Sure, it ends in 4483."
+MC0018,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0018,8,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0018,9,Customer,So nothing is happening? That's frustrating.
+MC0018,10,Agent,Thanks for your patience. Anything else on the account?
+MC0018,11,Customer,Okay. Thanks for your help.
+MC0019,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0019,2,Customer,I was charged $148.83 for an installation that never happened.
+MC0019,3,Agent,I understand. Give me a moment to open the billing history.
+MC0019,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0019,5,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0019,6,Customer,Fine. Please make sure someone actually calls.
+MC0019,7,Agent,Thanks for your patience. Anything else on the account?
+MC0019,8,Customer,"No, that's all. Thank you."
+MC0020,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0020,2,Customer,"There's a $65.55 late fee, but I'm on autopay."
+MC0020,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0020,4,Agent,"For security, can you confirm the service address city?"
+MC0020,5,Customer,"Yes, it's Oak Meridian."
+MC0020,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0020,7,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0020,8,Customer,"Okay, that makes sense. I didn't realize that."
+MC0020,9,Agent,Thanks for your patience. Anything else on the account?
+MC0020,10,Customer,"That's it, thanks."
+MC0021,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0021,2,Customer,I was charged $23.13 twice on this bill.
+MC0021,3,Customer,I'd like that refunded.
+MC0021,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0021,5,Agent,"For security, can you confirm the service address city?"
+MC0021,6,Customer,"Yes, it's Maple Junction."
+MC0021,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0021,8,Agent,"I can't apply it myself, but I'm submitting a $23.13 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0021,9,Customer,Okay. I'll watch for the email.
+MC0021,10,Agent,Is there anything else I can help with today?
+MC0021,11,Customer,"No, that's all. Thank you."
+MC0022,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0022,2,Customer,"I returned the modem last month, but I'm still being charged $74.17 for it."
+MC0022,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0022,4,Agent,I have the invoice open and I'm reviewing the line items.
+MC0022,5,Agent,I've processed a refund of $74.17 to your card. It will show in five to seven business days.
+MC0022,6,Customer,"Okay, I'll keep an eye out."
+MC0022,7,Agent,Thanks for your patience. Anything else on the account?
+MC0022,8,Customer,"That's it, thanks."
+MC0023,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0023,2,Customer,My $101.81 monthly discount isn't on this bill.
+MC0023,3,Agent,I understand. Give me a moment to open the billing history.
+MC0023,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0023,5,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $101.81 discount, and it's on the account now."
+MC0023,6,Customer,"Thank you, that's what I needed."
+MC0023,7,Agent,Is there anything else I can help with today?
+MC0023,8,Customer,"No, that's all. Thank you."
+MC0024,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0024,2,Customer,"There's a $55.38 late fee, but I'm on autopay."
+MC0024,3,Customer,Can you credit that back?
+MC0024,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0024,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0024,6,Agent,"You're right, that was our error. I've applied a $55.38 credit, and it shows on your account now."
+MC0024,7,Customer,"Great, I can see it. Thank you."
+MC0024,8,Agent,Thanks for your patience. Anything else on the account?
+MC0024,9,Customer,"That's it, thanks."
+MC0025,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0025,2,Customer,"I returned the modem last month, but I'm still being charged $126.98 for it."
+MC0025,3,Customer,Can you take that off the bill?
+MC0025,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0025,5,Agent,"For security, can you confirm the service address city?"
+MC0025,6,Customer,"Yes, it's Stonefield."
+MC0025,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0025,8,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0025,9,Customer,So nothing is happening? That's frustrating.
+MC0025,10,Agent,Thanks for your patience. Anything else on the account?
+MC0025,11,Customer,"That's it, thanks."
+MC0026,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0026,2,Customer,"There's a $45.17 late fee, but I'm on autopay."
+MC0026,3,Agent,I understand. Give me a moment to open the billing history.
+MC0026,4,Agent,"For security, can you confirm the service address city?"
+MC0026,5,Customer,"Yes, it's Lake Briar."
+MC0026,6,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0026,7,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0026,8,Customer,"Okay, that makes sense. I didn't realize that."
+MC0026,9,Agent,Is there anything else I can help with today?
+MC0026,10,Customer,"That's it, thanks."
+MC0027,1,Agent,"Orivanta Home Services billing, this is Jordan. What can I look at for you?"
+MC0027,2,Customer,My $115.57 monthly discount isn't on this bill.
+MC0027,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0027,4,Agent,"For security, can you confirm the service address city?"
+MC0027,5,Customer,"Yes, it's North Ember."
+MC0027,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0027,7,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $115.57 discount, and it's on the account now."
+MC0027,8,Customer,"Thank you, that's what I needed."
+MC0027,9,Agent,Thanks for your patience. Anything else on the account?
+MC0027,10,Customer,"No, that's all. Thank you."
+MC0028,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0028,2,Customer,My $132.76 monthly discount isn't on this bill.
+MC0028,3,Customer,Can you credit that back?
+MC0028,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0028,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0028,6,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $132.76 discount, and it's on the account now."
+MC0028,7,Customer,"Thank you, that's what I needed."
+MC0028,8,Agent,Is there anything else I can help with today?
+MC0028,9,Customer,Okay. Thanks for your help.
+MC0029,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0029,2,Customer,My service was out for two days and I'm still billed $90.15 for the month.
+MC0029,3,Agent,I understand. Give me a moment to open the billing history.
+MC0029,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0029,5,Agent,"I can't apply it myself, but I'm submitting a $18.03 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0029,6,Customer,Okay. I'll watch for the email.
+MC0029,7,Agent,Is there anything else I can help with today?
+MC0029,8,Customer,"No, that's all. Thank you."
+MC0030,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0030,2,Customer,I was charged $72.13 for an installation that never happened.
+MC0030,3,Customer,Can you take that off the bill?
+MC0030,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0030,5,Agent,"For security, can you confirm the service address city?"
+MC0030,6,Customer,"Yes, it's Maple Junction."
+MC0030,7,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0030,8,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0030,9,Customer,Fine. Please make sure someone actually calls.
+MC0030,10,Agent,Is there anything else I can help with today?
+MC0030,11,Customer,Okay. Thanks for your help.
+MC0031,1,Agent,"Orivanta Home Services billing, this is Priya. What can I look at for you?"
+MC0031,2,Customer,I was charged $148.36 for an installation that never happened.
+MC0031,3,Customer,Can you credit that back?
+MC0031,4,Agent,I understand. Give me a moment to open the billing history.
+MC0031,5,Agent,"For security, can you confirm the service address city?"
+MC0031,6,Customer,"Yes, it's Stonefield."
+MC0031,7,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0031,8,Agent,I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.
+MC0031,9,Customer,Thursday works.
+MC0031,10,Agent,Is there anything else I can help with today?
+MC0031,11,Customer,"No, that's all. Thank you."
+MC0032,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0032,2,Customer,"There's a $139.68 late fee, but I'm on autopay."
+MC0032,3,Customer,I'd like that refunded.
+MC0032,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0032,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0032,6,Customer,"Sure, it ends in 0400."
+MC0032,7,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0032,8,Agent,"You're right, that was our error. I've applied a $139.68 credit, and it shows on your account now."
+MC0032,9,Customer,"Great, I can see it. Thank you."
+MC0032,10,Agent,Is there anything else I can help with today?
+MC0032,11,Customer,Okay. Thanks for your help.
+MC0033,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0033,2,Customer,My $92.58 monthly discount isn't on this bill.
+MC0033,3,Customer,Can you take that off the bill?
+MC0033,4,Agent,I understand. Give me a moment to open the billing history.
+MC0033,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0033,6,Customer,"Sure, it ends in 8062."
+MC0033,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0033,8,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $92.58 discount, and it's on the account now."
+MC0033,9,Customer,"Thank you, that's what I needed."
+MC0033,10,Agent,Thanks for your patience. Anything else on the account?
+MC0033,11,Customer,Okay. Thanks for your help.
+MC0034,1,Agent,"Orivanta Home Services billing, this is Victor. What can I look at for you?"
+MC0034,2,Customer,I was charged $128.58 for an installation that never happened.
+MC0034,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0034,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0034,5,Customer,"Sure, it ends in 9424."
+MC0034,6,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0034,7,Agent,"You're right, that was our error. I've applied a $128.58 credit, and it shows on your account now."
+MC0034,8,Customer,"Great, I can see it. Thank you."
+MC0034,9,Agent,Is there anything else I can help with today?
+MC0034,10,Customer,"No, that's all. Thank you."
+MC0035,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0035,2,Customer,There's a $33.04 charge on my bill that I don't recognize.
+MC0035,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0035,4,Agent,"For security, can you confirm the service address city?"
+MC0035,5,Customer,"Yes, it's Lake Briar."
+MC0035,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0035,7,Agent,I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.
+MC0035,8,Customer,Thursday works.
+MC0035,9,Agent,Is there anything else I can help with today?
+MC0035,10,Customer,"No, that's all. Thank you."
+MC0036,1,Agent,"Orivanta Home Services billing, this is Maya. What can I look at for you?"
+MC0036,2,Customer,"There's a $55.87 late fee, but I'm on autopay."
+MC0036,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0036,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0036,5,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0036,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0036,7,Agent,Is there anything else I can help with today?
+MC0036,8,Customer,"No, that's all. Thank you."
+MC0037,1,Agent,"Orivanta Home Services billing, this is Priya. What can I look at for you?"
+MC0037,2,Customer,"There's a $13.56 late fee, but I'm on autopay."
+MC0037,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0037,4,Agent,I can see the charge on the March statement. Let me compare it with your payment history.
+MC0037,5,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0037,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0037,7,Agent,Is there anything else I can help with today?
+MC0037,8,Customer,"No, that's all. Thank you."
+MC0038,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0038,2,Customer,There's a $100.49 charge on my bill that I don't recognize.
+MC0038,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0038,4,Agent,"For security, can you confirm the service address city?"
+MC0038,5,Customer,"Yes, it's Stonefield."
+MC0038,6,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0038,7,Agent,"I can't apply it myself, but I'm submitting a $100.49 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0038,8,Customer,Okay. I'll watch for the email.
+MC0038,9,Agent,Is there anything else I can help with today?
+MC0038,10,Customer,"No, that's all. Thank you."
+MC0039,1,Agent,"Orivanta Home Services billing, this is Tess. What can I look at for you?"
+MC0039,2,Customer,My $129.25 monthly discount isn't on this bill.
+MC0039,3,Customer,Can you take that off the bill?
+MC0039,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0039,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0039,6,Customer,"Sure, it ends in 5074."
+MC0039,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0039,8,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $129.25 discount, and it's on the account now."
+MC0039,9,Customer,"Thank you, that's what I needed."
+MC0039,10,Agent,Is there anything else I can help with today?
+MC0039,11,Customer,"That's it, thanks."
+MC0040,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0040,2,Customer,I was charged $6.92 for an installation that never happened.
+MC0040,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0040,4,Agent,"For security, can you confirm the service address city?"
+MC0040,5,Customer,"Yes, it's Riverglass."
+MC0040,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0040,7,Agent,I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.
+MC0040,8,Customer,Thursday works.
+MC0040,9,Agent,Thanks for your patience. Anything else on the account?
+MC0040,10,Customer,"That's it, thanks."
+MC0041,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0041,2,Customer,My service was out for two days and I'm still billed $137.72 for the month.
+MC0041,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0041,4,Agent,"For security, can you confirm the service address city?"
+MC0041,5,Customer,"Yes, it's Stonefield."
+MC0041,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0041,7,Agent,Let me see what I can do about a credit on that. I'll make a note on the account.
+MC0041,8,Customer,Okay. I hope something actually happens this time.
+MC0041,9,Agent,Thanks for your patience. Anything else on the account?
+MC0041,10,Customer,Okay. Thanks for your help.
+MC0042,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0042,2,Customer,There's a $123.69 charge on my bill that I don't recognize.
+MC0042,3,Agent,I understand. Give me a moment to open the billing history.
+MC0042,4,Agent,I can see the charge on the August statement. Let me compare it with your payment history.
+MC0042,5,Agent,"That charge is the new streaming add-on that was added on the account last month. It's billed correctly, and you can remove it anytime."
+MC0042,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0042,7,Agent,Is there anything else I can help with today?
+MC0042,8,Customer,"That's it, thanks."
+MC0043,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0043,2,Customer,I was charged $36.74 for an installation that never happened.
+MC0043,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0043,4,Agent,"For security, can you confirm the service address city?"
+MC0043,5,Customer,"Yes, it's North Ember."
+MC0043,6,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0043,7,Agent,"You're right, that was our error. I've applied a $36.74 credit, and it shows on your account now."
+MC0043,8,Customer,"Great, I can see it. Thank you."
+MC0043,9,Agent,Is there anything else I can help with today?
+MC0043,10,Customer,"No, that's all. Thank you."
+MC0044,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0044,2,Customer,My $68.58 monthly discount isn't on this bill.
+MC0044,3,Customer,Can you take that off the bill?
+MC0044,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0044,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0044,6,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $68.58 discount, and it's on the account now."
+MC0044,7,Customer,"Thank you, that's what I needed."
+MC0044,8,Agent,Thanks for your patience. Anything else on the account?
+MC0044,9,Customer,"No, that's all. Thank you."
+MC0045,1,Agent,"Orivanta Home Services billing, this is Jordan. What can I look at for you?"
+MC0045,2,Customer,My service was out for two days and I'm still billed $29.60 for the month.
+MC0045,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0045,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0045,5,Customer,"Sure, it ends in 6126."
+MC0045,6,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0045,7,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0045,8,Customer,Fine. Please make sure someone actually calls.
+MC0045,9,Agent,Is there anything else I can help with today?
+MC0045,10,Customer,"That's it, thanks."
+MC0046,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0046,2,Customer,There's a $58.80 charge on my bill that I don't recognize.
+MC0046,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0046,4,Agent,"For security, can you confirm the service address city?"
+MC0046,5,Customer,"Yes, it's Lake Briar."
+MC0046,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0046,7,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0046,8,Customer,So nothing is happening? That's frustrating.
+MC0046,9,Agent,Thanks for your patience. Anything else on the account?
+MC0046,10,Customer,"That's it, thanks."
+MC0047,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0047,2,Customer,"I returned the modem last month, but I'm still being charged $142.70 for it."
+MC0047,3,Customer,Can you take that off the bill?
+MC0047,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0047,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0047,6,Customer,"Sure, it ends in 0507."
+MC0047,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0047,8,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0047,9,Customer,So nothing is happening? That's frustrating.
+MC0047,10,Agent,Is there anything else I can help with today?
+MC0047,11,Customer,Okay. Thanks for your help.
+MC0048,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0048,2,Customer,"I returned the modem last month, but I'm still being charged $61.03 for it."
+MC0048,3,Customer,Can you take that off the bill?
+MC0048,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0048,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0048,6,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0048,7,Customer,So nothing is happening? That's frustrating.
+MC0048,8,Agent,Is there anything else I can help with today?
+MC0048,9,Customer,"No, that's all. Thank you."
+MC0049,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0049,2,Customer,"I returned the modem last month, but I'm still being charged $32.40 for it."
+MC0049,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0049,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0049,5,Agent,I've processed a refund of $32.40 to your card. It will show in five to seven business days.
+MC0049,6,Customer,"Okay, I'll keep an eye out."
+MC0049,7,Agent,Thanks for your patience. Anything else on the account?
+MC0049,8,Customer,Okay. Thanks for your help.
+MC0050,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0050,2,Customer,"I returned the modem last month, but I'm still being charged $136.24 for it."
+MC0050,3,Customer,Can you credit that back?
+MC0050,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0050,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0050,6,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0050,7,Customer,So nothing is happening? That's frustrating.
+MC0050,8,Agent,Thanks for your patience. Anything else on the account?
+MC0050,9,Customer,Okay. Thanks for your help.
+MC0051,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0051,2,Customer,There's a $53.43 charge on my bill that I don't recognize.
+MC0051,3,Customer,I'd like that refunded.
+MC0051,4,Agent,I understand. Give me a moment to open the billing history.
+MC0051,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0051,6,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0051,7,Customer,So nothing is happening? That's frustrating.
+MC0051,8,Agent,Thanks for your patience. Anything else on the account?
+MC0051,9,Customer,Okay. Thanks for your help.
+MC0052,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0052,2,Customer,There's a $138.95 charge on my bill that I don't recognize.
+MC0052,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0052,4,Agent,"For security, can you confirm the service address city?"
+MC0052,5,Customer,"Yes, it's Riverglass."
+MC0052,6,Agent,I can see the charge on the July statement. Let me compare it with your payment history.
+MC0052,7,Agent,Let me see what I can do about a credit on that. I'll make a note on the account.
+MC0052,8,Customer,Okay. I hope something actually happens this time.
+MC0052,9,Agent,Is there anything else I can help with today?
+MC0052,10,Customer,"No, that's all. Thank you."
+MC0053,1,Agent,"Orivanta Home Services billing, this is Priya. What can I look at for you?"
+MC0053,2,Customer,My $40.72 monthly discount isn't on this bill.
+MC0053,3,Customer,Can you take that off the bill?
+MC0053,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0053,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0053,6,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $40.72 discount, and it's on the account now."
+MC0053,7,Customer,"Thank you, that's what I needed."
+MC0053,8,Agent,Thanks for your patience. Anything else on the account?
+MC0053,9,Customer,"No, that's all. Thank you."
+MC0054,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0054,2,Customer,There's a $71.82 charge on my bill that I don't recognize.
+MC0054,3,Agent,I understand. Give me a moment to open the billing history.
+MC0054,4,Agent,I can see the charge on the July statement. Let me compare it with your payment history.
+MC0054,5,Agent,"That charge is the new streaming add-on that was added on the account last month. It's billed correctly, and you can remove it anytime."
+MC0054,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0054,7,Agent,Is there anything else I can help with today?
+MC0054,8,Customer,Okay. Thanks for your help.
+MC0055,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0055,2,Customer,I was charged $121.37 twice on this bill.
+MC0055,3,Customer,Can you take that off the bill?
+MC0055,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0055,5,Agent,"For security, can you confirm the service address city?"
+MC0055,6,Customer,"Yes, it's Maple Junction."
+MC0055,7,Agent,I can see the charge on the August statement. Let me compare it with your payment history.
+MC0055,8,Agent,"You're right, that was our error. I've applied a $121.37 credit, and it shows on your account now."
+MC0055,9,Customer,"Great, I can see it. Thank you."
+MC0055,10,Agent,Is there anything else I can help with today?
+MC0055,11,Customer,"No, that's all. Thank you."
+MC0056,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0056,2,Customer,My $8.86 monthly discount isn't on this bill.
+MC0056,3,Agent,I understand. Give me a moment to open the billing history.
+MC0056,4,Agent,"For security, can you confirm the service address city?"
+MC0056,5,Customer,"Yes, it's Oak Meridian."
+MC0056,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0056,7,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $8.86 discount, and it's on the account now."
+MC0056,8,Customer,"Thank you, that's what I needed."
+MC0056,9,Agent,Thanks for your patience. Anything else on the account?
+MC0056,10,Customer,"No, that's all. Thank you."
+MC0057,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0057,2,Customer,I was charged $33.13 for an installation that never happened.
+MC0057,3,Customer,Can you credit that back?
+MC0057,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0057,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0057,6,Customer,"Sure, it ends in 0460."
+MC0057,7,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0057,8,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0057,9,Customer,Fine. Please make sure someone actually calls.
+MC0057,10,Agent,Thanks for your patience. Anything else on the account?
+MC0057,11,Customer,"No, that's all. Thank you."
+MC0058,1,Agent,"Orivanta Home Services billing, this is Victor. What can I look at for you?"
+MC0058,2,Customer,I was charged $16.18 for an installation that never happened.
+MC0058,3,Customer,Can you take that off the bill?
+MC0058,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0058,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0058,6,Customer,"Sure, it ends in 6554."
+MC0058,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0058,8,Agent,I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.
+MC0058,9,Customer,Thursday works.
+MC0058,10,Agent,Thanks for your patience. Anything else on the account?
+MC0058,11,Customer,Okay. Thanks for your help.
+MC0059,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0059,2,Customer,There's a $147.38 charge on my bill that I don't recognize.
+MC0059,3,Agent,I understand. Give me a moment to open the billing history.
+MC0059,4,Agent,"For security, can you confirm the service address city?"
+MC0059,5,Customer,"Yes, it's North Ember."
+MC0059,6,Agent,I can see the charge on the July statement. Let me compare it with your payment history.
+MC0059,7,Agent,"That charge is the new streaming add-on that was added on the account last month. It's billed correctly, and you can remove it anytime."
+MC0059,8,Customer,"Okay, that makes sense. I didn't realize that."
+MC0059,9,Agent,Thanks for your patience. Anything else on the account?
+MC0059,10,Customer,"That's it, thanks."
+MC0060,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0060,2,Customer,I was charged $112.50 twice on this bill.
+MC0060,3,Agent,I understand. Give me a moment to open the billing history.
+MC0060,4,Agent,I can see the charge on the March statement. Let me compare it with your payment history.
+MC0060,5,Agent,"You're right, that was our error. I've applied a $112.50 credit, and it shows on your account now."
+MC0060,6,Customer,"Great, I can see it. Thank you."
+MC0060,7,Agent,Thanks for your patience. Anything else on the account?
+MC0060,8,Customer,"That's it, thanks."
+MC0061,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0061,2,Customer,There's a $129.72 charge on my bill that I don't recognize.
+MC0061,3,Customer,Can you take that off the bill?
+MC0061,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0061,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0061,6,Agent,I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.
+MC0061,7,Customer,Thursday works.
+MC0061,8,Agent,Is there anything else I can help with today?
+MC0061,9,Customer,"No, that's all. Thank you."
+MC0062,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0062,2,Customer,There's a $55.85 charge on my bill that I don't recognize.
+MC0062,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0062,4,Agent,I have the invoice open and I'm reviewing the line items.
+MC0062,5,Agent,"That charge is the new streaming add-on that was added on the account last month. It's billed correctly, and you can remove it anytime."
+MC0062,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0062,7,Agent,Is there anything else I can help with today?
+MC0062,8,Customer,Okay. Thanks for your help.
+MC0063,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0063,2,Customer,"I returned the modem last month, but I'm still being charged $130.04 for it."
+MC0063,3,Customer,Can you credit that back?
+MC0063,4,Agent,I understand. Give me a moment to open the billing history.
+MC0063,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0063,6,Customer,"Sure, it ends in 9374."
+MC0063,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0063,8,Agent,I've processed a refund of $130.04 to your card. It will show in five to seven business days.
+MC0063,9,Customer,"Okay, I'll keep an eye out."
+MC0063,10,Agent,Is there anything else I can help with today?
+MC0063,11,Customer,"No, that's all. Thank you."
+MC0064,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0064,2,Customer,There's a $153.16 charge on my bill that I don't recognize.
+MC0064,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0064,4,Agent,"For security, can you confirm the service address city?"
+MC0064,5,Customer,"Yes, it's North Ember."
+MC0064,6,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0064,7,Agent,"You're right, that was our error. I've applied a $153.16 credit, and it shows on your account now."
+MC0064,8,Customer,"Great, I can see it. Thank you."
+MC0064,9,Agent,Thanks for your patience. Anything else on the account?
+MC0064,10,Customer,"That's it, thanks."
+MC0065,1,Agent,"Orivanta Home Services billing, this is Priya. What can I look at for you?"
+MC0065,2,Customer,"I returned the modem last month, but I'm still being charged $130.58 for it."
+MC0065,3,Agent,I understand. Give me a moment to open the billing history.
+MC0065,4,Agent,"For security, can you confirm the service address city?"
+MC0065,5,Customer,"Yes, it's Maple Junction."
+MC0065,6,Agent,I can see the charge on the April statement. Let me compare it with your payment history.
+MC0065,7,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0065,8,Customer,So nothing is happening? That's frustrating.
+MC0065,9,Agent,Thanks for your patience. Anything else on the account?
+MC0065,10,Customer,Okay. Thanks for your help.
+MC0066,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0066,2,Customer,"I returned the modem last month, but I'm still being charged $100.78 for it."
+MC0066,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0066,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0066,5,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0066,6,Customer,So nothing is happening? That's frustrating.
+MC0066,7,Agent,Is there anything else I can help with today?
+MC0066,8,Customer,"That's it, thanks."
+MC0067,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0067,2,Customer,"I returned the modem last month, but I'm still being charged $72.50 for it."
+MC0067,3,Customer,Can you credit that back?
+MC0067,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0067,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0067,6,Agent,I've processed a refund of $72.50 to your card. It will show in five to seven business days.
+MC0067,7,Customer,"Okay, I'll keep an eye out."
+MC0067,8,Agent,Thanks for your patience. Anything else on the account?
+MC0067,9,Customer,"No, that's all. Thank you."
+MC0068,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0068,2,Customer,"There's a $107.90 late fee, but I'm on autopay."
+MC0068,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0068,4,Agent,"For security, can you confirm the service address city?"
+MC0068,5,Customer,"Yes, it's Riverglass."
+MC0068,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0068,7,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0068,8,Customer,"Okay, that makes sense. I didn't realize that."
+MC0068,9,Agent,Thanks for your patience. Anything else on the account?
+MC0068,10,Customer,"That's it, thanks."
+MC0069,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0069,2,Customer,"There's a $64.00 late fee, but I'm on autopay."
+MC0069,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0069,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0069,5,Customer,"Sure, it ends in 5319."
+MC0069,6,Agent,I can see the charge on the March statement. Let me compare it with your payment history.
+MC0069,7,Agent,"I can't apply it myself, but I'm submitting a $64.00 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0069,8,Customer,Okay. I'll watch for the email.
+MC0069,9,Agent,Is there anything else I can help with today?
+MC0069,10,Customer,Okay. Thanks for your help.
+MC0070,1,Agent,"Orivanta Home Services billing, this is Omar. What can I look at for you?"
+MC0070,2,Customer,"There's a $103.19 late fee, but I'm on autopay."
+MC0070,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0070,4,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0070,5,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0070,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0070,7,Agent,Is there anything else I can help with today?
+MC0070,8,Customer,Okay. Thanks for your help.
+MC0071,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0071,2,Customer,"I returned the modem last month, but I'm still being charged $8.49 for it."
+MC0071,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0071,4,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0071,5,Agent,I've processed a refund of $8.49 to your card. It will show in five to seven business days.
+MC0071,6,Customer,"Okay, I'll keep an eye out."
+MC0071,7,Agent,Thanks for your patience. Anything else on the account?
+MC0071,8,Customer,"No, that's all. Thank you."
+MC0072,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0072,2,Customer,There's a $57.57 charge on my bill that I don't recognize.
+MC0072,3,Customer,Can you take that off the bill?
+MC0072,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0072,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0072,6,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0072,7,Customer,Fine. Please make sure someone actually calls.
+MC0072,8,Agent,Is there anything else I can help with today?
+MC0072,9,Customer,"That's it, thanks."
+MC0073,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0073,2,Customer,My service was out for two days and I'm still billed $146.52 for the month.
+MC0073,3,Customer,Can you take that off the bill?
+MC0073,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0073,5,Agent,"For security, can you confirm the service address city?"
+MC0073,6,Customer,"Yes, it's Oak Meridian."
+MC0073,7,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0073,8,Agent,"I can't apply it myself, but I'm submitting a $14.65 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0073,9,Customer,Okay. I'll watch for the email.
+MC0073,10,Agent,Is there anything else I can help with today?
+MC0073,11,Customer,"No, that's all. Thank you."
+MC0074,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0074,2,Customer,My $133.54 monthly discount isn't on this bill.
+MC0074,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0074,4,Agent,I can see the charge on the March statement. Let me compare it with your payment history.
+MC0074,5,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $133.54 discount, and it's on the account now."
+MC0074,6,Customer,"Thank you, that's what I needed."
+MC0074,7,Agent,Is there anything else I can help with today?
+MC0074,8,Customer,"That's it, thanks."
+MC0075,1,Agent,"Orivanta Home Services billing, this is Victor. What can I look at for you?"
+MC0075,2,Customer,I was charged $63.03 twice on this bill.
+MC0075,3,Customer,Can you credit that back?
+MC0075,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0075,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0075,6,Customer,"Sure, it ends in 1159."
+MC0075,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0075,8,Agent,Let me see what I can do about a credit on that. I'll make a note on the account.
+MC0075,9,Customer,Okay. I hope something actually happens this time.
+MC0075,10,Agent,Is there anything else I can help with today?
+MC0075,11,Customer,"That's it, thanks."
+MC0076,1,Agent,"Orivanta Home Services billing, this is Elias. What can I look at for you?"
+MC0076,2,Customer,"There's a $102.92 late fee, but I'm on autopay."
+MC0076,3,Agent,I understand. Give me a moment to open the billing history.
+MC0076,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0076,5,Customer,"Sure, it ends in 3443."
+MC0076,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0076,7,Agent,"You're right, that was our error. I've applied a $102.92 credit, and it shows on your account now."
+MC0076,8,Customer,"Great, I can see it. Thank you."
+MC0076,9,Agent,Is there anything else I can help with today?
+MC0076,10,Customer,Okay. Thanks for your help.
+MC0077,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0077,2,Customer,My service was out for two days and I'm still billed $131.84 for the month.
+MC0077,3,Agent,I understand. Give me a moment to open the billing history.
+MC0077,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0077,5,Customer,"Sure, it ends in 2831."
+MC0077,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0077,7,Agent,"I can't apply it myself, but I'm submitting a $26.37 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0077,8,Customer,Okay. I'll watch for the email.
+MC0077,9,Agent,Is there anything else I can help with today?
+MC0077,10,Customer,Okay. Thanks for your help.
+MC0078,1,Agent,"Orivanta Home Services billing, this is Jordan. What can I look at for you?"
+MC0078,2,Customer,My $7.24 monthly discount isn't on this bill.
+MC0078,3,Customer,I'd like that refunded.
+MC0078,4,Agent,I understand. Give me a moment to open the billing history.
+MC0078,5,Agent,I can see the charge on the July statement. Let me compare it with your payment history.
+MC0078,6,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $7.24 discount, and it's on the account now."
+MC0078,7,Customer,"Thank you, that's what I needed."
+MC0078,8,Agent,Is there anything else I can help with today?
+MC0078,9,Customer,"No, that's all. Thank you."
+MC0079,1,Agent,"Orivanta Home Services billing, this is Omar. What can I look at for you?"
+MC0079,2,Customer,"There's a $87.47 late fee, but I'm on autopay."
+MC0079,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0079,4,Agent,I can see the charge on the April statement. Let me compare it with your payment history.
+MC0079,5,Agent,"You're right, that was our error. I've applied a $87.47 credit, and it shows on your account now."
+MC0079,6,Customer,"Great, I can see it. Thank you."
+MC0079,7,Agent,Thanks for your patience. Anything else on the account?
+MC0079,8,Customer,Okay. Thanks for your help.
+MC0080,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0080,2,Customer,"There's a $129.85 late fee, but I'm on autopay."
+MC0080,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0080,4,Agent,I can see the charge on the April statement. Let me compare it with your payment history.
+MC0080,5,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0080,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0080,7,Agent,Is there anything else I can help with today?
+MC0080,8,Customer,Okay. Thanks for your help.
+MC0081,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0081,2,Customer,"There's a $92.96 late fee, but I'm on autopay."
+MC0081,3,Agent,I understand. Give me a moment to open the billing history.
+MC0081,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0081,5,Customer,"Sure, it ends in 8132."
+MC0081,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0081,7,Agent,"You're right, that was our error. I've applied a $92.96 credit, and it shows on your account now."
+MC0081,8,Customer,"Great, I can see it. Thank you."
+MC0081,9,Agent,Thanks for your patience. Anything else on the account?
+MC0081,10,Customer,"That's it, thanks."
+MC0082,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0082,2,Customer,There's a $57.92 charge on my bill that I don't recognize.
+MC0082,3,Customer,Can you credit that back?
+MC0082,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0082,5,Agent,"For security, can you confirm the service address city?"
+MC0082,6,Customer,"Yes, it's North Ember."
+MC0082,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0082,8,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0082,9,Customer,So nothing is happening? That's frustrating.
+MC0082,10,Agent,Thanks for your patience. Anything else on the account?
+MC0082,11,Customer,"That's it, thanks."
+MC0083,1,Agent,"Orivanta Home Services billing, this is Lena. What can I look at for you?"
+MC0083,2,Customer,There's a $134.60 charge on my bill that I don't recognize.
+MC0083,3,Customer,I'd like that refunded.
+MC0083,4,Agent,I understand. Give me a moment to open the billing history.
+MC0083,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0083,6,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0083,7,Customer,Fine. Please make sure someone actually calls.
+MC0083,8,Agent,Is there anything else I can help with today?
+MC0083,9,Customer,"No, that's all. Thank you."
+MC0084,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0084,2,Customer,I was charged $119.55 for an installation that never happened.
+MC0084,3,Agent,I understand. Give me a moment to open the billing history.
+MC0084,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0084,5,Customer,"Sure, it ends in 7540."
+MC0084,6,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0084,7,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0084,8,Customer,Fine. Please make sure someone actually calls.
+MC0084,9,Agent,Is there anything else I can help with today?
+MC0084,10,Customer,"That's it, thanks."
+MC0085,1,Agent,"Orivanta Home Services billing, this is Lena. What can I look at for you?"
+MC0085,2,Customer,There's a $129.26 charge on my bill that I don't recognize.
+MC0085,3,Customer,I'd like that refunded.
+MC0085,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0085,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0085,6,Agent,"I can't apply it myself, but I'm submitting a $129.26 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0085,7,Customer,Okay. I'll watch for the email.
+MC0085,8,Agent,Thanks for your patience. Anything else on the account?
+MC0085,9,Customer,"That's it, thanks."
+MC0086,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0086,2,Customer,"There's a $23.42 late fee, but I'm on autopay."
+MC0086,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0086,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0086,5,Customer,"Sure, it ends in 5822."
+MC0086,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0086,7,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0086,8,Customer,"Okay, that makes sense. I didn't realize that."
+MC0086,9,Agent,Is there anything else I can help with today?
+MC0086,10,Customer,"That's it, thanks."
+MC0087,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0087,2,Customer,I was charged $74.54 twice on this bill.
+MC0087,3,Customer,Can you take that off the bill?
+MC0087,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0087,5,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0087,6,Agent,"You're right, that was our error. I've applied a $74.54 credit, and it shows on your account now."
+MC0087,7,Customer,"Great, I can see it. Thank you."
+MC0087,8,Agent,Thanks for your patience. Anything else on the account?
+MC0087,9,Customer,"That's it, thanks."
+MC0088,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0088,2,Customer,I was charged $26.70 twice on this bill.
+MC0088,3,Customer,I'd like that refunded.
+MC0088,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0088,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0088,6,Customer,"Sure, it ends in 8997."
+MC0088,7,Agent,I can see the charge on the July statement. Let me compare it with your payment history.
+MC0088,8,Agent,"You're right, that was our error. I've applied a $26.70 credit, and it shows on your account now."
+MC0088,9,Customer,"Great, I can see it. Thank you."
+MC0088,10,Agent,Is there anything else I can help with today?
+MC0088,11,Customer,"That's it, thanks."
+MC0089,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0089,2,Customer,My service was out for two days and I'm still billed $61.92 for the month.
+MC0089,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0089,4,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0089,5,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0089,6,Customer,So nothing is happening? That's frustrating.
+MC0089,7,Agent,Is there anything else I can help with today?
+MC0089,8,Customer,"That's it, thanks."
+MC0090,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0090,2,Customer,There's a $132.30 charge on my bill that I don't recognize.
+MC0090,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0090,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0090,5,Customer,"Sure, it ends in 5343."
+MC0090,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0090,7,Agent,"That charge is the new streaming add-on that was added on the account last month. It's billed correctly, and you can remove it anytime."
+MC0090,8,Customer,"Okay, that makes sense. I didn't realize that."
+MC0090,9,Agent,Thanks for your patience. Anything else on the account?
+MC0090,10,Customer,Okay. Thanks for your help.
+MC0091,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0091,2,Customer,I was charged $75.60 for an installation that never happened.
+MC0091,3,Customer,Can you take that off the bill?
+MC0091,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0091,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0091,6,Customer,"Sure, it ends in 0329."
+MC0091,7,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0091,8,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0091,9,Customer,Fine. Please make sure someone actually calls.
+MC0091,10,Agent,Is there anything else I can help with today?
+MC0091,11,Customer,"No, that's all. Thank you."
+MC0092,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0092,2,Customer,I was charged $128.28 twice on this bill.
+MC0092,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0092,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0092,5,Customer,"Sure, it ends in 4367."
+MC0092,6,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0092,7,Agent,I've processed a refund of $128.28 to your card. It will show in five to seven business days.
+MC0092,8,Customer,"Okay, I'll keep an eye out."
+MC0092,9,Agent,Thanks for your patience. Anything else on the account?
+MC0092,10,Customer,Okay. Thanks for your help.
+MC0093,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0093,2,Customer,My service was out for two days and I'm still billed $135.49 for the month.
+MC0093,3,Customer,Can you credit that back?
+MC0093,4,Agent,I understand. Give me a moment to open the billing history.
+MC0093,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0093,6,Customer,"Sure, it ends in 9153."
+MC0093,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0093,8,Agent,"I can't apply it myself, but I'm submitting a $20.32 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0093,9,Customer,Okay. I'll watch for the email.
+MC0093,10,Agent,Thanks for your patience. Anything else on the account?
+MC0093,11,Customer,"That's it, thanks."
+MC0094,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0094,2,Customer,I was charged $76.16 for an installation that never happened.
+MC0094,3,Agent,I understand. Give me a moment to open the billing history.
+MC0094,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0094,5,Customer,"Sure, it ends in 2262."
+MC0094,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0094,7,Agent,I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.
+MC0094,8,Customer,Thursday works.
+MC0094,9,Agent,Is there anything else I can help with today?
+MC0094,10,Customer,"No, that's all. Thank you."
+MC0095,1,Agent,"Orivanta Home Services billing, this is Omar. What can I look at for you?"
+MC0095,2,Customer,My $70.72 monthly discount isn't on this bill.
+MC0095,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0095,4,Agent,"For security, can you confirm the service address city?"
+MC0095,5,Customer,"Yes, it's Maple Junction."
+MC0095,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0095,7,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $70.72 discount, and it's on the account now."
+MC0095,8,Customer,"Thank you, that's what I needed."
+MC0095,9,Agent,Is there anything else I can help with today?
+MC0095,10,Customer,"No, that's all. Thank you."
+MC0096,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0096,2,Customer,I was charged $31.05 for an installation that never happened.
+MC0096,3,Customer,Can you take that off the bill?
+MC0096,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0096,5,Agent,"For security, can you confirm the service address city?"
+MC0096,6,Customer,"Yes, it's Lake Briar."
+MC0096,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0096,8,Agent,"You're right, that was our error. I've applied a $31.05 credit, and it shows on your account now."
+MC0096,9,Customer,"Great, I can see it. Thank you."
+MC0096,10,Agent,Thanks for your patience. Anything else on the account?
+MC0096,11,Customer,"That's it, thanks."
+MC0097,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0097,2,Customer,There's a $110.42 charge on my bill that I don't recognize.
+MC0097,3,Agent,I understand. Give me a moment to open the billing history.
+MC0097,4,Agent,"For security, can you confirm the service address city?"
+MC0097,5,Customer,"Yes, it's Stonefield."
+MC0097,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0097,7,Agent,"I can't apply it myself, but I'm submitting a $110.42 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0097,8,Customer,Okay. I'll watch for the email.
+MC0097,9,Agent,Is there anything else I can help with today?
+MC0097,10,Customer,Okay. Thanks for your help.
+MC0098,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0098,2,Customer,There's a $114.57 charge on my bill that I don't recognize.
+MC0098,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0098,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0098,5,Customer,"Sure, it ends in 1436."
+MC0098,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0098,7,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0098,8,Customer,Fine. Please make sure someone actually calls.
+MC0098,9,Agent,Is there anything else I can help with today?
+MC0098,10,Customer,"No, that's all. Thank you."
+MC0099,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0099,2,Customer,I was charged $79.09 twice on this bill.
+MC0099,3,Customer,Can you take that off the bill?
+MC0099,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0099,5,Agent,"For security, can you confirm the service address city?"
+MC0099,6,Customer,"Yes, it's Lake Briar."
+MC0099,7,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0099,8,Agent,I've processed a refund of $79.09 to your card. It will show in five to seven business days.
+MC0099,9,Customer,"Okay, I'll keep an eye out."
+MC0099,10,Agent,Thanks for your patience. Anything else on the account?
+MC0099,11,Customer,Okay. Thanks for your help.
+MC0100,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0100,2,Customer,I was charged $142.68 for an installation that never happened.
+MC0100,3,Customer,Can you credit that back?
+MC0100,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0100,5,Agent,"For security, can you confirm the service address city?"
+MC0100,6,Customer,"Yes, it's North Ember."
+MC0100,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0100,8,Agent,"You're right, that was our error. I've applied a $142.68 credit, and it shows on your account now."
+MC0100,9,Customer,"Great, I can see it. Thank you."
+MC0100,10,Agent,Thanks for your patience. Anything else on the account?
+MC0100,11,Customer,"No, that's all. Thank you."
+MC0101,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0101,2,Customer,There's a $106.07 charge on my bill that I don't recognize.
+MC0101,3,Customer,I'd like that refunded.
+MC0101,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0101,5,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0101,6,Agent,"I can't apply it myself, but I'm submitting a $106.07 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0101,7,Customer,Okay. I'll watch for the email.
+MC0101,8,Agent,Thanks for your patience. Anything else on the account?
+MC0101,9,Customer,"No, that's all. Thank you."
+MC0102,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0102,2,Customer,I was charged $93.99 twice on this bill.
+MC0102,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0102,4,Agent,"For security, can you confirm the service address city?"
+MC0102,5,Customer,"Yes, it's Lake Briar."
+MC0102,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0102,7,Agent,I've processed a refund of $93.99 to your card. It will show in five to seven business days.
+MC0102,8,Customer,"Okay, I'll keep an eye out."
+MC0102,9,Agent,Thanks for your patience. Anything else on the account?
+MC0102,10,Customer,Okay. Thanks for your help.
+MC0103,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0103,2,Customer,I was charged $60.06 for an installation that never happened.
+MC0103,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0103,4,Agent,"For security, can you confirm the service address city?"
+MC0103,5,Customer,"Yes, it's Riverglass."
+MC0103,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0103,7,Agent,I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.
+MC0103,8,Customer,Thursday works.
+MC0103,9,Agent,Is there anything else I can help with today?
+MC0103,10,Customer,"No, that's all. Thank you."
+MC0104,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0104,2,Customer,"I returned the modem last month, but I'm still being charged $69.60 for it."
+MC0104,3,Agent,I understand. Give me a moment to open the billing history.
+MC0104,4,Agent,"For security, can you confirm the service address city?"
+MC0104,5,Customer,"Yes, it's Oak Meridian."
+MC0104,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0104,7,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0104,8,Customer,So nothing is happening? That's frustrating.
+MC0104,9,Agent,Thanks for your patience. Anything else on the account?
+MC0104,10,Customer,Okay. Thanks for your help.
+MC0105,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0105,2,Customer,I was charged $14.09 for an installation that never happened.
+MC0105,3,Customer,Can you credit that back?
+MC0105,4,Agent,I understand. Give me a moment to open the billing history.
+MC0105,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0105,6,Customer,"Sure, it ends in 9503."
+MC0105,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0105,8,Agent,"You're right, that was our error. I've applied a $14.09 credit, and it shows on your account now."
+MC0105,9,Customer,"Great, I can see it. Thank you."
+MC0105,10,Agent,Thanks for your patience. Anything else on the account?
+MC0105,11,Customer,"No, that's all. Thank you."
+MC0106,1,Agent,"Orivanta Home Services billing, this is Tess. What can I look at for you?"
+MC0106,2,Customer,"I returned the modem last month, but I'm still being charged $139.83 for it."
+MC0106,3,Customer,I'd like that refunded.
+MC0106,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0106,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0106,6,Agent,I've processed a refund of $139.83 to your card. It will show in five to seven business days.
+MC0106,7,Customer,"Okay, I'll keep an eye out."
+MC0106,8,Agent,Thanks for your patience. Anything else on the account?
+MC0106,9,Customer,"That's it, thanks."
+MC0107,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0107,2,Customer,There's a $151.58 charge on my bill that I don't recognize.
+MC0107,3,Agent,I understand. Give me a moment to open the billing history.
+MC0107,4,Agent,"For security, can you confirm the service address city?"
+MC0107,5,Customer,"Yes, it's Stonefield."
+MC0107,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0107,7,Agent,I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.
+MC0107,8,Customer,Thursday works.
+MC0107,9,Agent,Is there anything else I can help with today?
+MC0107,10,Customer,"No, that's all. Thank you."
+MC0108,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0108,2,Customer,I was charged $131.98 twice on this bill.
+MC0108,3,Agent,I understand. Give me a moment to open the billing history.
+MC0108,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0108,5,Customer,"Sure, it ends in 9070."
+MC0108,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0108,7,Agent,I've processed a refund of $131.98 to your card. It will show in five to seven business days.
+MC0108,8,Customer,"Okay, I'll keep an eye out."
+MC0108,9,Agent,Thanks for your patience. Anything else on the account?
+MC0108,10,Customer,"That's it, thanks."
+MC0109,1,Agent,"Orivanta Home Services billing, this is Priya. What can I look at for you?"
+MC0109,2,Customer,My service was out for two days and I'm still billed $103.62 for the month.
+MC0109,3,Agent,I understand. Give me a moment to open the billing history.
+MC0109,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0109,5,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0109,6,Customer,Fine. Please make sure someone actually calls.
+MC0109,7,Agent,Thanks for your patience. Anything else on the account?
+MC0109,8,Customer,"No, that's all. Thank you."
+MC0110,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0110,2,Customer,There's a $25.98 charge on my bill that I don't recognize.
+MC0110,3,Agent,I understand. Give me a moment to open the billing history.
+MC0110,4,Agent,"For security, can you confirm the service address city?"
+MC0110,5,Customer,"Yes, it's Riverglass."
+MC0110,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0110,7,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0110,8,Customer,Fine. Please make sure someone actually calls.
+MC0110,9,Agent,Thanks for your patience. Anything else on the account?
+MC0110,10,Customer,"That's it, thanks."
+MC0111,1,Agent,"Orivanta Home Services billing, this is Jordan. What can I look at for you?"
+MC0111,2,Customer,I was charged $158.05 twice on this bill.
+MC0111,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0111,4,Agent,I have the invoice open and I'm reviewing the line items.
+MC0111,5,Agent,I've processed a refund of $158.05 to your card. It will show in five to seven business days.
+MC0111,6,Customer,"Okay, I'll keep an eye out."
+MC0111,7,Agent,Is there anything else I can help with today?
+MC0111,8,Customer,"That's it, thanks."
+MC0112,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0112,2,Customer,There's a $149.66 charge on my bill that I don't recognize.
+MC0112,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0112,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0112,5,Agent,I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.
+MC0112,6,Customer,Thursday works.
+MC0112,7,Agent,Is there anything else I can help with today?
+MC0112,8,Customer,Okay. Thanks for your help.
+MC0113,1,Agent,"Orivanta Home Services billing, this is Priya. What can I look at for you?"
+MC0113,2,Customer,My service was out for two days and I'm still billed $66.19 for the month.
+MC0113,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0113,4,Agent,I have the invoice open and I'm reviewing the line items.
+MC0113,5,Agent,Let me see what I can do about a credit on that. I'll make a note on the account.
+MC0113,6,Customer,Okay. I hope something actually happens this time.
+MC0113,7,Agent,Is there anything else I can help with today?
+MC0113,8,Customer,"That's it, thanks."
+MC0114,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0114,2,Customer,There's a $108.59 charge on my bill that I don't recognize.
+MC0114,3,Customer,Can you take that off the bill?
+MC0114,4,Agent,I understand. Give me a moment to open the billing history.
+MC0114,5,Agent,"For security, can you confirm the service address city?"
+MC0114,6,Customer,"Yes, it's Stonefield."
+MC0114,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0114,8,Agent,"I can't apply it myself, but I'm submitting a $108.59 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0114,9,Customer,Okay. I'll watch for the email.
+MC0114,10,Agent,Is there anything else I can help with today?
+MC0114,11,Customer,"No, that's all. Thank you."
+MC0115,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0115,2,Customer,I was charged $100.50 twice on this bill.
+MC0115,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0115,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0115,5,Customer,"Sure, it ends in 8049."
+MC0115,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0115,7,Agent,"I can't apply it myself, but I'm submitting a $100.50 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0115,8,Customer,Okay. I'll watch for the email.
+MC0115,9,Agent,Is there anything else I can help with today?
+MC0115,10,Customer,Okay. Thanks for your help.
+MC0116,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0116,2,Customer,"I returned the modem last month, but I'm still being charged $139.27 for it."
+MC0116,3,Customer,Can you credit that back?
+MC0116,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0116,5,Agent,"For security, can you confirm the service address city?"
+MC0116,6,Customer,"Yes, it's Oak Meridian."
+MC0116,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0116,8,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0116,9,Customer,So nothing is happening? That's frustrating.
+MC0116,10,Agent,Is there anything else I can help with today?
+MC0116,11,Customer,"That's it, thanks."
+MC0117,1,Agent,"Orivanta Home Services billing, this is Omar. What can I look at for you?"
+MC0117,2,Customer,I was charged $48.44 for an installation that never happened.
+MC0117,3,Customer,Can you take that off the bill?
+MC0117,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0117,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0117,6,Customer,"Sure, it ends in 7467."
+MC0117,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0117,8,Agent,I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.
+MC0117,9,Customer,Thursday works.
+MC0117,10,Agent,Thanks for your patience. Anything else on the account?
+MC0117,11,Customer,Okay. Thanks for your help.
+MC0118,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0118,2,Customer,There's a $119.81 charge on my bill that I don't recognize.
+MC0118,3,Customer,Can you credit that back?
+MC0118,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0118,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0118,6,Customer,"Sure, it ends in 4353."
+MC0118,7,Agent,I can see the charge on the April statement. Let me compare it with your payment history.
+MC0118,8,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0118,9,Customer,Fine. Please make sure someone actually calls.
+MC0118,10,Agent,Is there anything else I can help with today?
+MC0118,11,Customer,Okay. Thanks for your help.
+MC0119,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0119,2,Customer,My service was out for two days and I'm still billed $92.39 for the month.
+MC0119,3,Customer,Can you take that off the bill?
+MC0119,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0119,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0119,6,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0119,7,Customer,So nothing is happening? That's frustrating.
+MC0119,8,Agent,Is there anything else I can help with today?
+MC0119,9,Customer,Okay. Thanks for your help.
+MC0120,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0120,2,Customer,I was charged $116.34 for an installation that never happened.
+MC0120,3,Customer,Can you take that off the bill?
+MC0120,4,Agent,Let me check that for you. One moment while I review the bill.
+MC0120,5,Agent,"For security, can you confirm the service address city?"
+MC0120,6,Customer,"Yes, it's Riverglass."
+MC0120,7,Agent,I can see the charge on the March statement. Let me compare it with your payment history.
+MC0120,8,Agent,"You're right, that was our error. I've applied a $116.34 credit, and it shows on your account now."
+MC0120,9,Customer,"Great, I can see it. Thank you."
+MC0120,10,Agent,Is there anything else I can help with today?
+MC0120,11,Customer,Okay. Thanks for your help.
+MC0121,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0121,2,Customer,I was charged $93.94 for an installation that never happened.
+MC0121,3,Customer,Can you take that off the bill?
+MC0121,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0121,5,Agent,"For security, can you confirm the service address city?"
+MC0121,6,Customer,"Yes, it's Lake Briar."
+MC0121,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0121,8,Agent,I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.
+MC0121,9,Customer,Thursday works.
+MC0121,10,Agent,Is there anything else I can help with today?
+MC0121,11,Customer,Okay. Thanks for your help.
+MC0122,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0122,2,Customer,I was charged $87.17 for an installation that never happened.
+MC0122,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0122,4,Agent,"For security, can you confirm the service address city?"
+MC0122,5,Customer,"Yes, it's Lake Briar."
+MC0122,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0122,7,Agent,"You're right, that was our error. I've applied a $87.17 credit, and it shows on your account now."
+MC0122,8,Customer,"Great, I can see it. Thank you."
+MC0122,9,Agent,Thanks for your patience. Anything else on the account?
+MC0122,10,Customer,Okay. Thanks for your help.
+MC0123,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0123,2,Customer,"I returned the modem last month, but I'm still being charged $40.45 for it."
+MC0123,3,Customer,Can you credit that back?
+MC0123,4,Agent,I understand. Give me a moment to open the billing history.
+MC0123,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0123,6,Agent,"I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+MC0123,7,Customer,So nothing is happening? That's frustrating.
+MC0123,8,Agent,Thanks for your patience. Anything else on the account?
+MC0123,9,Customer,"That's it, thanks."
+MC0124,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0124,2,Customer,There's a $131.08 charge on my bill that I don't recognize.
+MC0124,3,Customer,Can you credit that back?
+MC0124,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0124,5,Agent,"For security, can you confirm the service address city?"
+MC0124,6,Customer,"Yes, it's Maple Junction."
+MC0124,7,Agent,I can see the charge on the April statement. Let me compare it with your payment history.
+MC0124,8,Agent,I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.
+MC0124,9,Customer,Thursday works.
+MC0124,10,Agent,Is there anything else I can help with today?
+MC0124,11,Customer,"That's it, thanks."
+MC0125,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0125,2,Customer,"There's a $119.13 late fee, but I'm on autopay."
+MC0125,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0125,4,Agent,"For security, can you confirm the service address city?"
+MC0125,5,Customer,"Yes, it's Riverglass."
+MC0125,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0125,7,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0125,8,Customer,"Okay, that makes sense. I didn't realize that."
+MC0125,9,Agent,Thanks for your patience. Anything else on the account?
+MC0125,10,Customer,"No, that's all. Thank you."
+MC0126,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0126,2,Customer,"I returned the modem last month, but I'm still being charged $155.81 for it."
+MC0126,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0126,4,Agent,I have the invoice open and I'm reviewing the line items.
+MC0126,5,Agent,I've processed a refund of $155.81 to your card. It will show in five to seven business days.
+MC0126,6,Customer,"Okay, I'll keep an eye out."
+MC0126,7,Agent,Is there anything else I can help with today?
+MC0126,8,Customer,"That's it, thanks."
+MC0127,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0127,2,Customer,There's a $126.46 charge on my bill that I don't recognize.
+MC0127,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0127,4,Agent,"For security, can you confirm the service address city?"
+MC0127,5,Customer,"Yes, it's Riverglass."
+MC0127,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0127,7,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0127,8,Customer,Fine. Please make sure someone actually calls.
+MC0127,9,Agent,Thanks for your patience. Anything else on the account?
+MC0127,10,Customer,Okay. Thanks for your help.
+MC0128,1,Agent,"Orivanta Home Services billing, this is Omar. What can I look at for you?"
+MC0128,2,Customer,I was charged $97.00 twice on this bill.
+MC0128,3,Customer,Can you credit that back?
+MC0128,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0128,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0128,6,Customer,"Sure, it ends in 5962."
+MC0128,7,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0128,8,Agent,"You're right, that was our error. I've applied a $97.00 credit, and it shows on your account now."
+MC0128,9,Customer,"Great, I can see it. Thank you."
+MC0128,10,Agent,Is there anything else I can help with today?
+MC0128,11,Customer,"No, that's all. Thank you."
+MC0129,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0129,2,Customer,There's a $60.58 charge on my bill that I don't recognize.
+MC0129,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0129,4,Agent,I have the invoice open and I'm reviewing the line items.
+MC0129,5,Agent,"You're right, that was our error. I've applied a $60.58 credit, and it shows on your account now."
+MC0129,6,Customer,"Great, I can see it. Thank you."
+MC0129,7,Agent,Thanks for your patience. Anything else on the account?
+MC0129,8,Customer,"That's it, thanks."
+MC0130,1,Agent,"Orivanta Home Services billing, this is Maya. What can I look at for you?"
+MC0130,2,Customer,My $25.49 monthly discount isn't on this bill.
+MC0130,3,Customer,I'd like that refunded.
+MC0130,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0130,5,Agent,"For security, can you confirm the service address city?"
+MC0130,6,Customer,"Yes, it's Riverglass."
+MC0130,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0130,8,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $25.49 discount, and it's on the account now."
+MC0130,9,Customer,"Thank you, that's what I needed."
+MC0130,10,Agent,Is there anything else I can help with today?
+MC0130,11,Customer,"That's it, thanks."
+MC0131,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0131,2,Customer,There's a $39.99 charge on my bill that I don't recognize.
+MC0131,3,Customer,Can you take that off the bill?
+MC0131,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0131,5,Agent,"For security, can you confirm the service address city?"
+MC0131,6,Customer,"Yes, it's Oak Meridian."
+MC0131,7,Agent,I can see the charge on the March statement. Let me compare it with your payment history.
+MC0131,8,Agent,"You're right, that was our error. I've applied a $39.99 credit, and it shows on your account now."
+MC0131,9,Customer,"Great, I can see it. Thank you."
+MC0131,10,Agent,Thanks for your patience. Anything else on the account?
+MC0131,11,Customer,"That's it, thanks."
+MC0132,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0132,2,Customer,I was charged $41.83 for an installation that never happened.
+MC0132,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0132,4,Agent,"For security, can you confirm the service address city?"
+MC0132,5,Customer,"Yes, it's Oak Meridian."
+MC0132,6,Agent,I can see the charge on the July statement. Let me compare it with your payment history.
+MC0132,7,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0132,8,Customer,Fine. Please make sure someone actually calls.
+MC0132,9,Agent,Is there anything else I can help with today?
+MC0132,10,Customer,"No, that's all. Thank you."
+MC0133,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0133,2,Customer,There's a $90.21 charge on my bill that I don't recognize.
+MC0133,3,Agent,I understand. Give me a moment to open the billing history.
+MC0133,4,Agent,I have the invoice open and I'm reviewing the line items.
+MC0133,5,Agent,"That charge is the new streaming add-on that was added on the account last month. It's billed correctly, and you can remove it anytime."
+MC0133,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0133,7,Agent,Is there anything else I can help with today?
+MC0133,8,Customer,Okay. Thanks for your help.
+MC0134,1,Agent,"Orivanta Home Services billing, this is Maya. What can I look at for you?"
+MC0134,2,Customer,My service was out for two days and I'm still billed $159.94 for the month.
+MC0134,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0134,4,Agent,"For security, can you confirm the service address city?"
+MC0134,5,Customer,"Yes, it's Maple Junction."
+MC0134,6,Agent,I can see the charge on the April statement. Let me compare it with your payment history.
+MC0134,7,Agent,Let me see what I can do about a credit on that. I'll make a note on the account.
+MC0134,8,Customer,Okay. I hope something actually happens this time.
+MC0134,9,Agent,Is there anything else I can help with today?
+MC0134,10,Customer,"No, that's all. Thank you."
+MC0135,1,Agent,Thanks for contacting Orivanta. I can help with account and billing questions.
+MC0135,2,Customer,"I returned the modem last month, but I'm still being charged $44.50 for it."
+MC0135,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0135,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0135,5,Customer,"Sure, it ends in 2542."
+MC0135,6,Agent,I can see the charge on the August statement. Let me compare it with your payment history.
+MC0135,7,Agent,I've processed a refund of $44.50 to your card. It will show in five to seven business days.
+MC0135,8,Customer,"Okay, I'll keep an eye out."
+MC0135,9,Agent,Thanks for your patience. Anything else on the account?
+MC0135,10,Customer,"No, that's all. Thank you."
+MC0136,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0136,2,Customer,"There's a $109.61 late fee, but I'm on autopay."
+MC0136,3,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0136,4,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0136,5,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0136,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0136,7,Agent,Thanks for your patience. Anything else on the account?
+MC0136,8,Customer,"No, that's all. Thank you."
+MC0137,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0137,2,Customer,"There's a $159.30 late fee, but I'm on autopay."
+MC0137,3,Customer,I'd like that refunded.
+MC0137,4,Agent,I understand. Give me a moment to open the billing history.
+MC0137,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0137,6,Agent,Let me see what I can do about a credit on that. I'll make a note on the account.
+MC0137,7,Customer,Okay. I hope something actually happens this time.
+MC0137,8,Agent,Is there anything else I can help with today?
+MC0137,9,Customer,"That's it, thanks."
+MC0138,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0138,2,Customer,My service was out for two days and I'm still billed $108.78 for the month.
+MC0138,3,Customer,Can you take that off the bill?
+MC0138,4,Agent,I understand. Give me a moment to open the billing history.
+MC0138,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0138,6,Customer,"Sure, it ends in 7211."
+MC0138,7,Agent,I can see the charge on the April statement. Let me compare it with your payment history.
+MC0138,8,Agent,"I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+MC0138,9,Customer,Fine. Please make sure someone actually calls.
+MC0138,10,Agent,Thanks for your patience. Anything else on the account?
+MC0138,11,Customer,Okay. Thanks for your help.
+MC0139,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0139,2,Customer,My $89.71 monthly discount isn't on this bill.
+MC0139,3,Customer,Can you credit that back?
+MC0139,4,Agent,I understand. Give me a moment to open the billing history.
+MC0139,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0139,6,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $89.71 discount, and it's on the account now."
+MC0139,7,Customer,"Thank you, that's what I needed."
+MC0139,8,Agent,Is there anything else I can help with today?
+MC0139,9,Customer,"That's it, thanks."
+MC0140,1,Agent,"Orivanta Home Services billing, this is Elias. What can I look at for you?"
+MC0140,2,Customer,My $13.57 monthly discount isn't on this bill.
+MC0140,3,Customer,I'd like that refunded.
+MC0140,4,Agent,Thanks for explaining. I'll take a look at the charges now.
+MC0140,5,Agent,I have the invoice open and I'm reviewing the line items.
+MC0140,6,Agent,"The promotion dropped off when your plan renewed. I've reapplied the $13.57 discount, and it's on the account now."
+MC0140,7,Customer,"Thank you, that's what I needed."
+MC0140,8,Agent,Thanks for your patience. Anything else on the account?
+MC0140,9,Customer,Okay. Thanks for your help.
+MC0141,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0141,2,Customer,I was charged $56.87 twice on this bill.
+MC0141,3,Agent,I understand. Give me a moment to open the billing history.
+MC0141,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0141,5,Customer,"Sure, it ends in 8458."
+MC0141,6,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0141,7,Agent,"You're right, that was our error. I've applied a $56.87 credit, and it shows on your account now."
+MC0141,8,Customer,"Great, I can see it. Thank you."
+MC0141,9,Agent,Thanks for your patience. Anything else on the account?
+MC0141,10,Customer,"That's it, thanks."
+MC0142,1,Agent,"Orivanta Home Services billing, this is Lena. What can I look at for you?"
+MC0142,2,Customer,There's a $94.34 charge on my bill that I don't recognize.
+MC0142,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0142,4,Agent,"For security, can you confirm the service address city?"
+MC0142,5,Customer,"Yes, it's Lake Briar."
+MC0142,6,Agent,I can see the charge on the May statement. Let me compare it with your payment history.
+MC0142,7,Agent,"You're right, that was our error. I've applied a $94.34 credit, and it shows on your account now."
+MC0142,8,Customer,"Great, I can see it. Thank you."
+MC0142,9,Agent,Thanks for your patience. Anything else on the account?
+MC0142,10,Customer,Okay. Thanks for your help.
+MC0143,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0143,2,Customer,My service was out for two days and I'm still billed $35.89 for the month.
+MC0143,3,Agent,I understand. Give me a moment to open the billing history.
+MC0143,4,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0143,5,Customer,"Sure, it ends in 7480."
+MC0143,6,Agent,I can see the charge on the July statement. Let me compare it with your payment history.
+MC0143,7,Agent,"I can't apply it myself, but I'm submitting a $5.38 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0143,8,Customer,Okay. I'll watch for the email.
+MC0143,9,Agent,Thanks for your patience. Anything else on the account?
+MC0143,10,Customer,"No, that's all. Thank you."
+MC0144,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0144,2,Customer,There's a $119.30 charge on my bill that I don't recognize.
+MC0144,3,Customer,Can you take that off the bill?
+MC0144,4,Agent,I understand. Give me a moment to open the billing history.
+MC0144,5,Agent,"Before I go into the details, can you confirm the last four digits on the account?"
+MC0144,6,Customer,"Sure, it ends in 6073."
+MC0144,7,Agent,I have the invoice open and I'm reviewing the line items.
+MC0144,8,Agent,"I can't apply it myself, but I'm submitting a $119.30 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0144,9,Customer,Okay. I'll watch for the email.
+MC0144,10,Agent,Is there anything else I can help with today?
+MC0144,11,Customer,"That's it, thanks."
+MC0145,1,Agent,"Orivanta Home Services billing, this is Tess. What can I look at for you?"
+MC0145,2,Customer,"There's a $126.92 late fee, but I'm on autopay."
+MC0145,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0145,4,Agent,I can see the charge on the June statement. Let me compare it with your payment history.
+MC0145,5,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0145,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0145,7,Agent,Thanks for your patience. Anything else on the account?
+MC0145,8,Customer,"That's it, thanks."
+MC0146,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0146,2,Customer,There's a $43.55 charge on my bill that I don't recognize.
+MC0146,3,Customer,I'd like that refunded.
+MC0146,4,Agent,I'm sorry about that. Let me pull up the account.
+MC0146,5,Agent,I can see the charge on the April statement. Let me compare it with your payment history.
+MC0146,6,Agent,I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.
+MC0146,7,Customer,Thursday works.
+MC0146,8,Agent,Thanks for your patience. Anything else on the account?
+MC0146,9,Customer,"No, that's all. Thank you."
+MC0147,1,Agent,You've reached Orivanta customer care. What's going on with your account?
+MC0147,2,Customer,"There's a $116.36 late fee, but I'm on autopay."
+MC0147,3,Agent,I understand. Give me a moment to open the billing history.
+MC0147,4,Agent,"For security, can you confirm the service address city?"
+MC0147,5,Customer,"Yes, it's North Ember."
+MC0147,6,Agent,I have the invoice open and I'm reviewing the line items.
+MC0147,7,Agent,"I can't apply it myself, but I'm submitting a $116.36 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+MC0147,8,Customer,Okay. I'll watch for the email.
+MC0147,9,Agent,Thanks for your patience. Anything else on the account?
+MC0147,10,Customer,"No, that's all. Thank you."
+MC0148,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0148,2,Customer,"I returned the modem last month, but I'm still being charged $105.26 for it."
+MC0148,3,Agent,I understand. Give me a moment to open the billing history.
+MC0148,4,Agent,"For security, can you confirm the service address city?"
+MC0148,5,Customer,"Yes, it's Oak Meridian."
+MC0148,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0148,7,Agent,I've processed a refund of $105.26 to your card. It will show in five to seven business days.
+MC0148,8,Customer,"Okay, I'll keep an eye out."
+MC0148,9,Agent,Is there anything else I can help with today?
+MC0148,10,Customer,Okay. Thanks for your help.
+MC0149,1,Agent,Thank you for calling Orivanta Home Services. How can I help today?
+MC0149,2,Customer,"There's a $79.06 late fee, but I'm on autopay."
+MC0149,3,Agent,I'm sorry about that. Let me pull up the account.
+MC0149,4,Agent,I have the invoice open and I'm reviewing the line items.
+MC0149,5,Agent,"I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time."
+MC0149,6,Customer,"Okay, that makes sense. I didn't realize that."
+MC0149,7,Agent,Is there anything else I can help with today?
+MC0149,8,Customer,"No, that's all. Thank you."
+MC0150,1,Agent,"Orivanta Home Services billing, this is Tess. What can I look at for you?"
+MC0150,2,Customer,There's a $20.70 charge on my bill that I don't recognize.
+MC0150,3,Agent,Let me check that for you. One moment while I review the bill.
+MC0150,4,Agent,"For security, can you confirm the service address city?"
+MC0150,5,Customer,"Yes, it's Lake Briar."
+MC0150,6,Agent,I'm looking at the entries now and checking where that amount came from.
+MC0150,7,Agent,I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.
+MC0150,8,Customer,Thursday works.
+MC0150,9,Agent,Thanks for your patience. Anything else on the account?
+MC0150,10,Customer,Okay. Thanks for your help.

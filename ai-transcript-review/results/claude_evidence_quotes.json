@@ -1,0 +1,902 @@
+[
+ {
+  "call_id": "MC0001",
+  "q1_quote": "Agent: Let me see what I can do about a credit on that. I'll make a note on the account.",
+  "q2_quote": "Customer: There's a $39.50 late fee, but I'm on autopay.",
+  "q4_quote": "Agent: Let me see what I can do about a credit on that. I'll make a note on the account."
+ },
+ {
+  "call_id": "MC0002",
+  "q1_quote": "",
+  "q2_quote": "[2] Customer: My service was out for two days and I'm still billed $31.35 for the month. [3] Customer: I'd like that refunded.",
+  "q4_quote": "[8] Agent: I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0003",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $39.98 discount, and it's on the account now.",
+  "q2_quote": "My $39.98 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $39.98 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0004",
+  "q1_quote": "I've processed a refund of $64.09 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $64.09 for it.",
+  "q4_quote": "I've processed a refund of $64.09 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0005",
+  "q1_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "There's a $94.95 charge on my bill that I don't recognize.",
+  "q4_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0006",
+  "q1_quote": "You're right, that was our error. I've applied a $46.81 credit, and it shows on your account now.",
+  "q2_quote": "There's a $46.81 late fee, but I'm on autopay.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0007",
+  "q1_quote": "I've processed a refund of $36.22 to your card. It will show in five to seven business days.",
+  "q2_quote": "I was charged $36.22 twice on this bill.",
+  "q4_quote": "I've processed a refund of $36.22 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0008",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "I was charged $14.52 for an installation that never happened.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0009",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $79.25 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $79.25 late fee, but I'm on autopay.",
+  "q4_quote": "I'm submitting a $79.25 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0010",
+  "q1_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.",
+  "q2_quote": "There's a $119.25 charge on my bill that I don't recognize.",
+  "q4_quote": "Let me see what I can do about a credit on that. I'll make a note on the account."
+ },
+ {
+  "call_id": "MC0011",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "I was charged $114.56 for an installation that never happened.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0012",
+  "q1_quote": "I've processed a refund of $73.52 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $73.52 for it.",
+  "q4_quote": "I've processed a refund of $73.52 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0013",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "My service was out for two days and I'm still billed $75.60 for the month.",
+  "q4_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0014",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $134.16 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "I was charged $134.16 twice on this bill.",
+  "q4_quote": "I'm submitting a $134.16 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0015",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $44.18 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "I was charged $44.18 twice on this bill.",
+  "q4_quote": "I'm submitting a $44.18 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0016",
+  "q1_quote": "You're right, that was our error. I've applied a $64.15 credit, and it shows on your account now.",
+  "q2_quote": "There's a $64.15 charge on my bill that I don't recognize.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0017",
+  "q1_quote": "I've processed a refund of $133.71 to your card. It will show in five to seven business days.",
+  "q2_quote": "I was charged $133.71 twice on this bill.",
+  "q4_quote": "I've processed a refund of $133.71 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0018",
+  "q1_quote": "",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $156.84 for it.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0019",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "I was charged $148.83 for an installation that never happened.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0020",
+  "q1_quote": "",
+  "q2_quote": "There's a $65.55 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0021",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $23.13 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "I was charged $23.13 twice on this bill.",
+  "q4_quote": "I'm submitting a $23.13 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0022",
+  "q1_quote": "I've processed a refund of $74.17 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $74.17 for it.",
+  "q4_quote": "I've processed a refund of $74.17 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0023",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $101.81 discount, and it's on the account now.",
+  "q2_quote": "My $101.81 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $101.81 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0024",
+  "q1_quote": "You're right, that was our error. I've applied a $55.38 credit, and it shows on your account now.",
+  "q2_quote": "There's a $55.38 late fee, but I'm on autopay.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0025",
+  "q1_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $126.98 for it.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0026",
+  "q1_quote": "",
+  "q2_quote": "There's a $45.17 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0027",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $115.57 discount, and it's on the account now.",
+  "q2_quote": "My $115.57 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $115.57 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0028",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $132.76 discount, and it's on the account now.",
+  "q2_quote": "My $132.76 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $132.76 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0029",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $18.03 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "My service was out for two days and I'm still billed $90.15 for the month.",
+  "q4_quote": "I can't apply it myself, but I'm submitting a $18.03 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0030",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "I was charged $72.13 for an installation that never happened.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0031",
+  "q1_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "I was charged $148.36 for an installation that never happened.",
+  "q4_quote": "I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0032",
+  "q1_quote": "You're right, that was our error. I've applied a $139.68 credit, and it shows on your account now.",
+  "q2_quote": "There's a $139.68 late fee, but I'm on autopay.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0033",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $92.58 discount, and it's on the account now.",
+  "q2_quote": "My $92.58 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $92.58 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0034",
+  "q1_quote": "You're right, that was our error. I've applied a $128.58 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $128.58 for an installation that never happened.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0035",
+  "q1_quote": "",
+  "q2_quote": "There's a $33.04 charge on my bill that I don't recognize.",
+  "q4_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0036",
+  "q1_quote": "",
+  "q2_quote": "There's a $55.87 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0037",
+  "q1_quote": "",
+  "q2_quote": "There's a $13.56 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0038",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $100.49 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $100.49 charge on my bill that I don't recognize.",
+  "q4_quote": "I'm submitting a $100.49 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0039",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $129.25 discount, and it's on the account now.",
+  "q2_quote": "My $129.25 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $129.25 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0040",
+  "q1_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "I was charged $6.92 for an installation that never happened.",
+  "q4_quote": "I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0041",
+  "q1_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.",
+  "q2_quote": "My service was out for two days and I'm still billed $137.72 for the month.",
+  "q4_quote": "Let me see what I can do about a credit on that. I'll make a note on the account."
+ },
+ {
+  "call_id": "MC0042",
+  "q1_quote": "",
+  "q2_quote": "There's a $123.69 charge on my bill that I don't recognize.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0043",
+  "q1_quote": "You're right, that was our error. I've applied a $36.74 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $36.74 for an installation that never happened.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0044",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $68.58 discount, and it's on the account now.",
+  "q2_quote": "My $68.58 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $68.58 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0045",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "My service was out for two days and I'm still billed $29.60 for the month.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0046",
+  "q1_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.",
+  "q2_quote": "There's a $58.80 charge on my bill that I don't recognize.",
+  "q4_quote": "So nothing is happening? That's frustrating."
+ },
+ {
+  "call_id": "MC0047",
+  "q1_quote": "",
+  "q2_quote": "[2] Customer: I returned the modem last month, but I'm still being charged $142.70 for it. [3] Customer: Can you take that off the bill?",
+  "q4_quote": "[8] Agent: I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0048",
+  "q1_quote": "",
+  "q2_quote": "[2] Customer: I returned the modem last month, but I'm still being charged $61.03 for it. [3] Customer: Can you take that off the bill?",
+  "q4_quote": "[6] Agent: I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0049",
+  "q1_quote": "I've processed a refund of $32.40 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $32.40 for it.",
+  "q4_quote": "I've processed a refund of $32.40 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0050",
+  "q1_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $136.24 for it.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0051",
+  "q1_quote": "",
+  "q2_quote": "There's a $53.43 charge on my bill that I don't recognize.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0052",
+  "q1_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.",
+  "q2_quote": "There's a $138.95 charge on my bill that I don't recognize.",
+  "q4_quote": "Let me see what I can do about a credit on that. I'll make a note on the account."
+ },
+ {
+  "call_id": "MC0053",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $40.72 discount, and it's on the account now.",
+  "q2_quote": "My $40.72 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $40.72 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0054",
+  "q1_quote": "",
+  "q2_quote": "There's a $71.82 charge on my bill that I don't recognize.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0055",
+  "q1_quote": "You're right, that was our error. I've applied a $121.37 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $121.37 twice on this bill.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0056",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $8.86 discount, and it's on the account now.",
+  "q2_quote": "My $8.86 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $8.86 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0057",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "I was charged $33.13 for an installation that never happened.",
+  "q4_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0058",
+  "q1_quote": "",
+  "q2_quote": "I was charged $16.18 for an installation that never happened.",
+  "q4_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0059",
+  "q1_quote": "",
+  "q2_quote": "There's a $147.38 charge on my bill that I don't recognize.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0060",
+  "q1_quote": "You're right, that was our error. I've applied a $112.50 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $112.50 twice on this bill.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0061",
+  "q1_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "There's a $129.72 charge on my bill that I don't recognize.",
+  "q4_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0062",
+  "q1_quote": "",
+  "q2_quote": "There's a $55.85 charge on my bill that I don't recognize.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0063",
+  "q1_quote": "I've processed a refund of $130.04 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $130.04 for it.",
+  "q4_quote": "I've processed a refund of $130.04 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0064",
+  "q1_quote": "You're right, that was our error. I've applied a $153.16 credit, and it shows on your account now.",
+  "q2_quote": "There's a $153.16 charge on my bill that I don't recognize.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0065",
+  "q1_quote": "",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $130.58 for it.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0066",
+  "q1_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $100.78 for it.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0067",
+  "q1_quote": "Agent: I've processed a refund of $72.50 to your card. It will show in five to seven business days.",
+  "q2_quote": "Customer: I returned the modem last month, but I'm still being charged $72.50 for it.",
+  "q4_quote": "Agent: I've processed a refund of $72.50 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0068",
+  "q1_quote": "",
+  "q2_quote": "There's a $107.90 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0069",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $64.00 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $64.00 late fee, but I'm on autopay.",
+  "q4_quote": "I can't apply it myself, but I'm submitting a $64.00 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0070",
+  "q1_quote": "",
+  "q2_quote": "There's a $103.19 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0071",
+  "q1_quote": "I've processed a refund of $8.49 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $8.49 for it.",
+  "q4_quote": "I've processed a refund of $8.49 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0072",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "There's a $57.57 charge on my bill that I don't recognize.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0073",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $14.65 adjustment request to billing now.",
+  "q2_quote": "My service was out for two days and I'm still billed $146.52 for the month.",
+  "q4_quote": "You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0074",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $133.54 discount, and it's on the account now.",
+  "q2_quote": "My $133.54 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $133.54 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0075",
+  "q1_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.",
+  "q2_quote": "I was charged $63.03 twice on this bill.",
+  "q4_quote": "Let me see what I can do about a credit on that. I'll make a note on the account."
+ },
+ {
+  "call_id": "MC0076",
+  "q1_quote": "You're right, that was our error. I've applied a $102.92 credit, and it shows on your account now.",
+  "q2_quote": "There's a $102.92 late fee, but I'm on autopay.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0077",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $26.37 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "My service was out for two days and I'm still billed $131.84 for the month.",
+  "q4_quote": "I'm submitting a $26.37 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0078",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $7.24 discount, and it's on the account now.",
+  "q2_quote": "My $7.24 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $7.24 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0079",
+  "q1_quote": "You're right, that was our error. I've applied a $87.47 credit, and it shows on your account now.",
+  "q2_quote": "There's a $87.47 late fee, but I'm on autopay.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0080",
+  "q1_quote": "",
+  "q2_quote": "There's a $129.85 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0081",
+  "q1_quote": "You're right, that was our error. I've applied a $92.96 credit, and it shows on your account now.",
+  "q2_quote": "There's a $92.96 late fee, but I'm on autopay.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0082",
+  "q1_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.",
+  "q2_quote": "There's a $57.92 charge on my bill that I don't recognize.",
+  "q4_quote": "So nothing is happening? That's frustrating."
+ },
+ {
+  "call_id": "MC0083",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "There's a $134.60 charge on my bill that I don't recognize.",
+  "q4_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0084",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "I was charged $119.55 for an installation that never happened.",
+  "q4_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0085",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $129.26 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $129.26 charge on my bill that I don't recognize.",
+  "q4_quote": "I'm submitting a $129.26 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0086",
+  "q1_quote": "",
+  "q2_quote": "There's a $23.42 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0087",
+  "q1_quote": "You're right, that was our error. I've applied a $74.54 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $74.54 twice on this bill.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0088",
+  "q1_quote": "You're right, that was our error. I've applied a $26.70 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $26.70 twice on this bill.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0089",
+  "q1_quote": "",
+  "q2_quote": "My service was out for two days and I'm still billed $61.92 for the month.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0090",
+  "q1_quote": "",
+  "q2_quote": "There's a $132.30 charge on my bill that I don't recognize.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0091",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "I was charged $75.60 for an installation that never happened.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0092",
+  "q1_quote": "I've processed a refund of $128.28 to your card. It will show in five to seven business days.",
+  "q2_quote": "I was charged $128.28 twice on this bill.",
+  "q4_quote": "I've processed a refund of $128.28 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0093",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $20.32 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "My service was out for two days and I'm still billed $135.49 for the month.",
+  "q4_quote": "I'm submitting a $20.32 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0094",
+  "q1_quote": "",
+  "q2_quote": "I was charged $76.16 for an installation that never happened.",
+  "q4_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0095",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $70.72 discount, and it's on the account now.",
+  "q2_quote": "My $70.72 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $70.72 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0096",
+  "q1_quote": "You're right, that was our error. I've applied a $31.05 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $31.05 for an installation that never happened.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0097",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $110.42 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $110.42 charge on my bill that I don't recognize.",
+  "q4_quote": "I can't apply it myself, but I'm submitting a $110.42 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0098",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "There's a $114.57 charge on my bill that I don't recognize.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0099",
+  "q1_quote": "I've processed a refund of $79.09 to your card. It will show in five to seven business days.",
+  "q2_quote": "I was charged $79.09 twice on this bill.",
+  "q4_quote": "I've processed a refund of $79.09 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0100",
+  "q1_quote": "You're right, that was our error. I've applied a $142.68 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $142.68 for an installation that never happened.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0101",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $106.07 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $106.07 charge on my bill that I don't recognize.",
+  "q4_quote": "I'm submitting a $106.07 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0102",
+  "q1_quote": "I've processed a refund of $93.99 to your card. It will show in five to seven business days.",
+  "q2_quote": "I was charged $93.99 twice on this bill.",
+  "q4_quote": "I've processed a refund of $93.99 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0103",
+  "q1_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "I was charged $60.06 for an installation that never happened.",
+  "q4_quote": "I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0104",
+  "q1_quote": "",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $69.60 for it.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0105",
+  "q1_quote": "You're right, that was our error. I've applied a $14.09 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $14.09 for an installation that never happened.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0106",
+  "q1_quote": "I've processed a refund of $139.83 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $139.83 for it.",
+  "q4_quote": "I've processed a refund of $139.83 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0107",
+  "q1_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "There's a $151.58 charge on my bill that I don't recognize.",
+  "q4_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0108",
+  "q1_quote": "I've processed a refund of $131.98 to your card. It will show in five to seven business days.",
+  "q2_quote": "I was charged $131.98 twice on this bill.",
+  "q4_quote": "I've processed a refund of $131.98 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0109",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "My service was out for two days and I'm still billed $103.62 for the month.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0110",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "There's a $25.98 charge on my bill that I don't recognize.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0111",
+  "q1_quote": "I've processed a refund of $158.05 to your card. It will show in five to seven business days.",
+  "q2_quote": "I was charged $158.05 twice on this bill.",
+  "q4_quote": "I've processed a refund of $158.05 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0112",
+  "q1_quote": "",
+  "q2_quote": "There's a $149.66 charge on my bill that I don't recognize.",
+  "q4_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0113",
+  "q1_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.",
+  "q2_quote": "My service was out for two days and I'm still billed $66.19 for the month.",
+  "q4_quote": "Let me see what I can do about a credit on that. I'll make a note on the account."
+ },
+ {
+  "call_id": "MC0114",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $108.59 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $108.59 charge on my bill that I don't recognize.",
+  "q4_quote": "I'm submitting a $108.59 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0115",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $100.50 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "I was charged $100.50 twice on this bill.",
+  "q4_quote": "I'm submitting a $100.50 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0116",
+  "q1_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $139.27 for it.",
+  "q4_quote": "So nothing is happening? That's frustrating."
+ },
+ {
+  "call_id": "MC0117",
+  "q1_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "I was charged $48.44 for an installation that never happened.",
+  "q4_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0118",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "There's a $119.81 charge on my bill that I don't recognize.",
+  "q4_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0119",
+  "q1_quote": "",
+  "q2_quote": "[2] Customer: My service was out for two days and I'm still billed $92.39 for the month. / [3] Customer: Can you take that off the bill?",
+  "q4_quote": "[6] Agent: I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0120",
+  "q1_quote": "You're right, that was our error. I've applied a $116.34 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $116.34 for an installation that never happened.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0121",
+  "q1_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "I was charged $93.94 for an installation that never happened.",
+  "q4_quote": "I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0122",
+  "q1_quote": "You're right, that was our error. I've applied a $87.17 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $87.17 for an installation that never happened.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0123",
+  "q1_quote": "",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $40.45 for it.",
+  "q4_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later."
+ },
+ {
+  "call_id": "MC0124",
+  "q1_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "There's a $131.08 charge on my bill that I don't recognize.",
+  "q4_quote": "I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0125",
+  "q1_quote": "",
+  "q2_quote": "There's a $119.13 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0126",
+  "q1_quote": "I've processed a refund of $155.81 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $155.81 for it.",
+  "q4_quote": "I've processed a refund of $155.81 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0127",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "There's a $126.46 charge on my bill that I don't recognize.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0128",
+  "q1_quote": "You're right, that was our error. I've applied a $97.00 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $97.00 twice on this bill.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0129",
+  "q1_quote": "You're right, that was our error. I've applied a $60.58 credit, and it shows on your account now.",
+  "q2_quote": "There's a $60.58 charge on my bill that I don't recognize.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0130",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $25.49 discount, and it's on the account now.",
+  "q2_quote": "My $25.49 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $25.49 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0131",
+  "q1_quote": "You're right, that was our error. I've applied a $39.99 credit, and it shows on your account now.",
+  "q2_quote": "There's a $39.99 charge on my bill that I don't recognize.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0132",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "I was charged $41.83 for an installation that never happened.",
+  "q4_quote": "I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0133",
+  "q1_quote": "",
+  "q2_quote": "There's a $90.21 charge on my bill that I don't recognize.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0134",
+  "q1_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.",
+  "q2_quote": "My service was out for two days and I'm still billed $159.94 for the month.",
+  "q4_quote": "Let me see what I can do about a credit on that. I'll make a note on the account."
+ },
+ {
+  "call_id": "MC0135",
+  "q1_quote": "I've processed a refund of $44.50 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $44.50 for it.",
+  "q4_quote": "I've processed a refund of $44.50 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0136",
+  "q1_quote": "",
+  "q2_quote": "There's a $109.61 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0137",
+  "q1_quote": "Agent: Let me see what I can do about a credit on that. I'll make a note on the account.",
+  "q2_quote": "Customer: There's a $159.30 late fee, but I'm on autopay.",
+  "q4_quote": "Agent: Let me see what I can do about a credit on that. I'll make a note on the account."
+ },
+ {
+  "call_id": "MC0138",
+  "q1_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.",
+  "q2_quote": "My service was out for two days and I'm still billed $108.78 for the month.",
+  "q4_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days."
+ },
+ {
+  "call_id": "MC0139",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $89.71 discount, and it's on the account now.",
+  "q2_quote": "My $89.71 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $89.71 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0140",
+  "q1_quote": "The promotion dropped off when your plan renewed. I've reapplied the $13.57 discount, and it's on the account now.",
+  "q2_quote": "My $13.57 monthly discount isn't on this bill.",
+  "q4_quote": "I've reapplied the $13.57 discount, and it's on the account now."
+ },
+ {
+  "call_id": "MC0141",
+  "q1_quote": "You're right, that was our error. I've applied a $56.87 credit, and it shows on your account now.",
+  "q2_quote": "I was charged $56.87 twice on this bill.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0142",
+  "q1_quote": "You're right, that was our error. I've applied a $94.34 credit, and it shows on your account now.",
+  "q2_quote": "There's a $94.34 charge on my bill that I don't recognize.",
+  "q4_quote": "Great, I can see it. Thank you."
+ },
+ {
+  "call_id": "MC0143",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $5.38 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "My service was out for two days and I'm still billed $35.89 for the month.",
+  "q4_quote": "I'm submitting a $5.38 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0144",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $119.30 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $119.30 charge on my bill that I don't recognize.",
+  "q4_quote": "I'm submitting a $119.30 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0145",
+  "q1_quote": "",
+  "q2_quote": "There's a $126.92 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0146",
+  "q1_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "There's a $43.55 charge on my bill that I don't recognize.",
+  "q4_quote": "I'll call you back by Thursday with an answer."
+ },
+ {
+  "call_id": "MC0147",
+  "q1_quote": "I can't apply it myself, but I'm submitting a $116.36 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.",
+  "q2_quote": "There's a $116.36 late fee, but I'm on autopay.",
+  "q4_quote": "I can't apply it myself, but I'm submitting a $116.36 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days."
+ },
+ {
+  "call_id": "MC0148",
+  "q1_quote": "I've processed a refund of $105.26 to your card. It will show in five to seven business days.",
+  "q2_quote": "I returned the modem last month, but I'm still being charged $105.26 for it.",
+  "q4_quote": "I've processed a refund of $105.26 to your card. It will show in five to seven business days."
+ },
+ {
+  "call_id": "MC0149",
+  "q1_quote": "",
+  "q2_quote": "There's a $79.06 late fee, but I'm on autopay.",
+  "q4_quote": "Okay, that makes sense. I didn't realize that."
+ },
+ {
+  "call_id": "MC0150",
+  "q1_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.",
+  "q2_quote": "There's a $20.70 charge on my bill that I don't recognize.",
+  "q4_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer."
+ }
+]

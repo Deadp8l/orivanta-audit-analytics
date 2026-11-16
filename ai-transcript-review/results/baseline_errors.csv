@@ -1,0 +1,211 @@
+call_id,check,reference,predicted,planted_problem,scenario
+MC0088,Q3 notes,Contradicts,Match,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0116,Q3 notes,Contradicts,Match,SUMMARY_SAYS_RESOLVED,unresolved
+MC0025,Q3 notes,Contradicts,Match,SUMMARY_SAYS_RESOLVED,unresolved
+MC0146,Q3 notes,Contradicts,Match,NOTES_CONTRADICT_CALL,callback
+MC0030,Q3 notes,Contradicts,Match,,followup_review
+MC0113,Q3 notes,Contradicts,Match,,conditional_request
+MC0029,Q3 notes,Contradicts,Match,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0053,Q3 notes,Incomplete,Match,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0074,Q3 notes,Contradicts,Match,RECORD_SAYS_NO_PROMISE,promotion_applied
+MC0013,Q3 notes,Incomplete,Match,PROMISE_OMITTED_FROM_NOTES,followup_review
+MC0093,Q3 notes,Contradicts,Match,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0086,Q3 notes,Contradicts,Match,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0024,Q3 notes,Incomplete,Match,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0091,Q3 notes,Contradicts,Match,,followup_review
+MC0036,Q3 notes,Contradicts,Match,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0066,Q3 notes,Contradicts,Match,SUMMARY_SAYS_RESOLVED,unresolved
+MC0127,Q3 notes,Contradicts,Match,,followup_review
+MC0083,Q3 notes,Contradicts,Match,,followup_review
+MC0134,Q3 notes,Contradicts,Match,,conditional_request
+MC0009,Q3 notes,Contradicts,Match,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0045,Q3 notes,Contradicts,Match,,followup_review
+MC0084,Q3 notes,Contradicts,Match,,followup_review
+MC0033,Q3 notes,Incomplete,Match,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0008,Q3 notes,Contradicts,Match,,followup_review
+MC0103,Q3 notes,Contradicts,Match,NOTES_CONTRADICT_CALL,callback
+MC0019,Q3 notes,Contradicts,Match,,followup_review
+MC0118,Q3 notes,Contradicts,Match,,followup_review
+MC0110,Q3 notes,Contradicts,Match,,followup_review
+MC0015,Q3 notes,Contradicts,Match,RECORD_SAYS_NO_PROMISE,conditional_request
+MC0005,Q3 notes,Contradicts,Match,NOTES_CONTRADICT_CALL,callback
+MC0077,Q3 notes,Contradicts,Match,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0057,Q3 notes,Contradicts,Match,,followup_review
+MC0128,Q3 notes,Contradicts,Match,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0105,Q3 notes,Incomplete,Match,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0026,Q3 notes,Contradicts,Match,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0060,Q3 notes,Incomplete,Match,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0001,Q3 notes,Contradicts,Match,,conditional_request
+MC0072,Q3 notes,Contradicts,Match,,followup_review
+MC0041,Q3 notes,Contradicts,Match,,conditional_request
+MC0061,Q3 notes,Contradicts,Match,NOTES_CONTRADICT_CALL,callback
+MC0132,Q3 notes,Contradicts,Match,RECORD_OVERSTATES_PROMISE,followup_review
+MC0011,Q3 notes,Contradicts,Match,,followup_review
+MC0044,Q3 notes,Incomplete,Match,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0109,Q3 notes,Contradicts,Match,RECORD_SAYS_NO_PROMISE,followup_review
+MC0055,Q3 notes,Contradicts,Match,NOTES_CONTRADICT_CALL,applied_credit
+MC0100,Q3 notes,Incomplete,Match,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0126,Q3 notes,Contradicts,Match,RECORD_SAYS_NO_PROMISE,refund_processed
+MC0138,Q3 notes,Contradicts,Match,,followup_review
+MC0065,Q3 notes,Contradicts,Match,SUMMARY_SAYS_RESOLVED,unresolved
+MC0064,Q3 notes,Contradicts,Match,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0052,Q3 notes,Contradicts,Match,,conditional_request
+MC0098,Q3 notes,Contradicts,Match,RECORD_OVERSTATES_PROMISE,followup_review
+MC0104,Q3 notes,Contradicts,Match,SUMMARY_SAYS_RESOLVED,unresolved
+MC0088,Q3 field at issue,Promised action,None,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0116,Q3 field at issue,Summary,None,SUMMARY_SAYS_RESOLVED,unresolved
+MC0025,Q3 field at issue,Summary,None,SUMMARY_SAYS_RESOLVED,unresolved
+MC0146,Q3 field at issue,Notes,None,NOTES_CONTRADICT_CALL,callback
+MC0030,Q3 field at issue,Notes,None,,followup_review
+MC0113,Q3 field at issue,Notes,None,,conditional_request
+MC0029,Q3 field at issue,Promised action,None,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0053,Q3 field at issue,Notes,None,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0074,Q3 field at issue,Promised action,None,RECORD_SAYS_NO_PROMISE,promotion_applied
+MC0013,Q3 field at issue,Notes,None,PROMISE_OMITTED_FROM_NOTES,followup_review
+MC0093,Q3 field at issue,Promised action,None,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0086,Q3 field at issue,Notes,None,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0024,Q3 field at issue,Notes,None,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0091,Q3 field at issue,Notes,None,,followup_review
+MC0036,Q3 field at issue,Notes,None,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0066,Q3 field at issue,Summary,None,SUMMARY_SAYS_RESOLVED,unresolved
+MC0127,Q3 field at issue,Notes,None,,followup_review
+MC0083,Q3 field at issue,Notes,None,,followup_review
+MC0134,Q3 field at issue,Notes,None,,conditional_request
+MC0009,Q3 field at issue,Promised action,None,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0045,Q3 field at issue,Notes,None,,followup_review
+MC0084,Q3 field at issue,Notes,None,,followup_review
+MC0033,Q3 field at issue,Notes,None,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0008,Q3 field at issue,Notes,None,,followup_review
+MC0103,Q3 field at issue,Notes,None,NOTES_CONTRADICT_CALL,callback
+MC0019,Q3 field at issue,Notes,None,,followup_review
+MC0118,Q3 field at issue,Notes,None,,followup_review
+MC0110,Q3 field at issue,Notes,None,,followup_review
+MC0015,Q3 field at issue,Promised action,None,RECORD_SAYS_NO_PROMISE,conditional_request
+MC0005,Q3 field at issue,Notes,None,NOTES_CONTRADICT_CALL,callback
+MC0077,Q3 field at issue,Promised action,None,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0057,Q3 field at issue,Notes,None,,followup_review
+MC0128,Q3 field at issue,Promised action,None,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0105,Q3 field at issue,Notes,None,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0026,Q3 field at issue,Notes,None,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0060,Q3 field at issue,Notes,None,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0001,Q3 field at issue,Notes,None,,conditional_request
+MC0072,Q3 field at issue,Notes,None,,followup_review
+MC0041,Q3 field at issue,Notes,None,,conditional_request
+MC0061,Q3 field at issue,Notes,None,NOTES_CONTRADICT_CALL,callback
+MC0132,Q3 field at issue,Promised action,None,RECORD_OVERSTATES_PROMISE,followup_review
+MC0011,Q3 field at issue,Notes,None,,followup_review
+MC0044,Q3 field at issue,Notes,None,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0109,Q3 field at issue,Promised action,None,RECORD_SAYS_NO_PROMISE,followup_review
+MC0055,Q3 field at issue,Notes,None,NOTES_CONTRADICT_CALL,applied_credit
+MC0100,Q3 field at issue,Notes,None,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0126,Q3 field at issue,Promised action,None,RECORD_SAYS_NO_PROMISE,refund_processed
+MC0138,Q3 field at issue,Notes,None,,followup_review
+MC0065,Q3 field at issue,Summary,None,SUMMARY_SAYS_RESOLVED,unresolved
+MC0064,Q3 field at issue,Promised action,None,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0052,Q3 field at issue,Notes,None,,conditional_request
+MC0098,Q3 field at issue,Promised action,None,RECORD_OVERSTATES_PROMISE,followup_review
+MC0104,Q3 field at issue,Summary,None,SUMMARY_SAYS_RESOLVED,unresolved
+MC0088,Q3 coaching,Yes,No,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0116,Q3 coaching,Yes,No,SUMMARY_SAYS_RESOLVED,unresolved
+MC0025,Q3 coaching,Yes,No,SUMMARY_SAYS_RESOLVED,unresolved
+MC0146,Q3 coaching,Yes,No,NOTES_CONTRADICT_CALL,callback
+MC0030,Q3 coaching,Yes,No,,followup_review
+MC0113,Q3 coaching,Yes,No,,conditional_request
+MC0029,Q3 coaching,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0053,Q3 coaching,Yes,No,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0074,Q3 coaching,Yes,No,RECORD_SAYS_NO_PROMISE,promotion_applied
+MC0013,Q3 coaching,Yes,No,PROMISE_OMITTED_FROM_NOTES,followup_review
+MC0093,Q3 coaching,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0086,Q3 coaching,Yes,No,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0024,Q3 coaching,Yes,No,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0091,Q3 coaching,Yes,No,,followup_review
+MC0036,Q3 coaching,Yes,No,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0066,Q3 coaching,Yes,No,SUMMARY_SAYS_RESOLVED,unresolved
+MC0127,Q3 coaching,Yes,No,,followup_review
+MC0083,Q3 coaching,Yes,No,,followup_review
+MC0134,Q3 coaching,Yes,No,,conditional_request
+MC0009,Q3 coaching,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0045,Q3 coaching,Yes,No,,followup_review
+MC0084,Q3 coaching,Yes,No,,followup_review
+MC0033,Q3 coaching,Yes,No,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0008,Q3 coaching,Yes,No,,followup_review
+MC0103,Q3 coaching,Yes,No,NOTES_CONTRADICT_CALL,callback
+MC0019,Q3 coaching,Yes,No,,followup_review
+MC0118,Q3 coaching,Yes,No,,followup_review
+MC0110,Q3 coaching,Yes,No,,followup_review
+MC0015,Q3 coaching,Yes,No,RECORD_SAYS_NO_PROMISE,conditional_request
+MC0005,Q3 coaching,Yes,No,NOTES_CONTRADICT_CALL,callback
+MC0077,Q3 coaching,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0057,Q3 coaching,Yes,No,,followup_review
+MC0128,Q3 coaching,Yes,No,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0105,Q3 coaching,Yes,No,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0026,Q3 coaching,Yes,No,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0060,Q3 coaching,Yes,No,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0001,Q3 coaching,Yes,No,,conditional_request
+MC0072,Q3 coaching,Yes,No,,followup_review
+MC0041,Q3 coaching,Yes,No,,conditional_request
+MC0061,Q3 coaching,Yes,No,NOTES_CONTRADICT_CALL,callback
+MC0132,Q3 coaching,Yes,No,RECORD_OVERSTATES_PROMISE,followup_review
+MC0011,Q3 coaching,Yes,No,,followup_review
+MC0044,Q3 coaching,Yes,No,PROMISE_OMITTED_FROM_NOTES,promotion_applied
+MC0109,Q3 coaching,Yes,No,RECORD_SAYS_NO_PROMISE,followup_review
+MC0055,Q3 coaching,Yes,No,NOTES_CONTRADICT_CALL,applied_credit
+MC0100,Q3 coaching,Yes,No,PROMISE_OMITTED_FROM_NOTES,applied_credit
+MC0126,Q3 coaching,Yes,No,RECORD_SAYS_NO_PROMISE,refund_processed
+MC0138,Q3 coaching,Yes,No,,followup_review
+MC0065,Q3 coaching,Yes,No,SUMMARY_SAYS_RESOLVED,unresolved
+MC0064,Q3 coaching,Yes,No,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0052,Q3 coaching,Yes,No,,conditional_request
+MC0098,Q3 coaching,Yes,No,RECORD_OVERSTATES_PROMISE,followup_review
+MC0104,Q3 coaching,Yes,No,SUMMARY_SAYS_RESOLVED,unresolved
+MC0042,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0137,Q4 resolved,Unclear,Not resolved,,conditional_request
+MC0113,Q4 resolved,Unclear,Not resolved,,conditional_request
+MC0020,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0037,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0125,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0086,Q4 resolved,Resolved,Not resolved,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0090,Q4 resolved,Resolved,Not resolved,NOTES_MISSING,explained_no_promise
+MC0036,Q4 resolved,Resolved,Not resolved,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0062,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0075,Q4 resolved,Unclear,Not resolved,,conditional_request
+MC0080,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0070,Q4 resolved,Resolved,Not resolved,NOTES_MISSING,explained_no_promise
+MC0010,Q4 resolved,Unclear,Not resolved,,conditional_request
+MC0145,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0134,Q4 resolved,Unclear,Not resolved,,conditional_request
+MC0149,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0054,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0133,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0026,Q4 resolved,Resolved,Not resolved,NOTES_CONTRADICT_CALL,explained_no_promise
+MC0001,Q4 resolved,Unclear,Not resolved,,conditional_request
+MC0041,Q4 resolved,Unclear,Not resolved,,conditional_request
+MC0068,Q4 resolved,Resolved,Not resolved,NOTES_MISSING,explained_no_promise
+MC0136,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0059,Q4 resolved,Resolved,Not resolved,,explained_no_promise
+MC0052,Q4 resolved,Unclear,Not resolved,,conditional_request
+MC0088,Needs human review,Yes,No,RECORD_SAYS_NO_PROMISE,applied_credit
+MC0042,Needs human review,No,Yes,,explained_no_promise
+MC0146,Needs human review,Yes,No,NOTES_CONTRADICT_CALL,callback
+MC0029,Needs human review,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0020,Needs human review,No,Yes,,explained_no_promise
+MC0037,Needs human review,No,Yes,,explained_no_promise
+MC0125,Needs human review,No,Yes,,explained_no_promise
+MC0093,Needs human review,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0090,Needs human review,No,Yes,NOTES_MISSING,explained_no_promise
+MC0062,Needs human review,No,Yes,,explained_no_promise
+MC0080,Needs human review,No,Yes,,explained_no_promise
+MC0070,Needs human review,No,Yes,NOTES_MISSING,explained_no_promise
+MC0145,Needs human review,No,Yes,,explained_no_promise
+MC0009,Needs human review,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0149,Needs human review,No,Yes,,explained_no_promise
+MC0103,Needs human review,Yes,No,NOTES_CONTRADICT_CALL,callback
+MC0054,Needs human review,No,Yes,,explained_no_promise
+MC0015,Needs human review,Yes,No,RECORD_SAYS_NO_PROMISE,conditional_request
+MC0005,Needs human review,Yes,No,NOTES_CONTRADICT_CALL,callback
+MC0133,Needs human review,No,Yes,,explained_no_promise
+MC0077,Needs human review,Yes,No,RECORD_OVERSTATES_PROMISE,conditional_request
+MC0061,Needs human review,Yes,No,NOTES_CONTRADICT_CALL,callback
+MC0068,Needs human review,No,Yes,NOTES_MISSING,explained_no_promise
+MC0136,Needs human review,No,Yes,,explained_no_promise
+MC0059,Needs human review,No,Yes,,explained_no_promise

@@ -1,0 +1,122 @@
+[
+  {
+    "call_id": "MC0091",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Credit", "turn": 8, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$75.60 installation fee for an installation that never happened", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "I was charged $75.60 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Summary, notes, promised action (Investigate), $0.00 amount and follow-up disposition all reflect the billing review opened with no amount stated.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 8, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $75.60 installation fee; agent opened a billing review with billing to contact the customer within 3 business days."
+  },
+  {
+    "call_id": "MC0092",
+    "q1": {"answer": "Yes (firm)", "amount": 128.28, "type": "Refund", "turn": 7, "evidence_quote": "I've processed a refund of $128.28 to your card. It will show in five to seven business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Duplicate $128.28 charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $128.28 twice on this bill.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, promised action, $128.28 amount and disposition all match the refund processed on the call.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "I've processed a refund of $128.28 to your card. It will show in five to seven business days.", "confidence": "High"},
+    "one_line_summary": "Customer reported a duplicate $128.28 charge; agent processed a $128.28 refund to the card."
+  },
+  {
+    "call_id": "MC0093",
+    "q1": {"answer": "Yes (conditional)", "amount": 20.32, "type": "Other", "turn": 8, "evidence_quote": "I can't apply it myself, but I'm submitting a $20.32 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Full $135.49 monthly bill despite a two-day service outage", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "My service was out for two days and I'm still billed $135.49 for the month.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, $20.32 amount and Credit requested disposition match the adjustment request. Promised action 'Issue credit' is loosely worded since the agent could not apply it, but it reflects the requested credit.", "confidence": "Medium"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 8, "evidence_quote": "I can't apply it myself, but I'm submitting a $20.32 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Customer complained of being billed in full after a two-day outage; agent submitted a $20.32 adjustment request for billing review."
+  },
+  {
+    "call_id": "MC0094",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Other", "turn": 7, "evidence_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "Medium"},
+    "q2": {"answer": "Yes", "disputed_item": "$76.16 installation fee for an installation that never happened", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $76.16 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Missing", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Agent notes are blank.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $76.16 installation fee; agent will check with the installation team and call back by Thursday; notes blank."
+  },
+  {
+    "call_id": "MC0095",
+    "q1": {"answer": "Yes (firm)", "amount": 70.72, "type": "Promotion", "turn": 7, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $70.72 discount, and it's on the account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Missing $70.72 monthly discount", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "My $70.72 monthly discount isn't on this bill.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Amount", "coaching": "Yes", "explanation": "Promised amount is recorded as $89.15, but the agent reapplied a $70.72 discount.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $70.72 discount, and it's on the account now.", "confidence": "High"},
+    "one_line_summary": "Customer's $70.72 discount was missing after renewal; agent reapplied it, but the record shows $89.15."
+  },
+  {
+    "call_id": "MC0096",
+    "q1": {"answer": "Yes (firm)", "amount": 31.05, "type": "Credit", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $31.05 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$31.05 installation fee for an installation that never happened", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "I was charged $31.05 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Missing", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Agent notes are blank.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $31.05 credit, and it shows on your account now.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $31.05 installation fee; agent applied a $31.05 credit; notes blank."
+  },
+  {
+    "call_id": "MC0097",
+    "q1": {"answer": "Yes (conditional)", "amount": 110.42, "type": "Other", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $110.42 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $110.42 charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $110.42 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Amount", "coaching": "Yes", "explanation": "Promised amount is recorded as $138.10, but the agent submitted a $110.42 adjustment request.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $110.42 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Customer disputed an unrecognized $110.42 charge; agent submitted a $110.42 adjustment request, but the record shows $138.10."
+  },
+  {
+    "call_id": "MC0098",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Credit", "turn": 7, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $114.57 charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $114.57 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, $0.00 amount and follow-up disposition match the billing review. Promised action 'Issue credit' is loosely worded since the agent could not confirm a credit, but it reflects the possible credit under review.", "confidence": "Medium"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "one_line_summary": "Customer disputed an unrecognized $114.57 charge; agent opened a billing review with contact in 3 business days."
+  },
+  {
+    "call_id": "MC0099",
+    "q1": {"answer": "Yes (firm)", "amount": 79.09, "type": "Refund", "turn": 8, "evidence_quote": "I've processed a refund of $79.09 to your card. It will show in five to seven business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Duplicate $79.09 charge", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "I was charged $79.09 twice on this bill.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, promised action, $79.09 amount and disposition all match the refund processed.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "I've processed a refund of $79.09 to your card. It will show in five to seven business days.", "confidence": "High"},
+    "one_line_summary": "Customer reported a duplicate $79.09 charge and asked for it removed; agent processed a $79.09 refund."
+  },
+  {
+    "call_id": "MC0100",
+    "q1": {"answer": "Yes (firm)", "amount": 142.68, "type": "Credit", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $142.68 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$142.68 installation fee for an installation that never happened", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "I was charged $142.68 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Incomplete", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes only say 'Reviewed account; discussed installation fee.' and leave out the $142.68 credit that was applied.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $142.68 credit, and it shows on your account now.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $142.68 installation fee; agent applied a $142.68 credit, but notes omit the credit."
+  },
+  {
+    "call_id": "MC0101",
+    "q1": {"answer": "Yes (conditional)", "amount": 106.07, "type": "Other", "turn": 6, "evidence_quote": "I can't apply it myself, but I'm submitting a $106.07 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $106.07 charge", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "There's a $106.07 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, promised action (Investigate), $106.07 amount and Credit requested disposition match the adjustment request.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 6, "evidence_quote": "I can't apply it myself, but I'm submitting a $106.07 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Customer disputed an unrecognized $106.07 charge and asked for a refund; agent submitted a $106.07 adjustment request."
+  },
+  {
+    "call_id": "MC0102",
+    "q1": {"answer": "Yes (firm)", "amount": 93.99, "type": "Refund", "turn": 7, "evidence_quote": "I've processed a refund of $93.99 to your card. It will show in five to seven business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Duplicate $93.99 charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $93.99 twice on this bill.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, promised action, $93.99 amount and disposition all match the refund processed.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "I've processed a refund of $93.99 to your card. It will show in five to seven business days.", "confidence": "High"},
+    "one_line_summary": "Customer reported a duplicate $93.99 charge; agent processed a $93.99 refund."
+  },
+  {
+    "call_id": "MC0103",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Other", "turn": 7, "evidence_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "Medium"},
+    "q2": {"answer": "Yes", "disputed_item": "$60.06 installation fee for an installation that never happened", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $60.06 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes say the customer accepted all charges and reported no billing concern with no action needed, but the customer disputed the installation fee and the agent promised a callback by Thursday.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I need to confirm this with the installation team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $60.06 installation fee; agent promised a Thursday callback, but notes claim no concern and no action."
+  },
+  {
+    "call_id": "MC0104",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$69.60 modem charge after the modem was returned", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I returned the modem last month, but I'm still being charged $69.60 for it.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Summary", "coaching": "Yes", "explanation": "Summary and disposition say the issue was resolved, but the agent could not explain or change the charge and took no action.", "confidence": "High"},
+    "q4": {"answer": "Not resolved", "turn": 7, "evidence_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $69.60 charge for a returned modem; agent took no action, yet the record says resolved."
+  },
+  {
+    "call_id": "MC0105",
+    "q1": {"answer": "Yes (firm)", "amount": 14.09, "type": "Credit", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $14.09 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$14.09 installation fee for an installation that never happened", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "I was charged $14.09 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Incomplete", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes only say 'Reviewed account; discussed installation fee.' and leave out the $14.09 credit that was applied.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $14.09 credit, and it shows on your account now.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $14.09 installation fee; agent applied a $14.09 credit, but notes omit the credit."
+  }
+]
