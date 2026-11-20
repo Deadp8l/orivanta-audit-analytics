@@ -13,7 +13,7 @@ Orivanta is a fully synthetic audit analytics portfolio project examining credit
 | Recruiter or hiring manager | [Recruiter case study](case-study/Orivanta_Recruiter_Case_Study.pdf) | A 12-page executive case study focused on findings, judgment, controls, and candidate ownership |
 | Audit, risk, controls, or operations leader | [Recruiter case study](case-study/Orivanta_Recruiter_Case_Study.pdf) | Business implications, evidence boundaries, control redesign, and a proposed 30/60/90-day action plan |
 | Technical reviewer | [Technical evidence appendix](technical-appendix/Orivanta_Technical_Evidence_Appendix.pdf) | Test inventory, methodology, SQL/Python reconciliation, scenarios, traceability, and limitations |
-| AI evaluation or product reviewer | [AI transcript review](ai-transcript-review/) | An AI reviewer for synthetic customer-care calls, scored against 150 hand labels, with a [case study](ai-transcript-review/CASE_STUDY.md) on the rubric and its failure modes |
+| AI evaluation or product reviewer | [AI transcript review](ai-transcript-review/) | An AI reviewer for synthetic customer-care calls, scored against 150 reference labels I manually reviewed, with a [case study](ai-transcript-review/CASE_STUDY.md) on the rubric and its failure modes |
 | Reproducibility reviewer | [`src/`](src/), [`sql/`](sql/), [`tests/`](tests/), and [`results/`](results/) | Selected implementation and validation evidence supporting the public claims |
 
 ![Executive summary preview](assets/executive-summary-preview.png)
@@ -104,7 +104,7 @@ data/                Synthetic source data and synthetic benchmark data
 results/             Selected validated outputs supporting public claims
 methodology/         Evidence and financial-interpretation definitions
 validation/          Captured test-run evidence and validation guidance
-ai-transcript-review/ AI reviewer for synthetic customer-care calls, scored against hand labels (separate data set)
+ai-transcript-review/ AI reviewer for synthetic customer-care calls, scored against reference labels I manually reviewed (separate data set)
 ```
 
 ## Reproduce the analytical run
