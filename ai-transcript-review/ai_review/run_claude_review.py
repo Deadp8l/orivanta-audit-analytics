@@ -91,8 +91,12 @@ def review(client, call):
         raise RuntimeError(f"{call['call_id']}: model declined ({response.stop_details})")
     if response.stop_reason == "max_tokens":
         raise RuntimeError(f"{call['call_id']}: output cut off at max_tokens")
+    if response.model != MODEL:
+        print(f"  note: {call['call_id']} was answered by {response.model}, not {MODEL}")
     text = next(b.text for b in response.content if b.type == "text")
-    return json.loads(text), response.usage
+    result = json.loads(text)
+    result["served_model"] = response.model
+    return result, response.usage
 
 
 def review_cli(call, workdir):
@@ -179,6 +183,7 @@ def main():
 
     client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from the environment
     rows, quotes, usage = [], [], {"input": 0, "output": 0, "cache_read": 0}
+    served = {}
     for i, call in enumerate(calls, 1):
         try:
             r, u = review(client, call)
@@ -187,6 +192,8 @@ def main():
         except (anthropic.RateLimitError, anthropic.APIConnectionError, anthropic.APIStatusError, RuntimeError, json.JSONDecodeError) as e:
             print(f"[{i}/{len(calls)}] {call['call_id']} FAILED: {e}")
             continue
+        model = r.pop("served_model")
+        served[model] = served.get(model, 0) + 1
         usage["input"] += u.input_tokens
         usage["output"] += u.output_tokens
         usage["cache_read"] += u.cache_read_input_tokens or 0
@@ -200,6 +207,7 @@ def main():
         json.dump(quotes, f, indent=1)
     print(f"\nSaved {len(rows)} reviews to results/claude_predictions.csv")
     print(f"Tokens: {usage['input']:,} input, {usage['output']:,} output, {usage['cache_read']:,} read from cache")
+    print("Models that answered: " + ", ".join(f"{m} ({n} calls)" for m, n in served.items()))
 
 
 if __name__ == "__main__":
