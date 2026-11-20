@@ -2,7 +2,7 @@
 
 Calls scored: 150 of 150
 
-## Agreement with the reference labels (labeled by Billy)
+## Agreement with the reference labels (manually reviewed by Billy)
 
 | Check | Agreement |
 |---|---|

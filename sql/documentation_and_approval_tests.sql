@@ -1,52 +1,477 @@
 -- documentation_and_approval_tests.sql
--- Recruiter-facing consolidated SQL derived from validated source files.
+-- SQLite. Each query returns the records that one audit test flags, in a standard set of columns.
+-- T21-T23 are Python-only (percentile-based behavioral indicators), so they have no SQL here.
 
+-- T09: Invalid or inactive reason code
+-- Flags: Reason code is missing from the reason-code table or is inactive.
+SELECT 'T09' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN reason_codes r ON c.reason_code=r.reason_code
+    WHERE r.reason_code IS NULL
+        OR CAST(COALESCE(r.active_flag, 0) AS INTEGER)<>1
+) q;
 
--- ===== Source file: 05_reason_and_documentation_tests.sql =====
+-- T10: Reason code and credit type mismatch
+-- Flags: Credit type differs from the type assigned to the reason code.
+SELECT 'T10' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN reason_codes r ON c.reason_code=r.reason_code
+    WHERE c.credit_status='Posted'
+        AND c.credit_type<>r.credit_type
+) q;
 
--- SQLite-compatible audit queries. Each statement returns a standardized record-level population.
--- T21-T23 remain Python-primary normalized behavioral indicators.
+-- T11: Missing case support
+-- Flags: Posted credit has an interaction but no valid case reference.
+SELECT 'T11' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN cases_disputes ca ON c.case_id=ca.case_id
+    WHERE c.credit_status='Posted'
+        AND COALESCE(c.interaction_id, '')<>''
+        AND (COALESCE(c.case_id, '')='' OR ca.case_id IS NULL)
+) q;
 
-SELECT 'T09' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,0 direct_amount FROM credits_adjustments c LEFT JOIN reason_codes r ON c.reason_code=r.reason_code WHERE r.reason_code IS NULL OR CAST(COALESCE(r.active_flag,0) AS INTEGER)<>1) q;
+-- T12: Missing interaction support
+-- Flags: Posted credit has a case but no valid interaction reference.
+SELECT 'T12' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN interactions i ON c.interaction_id=i.interaction_id
+    WHERE c.credit_status='Posted'
+        AND COALESCE(c.case_id, '')<>''
+        AND (COALESCE(c.interaction_id, '')='' OR i.interaction_id IS NULL)
+) q;
 
-SELECT 'T10' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN reason_codes r ON c.reason_code=r.reason_code WHERE c.credit_status='Posted' AND c.credit_type<>r.credit_type) q;
+-- T13: Missing required documentation
+-- Flags: Posted credit with valid case and interaction has incomplete credit or case documentation.
+SELECT 'T13' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN cases_disputes ca ON c.case_id=ca.case_id
+    JOIN interactions i ON c.interaction_id=i.interaction_id
+    WHERE c.credit_status='Posted'
+        AND (CAST(c.documentation_complete_flag AS INTEGER)<>1 OR CAST(ca.supporting_documentation_flag AS INTEGER)<>1)
+) q;
 
-SELECT 'T11' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c LEFT JOIN cases_disputes ca ON c.case_id=ca.case_id WHERE c.credit_status='Posted' AND COALESCE(c.interaction_id,'')<>'' AND (COALESCE(c.case_id,'')='' OR ca.case_id IS NULL)) q;
+-- T14: Posted credit not communicated
+-- Flags: Posted credit has a linked interaction and customer-notified flag is false.
+SELECT 'T14' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN interactions i ON c.interaction_id=i.interaction_id
+    WHERE c.credit_status='Posted'
+        AND CAST(c.customer_notified_flag AS INTEGER)<>1
+) q;
 
-SELECT 'T12' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c LEFT JOIN interactions i ON c.interaction_id=i.interaction_id WHERE c.credit_status='Posted' AND COALESCE(c.case_id,'')<>'' AND (COALESCE(c.interaction_id,'')='' OR i.interaction_id IS NULL)) q;
+-- T15: Authentication failure
+-- Flags: Posted credit has a linked interaction with authentication-completed flag false.
+SELECT 'T15' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN interactions i ON c.interaction_id=i.interaction_id
+    WHERE c.credit_status='Posted'
+        AND CAST(i.authentication_completed_flag AS INTEGER)<>1
+) q;
 
-SELECT 'T13' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN cases_disputes ca ON c.case_id=ca.case_id JOIN interactions i ON c.interaction_id=i.interaction_id WHERE c.credit_status='Posted' AND (CAST(c.documentation_complete_flag AS INTEGER)<>1 OR CAST(ca.supporting_documentation_flag AS INTEGER)<>1)) q;
+-- T24: Promised adjustment not completed
+-- Flags: Interaction records an uncompleted adjustment promise and no linked posted credit.
+SELECT 'T24' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count,
+            SUM(credit_amount) linked_credit_amount
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        COALESCE(i.promised_amount, 0) amount,
+        ABS(COALESCE(i.promised_amount, 0)) gross_amount,
+        0 direct_amount
+    FROM interactions i
+    LEFT JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE i.promised_action IN ('Issue credit', 'Process refund', 'Apply promotion')
+        AND CAST(i.actual_action_completed_flag AS INTEGER)<>1
+        AND COALESCE(p.linked_credit_count, 0)=0
+) q;
 
-SELECT 'T14' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN interactions i ON c.interaction_id=i.interaction_id WHERE c.credit_status='Posted' AND CAST(c.customer_notified_flag AS INTEGER)<>1) q;
+-- T25: Promised amount mismatch
+-- Flags: Completed promise has linked posted credit total differing from promised amount by more than $1.
+SELECT 'T25' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count,
+            SUM(credit_amount) linked_credit_amount
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        p.linked_credit_amount amount,
+        ABS(p.linked_credit_amount) gross_amount,
+        ABS(CAST(i.promised_amount AS REAL)-p.linked_credit_amount) direct_amount
+    FROM interactions i
+    JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE i.promised_action IN ('Issue credit', 'Process refund', 'Apply promotion')
+        AND CAST(i.actual_action_completed_flag AS INTEGER)=1
+        AND COALESCE(i.promised_amount, '')<>''
+        AND ABS(CAST(i.promised_amount AS REAL)-p.linked_credit_amount)>1.0
+) q;
 
-SELECT 'T15' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN interactions i ON c.interaction_id=i.interaction_id WHERE c.credit_status='Posted' AND CAST(i.authentication_completed_flag AS INTEGER)<>1) q;
+-- T26: Promise completed after due date
+-- Flags: Completed promise has a linked credit posted after the promised completion date.
+SELECT 'T26' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count,
+            SUM(credit_amount) linked_credit_amount,
+            MAX(posting_date) latest_posting_date
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        COALESCE(i.promised_amount, p.linked_credit_amount) amount,
+        ABS(COALESCE(i.promised_amount, p.linked_credit_amount)) gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE i.promised_action IN ('Issue credit', 'Process refund', 'Apply promotion')
+        AND CAST(i.actual_action_completed_flag AS INTEGER)=1
+        AND COALESCE(i.promised_completion_date, '')<>''
+        AND date(p.latest_posting_date)>date(i.promised_completion_date)
+) q;
 
+-- T27: Transcript refund request without posted credit
+-- Flags: Transcript contains refund-request language but no linked posted credit.
+SELECT 'T27' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH tf AS (
+        SELECT interaction_id,
+            MAX(CASE WHEN speaker='Customer' AND CAST(contains_refund_request_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_refund_flag,
+            MIN(account_id) account_id,
+            MIN(customer_id) customer_id,
+            MIN(agent_id) agent_id
+        FROM transcripts
+        GROUP BY interaction_id
+    ), posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN tf ON i.interaction_id=tf.interaction_id
+    LEFT JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE tf.customer_refund_flag=1
+        AND i.contact_reason IN ('Missing refund', 'Disputed charge', 'Unexpected late fee', 'Payment reversal')
+        AND COALESCE(p.linked_credit_count, 0)=0
+) q;
 
--- ===== Source file: 08_promise_completion_tests.sql =====
+-- T28: Transcript promise not completed
+-- Flags: Transcript contains promise language and structured action-completed flag is false.
+SELECT 'T28' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH tf AS (
+        SELECT interaction_id,
+            MAX(CAST(contains_promise_flag AS INTEGER)) contains_promise
+        FROM transcripts
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        COALESCE(i.promised_amount, 0) amount,
+        ABS(COALESCE(i.promised_amount, 0)) gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN tf ON i.interaction_id=tf.interaction_id
+    WHERE tf.contains_promise=1
+        AND CAST(i.actual_action_completed_flag AS INTEGER)<>1
+) q;
 
--- SQLite-compatible audit queries. Each statement returns a standardized record-level population.
--- T21-T23 remain Python-primary normalized behavioral indicators.
+-- T29: Transcript lacks authentication evidence
+-- Flags: Credit-linked interaction has authentication flag false and transcript lacks compliance language.
+SELECT 'T29' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH tf AS (
+        SELECT interaction_id,
+            MAX(CAST(contains_compliance_language_flag AS INTEGER)) contains_compliance
+        FROM transcripts
+        GROUP BY interaction_id
+    ), posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count,
+            SUM(credit_amount) linked_credit_amount
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        p.linked_credit_amount amount,
+        ABS(p.linked_credit_amount) gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN tf ON i.interaction_id=tf.interaction_id
+    JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE CAST(i.authentication_completed_flag AS INTEGER)<>1
+        AND tf.contains_compliance<>1
+) q;
 
-SELECT 'T24' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH posted AS (SELECT interaction_id,COUNT(*) linked_credit_count,SUM(credit_amount) linked_credit_amount FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,COALESCE(i.promised_amount,0) amount,ABS(COALESCE(i.promised_amount,0)) gross_amount,0 direct_amount FROM interactions i LEFT JOIN posted p ON i.interaction_id=p.interaction_id WHERE i.promised_action IN ('Issue credit','Process refund','Apply promotion') AND CAST(i.actual_action_completed_flag AS INTEGER)<>1 AND COALESCE(p.linked_credit_count,0)=0) q;
+-- T30: Transcript contradicts agent notes
+-- Flags: Transcript indicates dispute or refund request while notes state no concern or accepted all charges.
+SELECT 'T30' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH tf AS (
+        SELECT interaction_id,
+            MAX(CASE WHEN speaker='Customer' AND CAST(contains_refund_request_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_refund_flag,
+            MAX(CASE WHEN speaker='Customer' AND CAST(contains_dispute_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_dispute_flag
+        FROM transcripts
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN tf ON i.interaction_id=tf.interaction_id
+    WHERE (tf.customer_refund_flag=1 OR tf.customer_dispute_flag=1)
+        AND (LOWER(i.agent_notes) LIKE '%accepted all charges%' OR LOWER(i.agent_notes) LIKE '%no billing concern%' OR LOWER(i.agent_notes) LIKE '%accepted standard explanation%')
+) q;
 
-SELECT 'T25' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH posted AS (SELECT interaction_id,COUNT(*) linked_credit_count,SUM(credit_amount) linked_credit_amount FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,p.linked_credit_amount amount,ABS(p.linked_credit_amount) gross_amount,ABS(CAST(i.promised_amount AS REAL)-p.linked_credit_amount) direct_amount FROM interactions i JOIN posted p ON i.interaction_id=p.interaction_id WHERE i.promised_action IN ('Issue credit','Process refund','Apply promotion') AND CAST(i.actual_action_completed_flag AS INTEGER)=1 AND COALESCE(i.promised_amount,'')<>'' AND ABS(CAST(i.promised_amount AS REAL)-p.linked_credit_amount)>1.0) q;
+-- T31: Summary inconsistent with interaction
+-- Flags: Expected contact-reason phrase is absent from the interaction summary.
+SELECT 'T31' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT interaction_id record_id,
+        account_id,
+        customer_id,
+        agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM interactions
+    WHERE CASE contact_reason WHEN 'Disputed charge' THEN instr(lower(summary), 'disputed charge')=0 WHEN 'Missing refund' THEN instr(lower(summary), 'missing refund')=0 WHEN 'Unexpected late fee' THEN instr(lower(summary), 'unexpected late fee')=0 WHEN 'Service interruption' THEN instr(lower(summary), 'service interruption')=0 WHEN 'Promotion not applied' THEN instr(lower(summary), 'promotion not applied')=0 WHEN 'Payment reversal' THEN instr(lower(summary), 'payment reversal')=0 WHEN 'Equipment fee' THEN instr(lower(summary), 'equipment fee')=0 WHEN 'High bill' THEN instr(lower(summary), 'high bill')=0 WHEN 'Installation fee' THEN instr(lower(summary), 'installation fee')=0 ELSE 0 END
+) q;
 
-SELECT 'T26' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH posted AS (SELECT interaction_id,COUNT(*) linked_credit_count,SUM(credit_amount) linked_credit_amount,MAX(posting_date) latest_posting_date FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,COALESCE(i.promised_amount,p.linked_credit_amount) amount,ABS(COALESCE(i.promised_amount,p.linked_credit_amount)) gross_amount,0 direct_amount FROM interactions i JOIN posted p ON i.interaction_id=p.interaction_id WHERE i.promised_action IN ('Issue credit','Process refund','Apply promotion') AND CAST(i.actual_action_completed_flag AS INTEGER)=1 AND COALESCE(i.promised_completion_date,'')<>'' AND date(p.latest_posting_date)>date(i.promised_completion_date)) q;
-
-
--- ===== Source file: 09_transcript_consistency_tests.sql =====
-
--- SQLite-compatible audit queries. Each statement returns a standardized record-level population.
--- T21-T23 remain Python-primary normalized behavioral indicators.
-
-SELECT 'T27' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH tf AS (SELECT interaction_id,MAX(CASE WHEN speaker='Customer' AND CAST(contains_refund_request_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_refund_flag,MIN(account_id) account_id,MIN(customer_id) customer_id,MIN(agent_id) agent_id FROM transcripts GROUP BY interaction_id), posted AS (SELECT interaction_id,COUNT(*) linked_credit_count FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,0 amount,0 gross_amount,0 direct_amount FROM interactions i JOIN tf ON i.interaction_id=tf.interaction_id LEFT JOIN posted p ON i.interaction_id=p.interaction_id WHERE tf.customer_refund_flag=1 AND i.contact_reason IN ('Missing refund','Disputed charge','Unexpected late fee','Payment reversal') AND COALESCE(p.linked_credit_count,0)=0) q;
-
-SELECT 'T28' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH tf AS (SELECT interaction_id,MAX(CAST(contains_promise_flag AS INTEGER)) contains_promise FROM transcripts GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,COALESCE(i.promised_amount,0) amount,ABS(COALESCE(i.promised_amount,0)) gross_amount,0 direct_amount FROM interactions i JOIN tf ON i.interaction_id=tf.interaction_id WHERE tf.contains_promise=1 AND CAST(i.actual_action_completed_flag AS INTEGER)<>1) q;
-
-SELECT 'T29' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH tf AS (SELECT interaction_id,MAX(CAST(contains_compliance_language_flag AS INTEGER)) contains_compliance FROM transcripts GROUP BY interaction_id), posted AS (SELECT interaction_id,COUNT(*) linked_credit_count,SUM(credit_amount) linked_credit_amount FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,p.linked_credit_amount amount,ABS(p.linked_credit_amount) gross_amount,0 direct_amount FROM interactions i JOIN tf ON i.interaction_id=tf.interaction_id JOIN posted p ON i.interaction_id=p.interaction_id WHERE CAST(i.authentication_completed_flag AS INTEGER)<>1 AND tf.contains_compliance<>1) q;
-
-SELECT 'T30' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH tf AS (SELECT interaction_id,MAX(CASE WHEN speaker='Customer' AND CAST(contains_refund_request_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_refund_flag,MAX(CASE WHEN speaker='Customer' AND CAST(contains_dispute_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_dispute_flag FROM transcripts GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,0 amount,0 gross_amount,0 direct_amount FROM interactions i JOIN tf ON i.interaction_id=tf.interaction_id WHERE (tf.customer_refund_flag=1 OR tf.customer_dispute_flag=1) AND (LOWER(i.agent_notes) LIKE '%accepted all charges%' OR LOWER(i.agent_notes) LIKE '%no billing concern%' OR LOWER(i.agent_notes) LIKE '%accepted standard explanation%')) q;
-
-SELECT 'T31' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT interaction_id record_id,account_id,customer_id,agent_id,0 amount,0 gross_amount,0 direct_amount FROM interactions WHERE CASE contact_reason WHEN 'Disputed charge' THEN instr(lower(summary),'disputed charge')=0 WHEN 'Missing refund' THEN instr(lower(summary),'missing refund')=0 WHEN 'Unexpected late fee' THEN instr(lower(summary),'unexpected late fee')=0 WHEN 'Service interruption' THEN instr(lower(summary),'service interruption')=0 WHEN 'Promotion not applied' THEN instr(lower(summary),'promotion not applied')=0 WHEN 'Payment reversal' THEN instr(lower(summary),'payment reversal')=0 WHEN 'Equipment fee' THEN instr(lower(summary),'equipment fee')=0 WHEN 'High bill' THEN instr(lower(summary),'high bill')=0 WHEN 'Installation fee' THEN instr(lower(summary),'installation fee')=0 ELSE 0 END) q;
-
-SELECT 'T32' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH base AS (SELECT *,LOWER(TRIM(agent_notes)) note_norm FROM interactions), stats AS (SELECT note_norm,COUNT(*) row_count,COUNT(DISTINCT case_id) case_count,COUNT(DISTINCT account_id) account_count,COUNT(DISTINCT agent_id) agent_count FROM base WHERE note_norm NOT IN ('','customer accepted all charges and reported no billing concern.','reviewed profile; customer accepted standard explanation. no further action.') GROUP BY note_norm HAVING COUNT(*)>1 AND COUNT(DISTINCT case_id)>1 AND (COUNT(DISTINCT account_id)=1 OR COUNT(DISTINCT agent_id)=1)) SELECT b.interaction_id record_id,b.account_id,b.customer_id,b.agent_id,0 amount,0 gross_amount,0 direct_amount FROM base b JOIN stats s ON b.note_norm=s.note_norm) q;
+-- T32: Copied notes across cases
+-- Flags: Exact non-generic note is repeated across multiple cases and either the same agent or same account.
+SELECT 'T32' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH base AS (
+        SELECT *,
+            LOWER(TRIM(agent_notes)) note_norm
+        FROM interactions
+    ), stats AS (
+        SELECT note_norm,
+            COUNT(*) row_count,
+            COUNT(DISTINCT case_id) case_count,
+            COUNT(DISTINCT account_id) account_count,
+            COUNT(DISTINCT agent_id) agent_count
+        FROM base
+        WHERE note_norm NOT IN ('', 'customer accepted all charges and reported no billing concern.', 'reviewed profile; customer accepted standard explanation. no further action.')
+        GROUP BY note_norm
+        HAVING COUNT(*)>1
+            AND COUNT(DISTINCT case_id)>1
+            AND (COUNT(DISTINCT account_id)=1 OR COUNT(DISTINCT agent_id)=1)
+    )
+    SELECT b.interaction_id record_id,
+        b.account_id,
+        b.customer_id,
+        b.agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM base b
+    JOIN stats s ON b.note_norm=s.note_norm
+) q;

@@ -1,6 +1,15 @@
 # Orivanta Audit Analytics
 
-**Internal audit case study | Control design | Audit analytics | SQL/Python reconciliation | Executive decision support**
+**AI evaluation | Human-in-the-loop review | Audit analytics | SQL/Python reconciliation**
+
+This repository holds two projects built on the same fictional company:
+
+1. **[AI transcript review](ai-transcript-review/):** a Claude reviewer for 150 synthetic customer-care calls, scored against 150 reference labels I manually reviewed and against a keyword-rules baseline. Claude caught 50 of 50 planted problems; the keyword rules caught 16. *Measured on the calls the rubric was tuned on, not on new calls.* [Case study](ai-transcript-review/CASE_STUDY.md) · [Sample output](ai-transcript-review/SAMPLE_OUTPUT.md)
+2. **Audit analytics case study (this page):** 40 audit tests on synthetic credit, billing and reconciliation data, with SQL and Python results reconciled record by record.
+
+[![AI call review results](assets/ai-review-results.png)](ai-transcript-review/)
+
+## Audit analytics case study
 
 Orivanta is a fully synthetic audit analytics portfolio project examining credit authorization, billing accuracy, duplicate processing, documentation, customer-outcome indicators, and account reconciliation. The project shows how analytical testing can be translated into defensible audit judgment and practical management action.
 
@@ -10,7 +19,7 @@ Orivanta is a fully synthetic audit analytics portfolio project examining credit
 
 | Reader | Recommended artifact | What it provides |
 |---|---|---|
-| Recruiter or hiring manager | [Recruiter case study](case-study/Orivanta_Recruiter_Case_Study.pdf) | A 12-page executive case study focused on findings, judgment, controls, and candidate ownership |
+| Recruiter or hiring manager | [Recruiter case study](case-study/Orivanta_Recruiter_Case_Study.pdf) | A 12-page executive case study focused on findings, judgment, controls, and my decisions |
 | Audit, risk, controls, or operations leader | [Recruiter case study](case-study/Orivanta_Recruiter_Case_Study.pdf) | Business implications, evidence boundaries, control redesign, and a proposed 30/60/90-day action plan |
 | Technical reviewer | [Technical evidence appendix](technical-appendix/Orivanta_Technical_Evidence_Appendix.pdf) | Test inventory, methodology, SQL/Python reconciliation, scenarios, traceability, and limitations |
 | AI evaluation or product reviewer | [AI transcript review](ai-transcript-review/) | An AI reviewer for synthetic customer-care calls, scored against 150 reference labels I manually reviewed, with a [case study](ai-transcript-review/CASE_STUDY.md) on the rubric and its failure modes |
@@ -41,8 +50,7 @@ The analysis also identified documentation, customer-outcome, and reconciliation
 | Investigative transaction value | $23,139.04 | Review population requiring contextual evidence |
 | Confirmed financial loss | Not established | No final loss conclusion is supported |
 | SQL/Python reconciliation | 37 of 37 | Supported tests reconciled at record-ID level |
-| Original repository tests | 5 passed | Captured original test run |
-| Enhanced reference scenarios | 69 passed | Boundary scenarios across nine priority tests |
+| Automated tests | 74 passed | 5 core repository tests plus 69 boundary scenarios across nine priority tests |
 
 These measures do **not** form an additive financial waterfall. See [Financial measure definitions](methodology/financial-measures.md).
 
@@ -61,7 +69,7 @@ Business risk
   -> leadership action
 ```
 
-Python and SQL support the assurance process; they are not the central story.
+SQL and Python do the testing; the focus is the audit decisions they support.
 
 ## Project-owner decisions
 
@@ -143,10 +151,8 @@ AI-assisted tools supported drafting, comparison, debugging, documentation, and 
 
 ## Validation status
 
-- Final portfolio release checks: **53 of 53 passed**
 - SQL/Python supported-test reconciliation: **37 of 37 passed at record-ID level**
-- Enhanced priority-test scenarios: **69 passed**
-- Unresolved Critical or High portfolio issues at release: **0**
+- Automated tests: **74 passed** (5 core tests plus 69 boundary scenarios)
 
 Detailed limitations and validation evidence are provided in the [technical appendix](technical-appendix/Orivanta_Technical_Evidence_Appendix.pdf).
 

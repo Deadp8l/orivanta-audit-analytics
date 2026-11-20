@@ -1,10 +1,10 @@
-> **Historical snapshot (Nov 11, 2026):** scored against Billy's labels before 14 Q3 labels were changed on Nov 16. Rerunning `evaluate.py` will overwrite it with scores against the current labels.
+> **Historical snapshot (Nov 11, 2026):** scored against my labels before 14 Q3 labels were changed on Nov 16. Rerunning `evaluate.py` will overwrite it with scores against the current labels.
 
 # Evaluation: claude_helpers
 
 Calls scored: 150 of 150
 
-## Agreement with the reference labels (labeled by Billy)
+## Agreement with the reference labels (manually reviewed by Billy)
 
 | Check | Agreement |
 |---|---|
