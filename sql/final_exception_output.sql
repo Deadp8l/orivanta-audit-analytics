@@ -1,82 +1,941 @@
 -- final_exception_output.sql
--- Recruiter-facing consolidated SQL derived from validated source files.
+-- SQLite. Combines all 37 SQL-supported tests into one exception list.
+-- T21-T23 are Python-only (percentile-based behavioral indicators), so they are not included.
 
-
--- ===== Source file: 14_final_exception_output.sql =====
-
--- Complete consolidated SQL output for all 37 SQL-supported tests.
--- T21-T23 are Python-primary percentile-based behavioral tests.
-
-SELECT 'T01' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT credit_id record_id, account_id, customer_id, agent_id, credit_amount amount, ABS(credit_amount) gross_amount, 0 direct_amount FROM credits_adjustments WHERE credit_status='Posted' AND CAST(credit_amount AS REAL)>CAST(agent_authority_limit AS REAL) AND approval_status<>'Approved') q
+SELECT 'T01' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT credit_id record_id,
+        account_id,
+        customer_id,
+        agent_id,
+        credit_amount amount,
+        ABS(credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments
+    WHERE credit_status='Posted'
+        AND CAST(credit_amount AS REAL)>CAST(agent_authority_limit AS REAL)
+        AND approval_status<>'Approved'
+) q
 UNION ALL
-SELECT 'T02' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT credit_id record_id, account_id, customer_id, agent_id, credit_amount amount, ABS(credit_amount) gross_amount, 0 direct_amount FROM credits_adjustments WHERE credit_status='Posted' AND CAST(approval_required_flag AS INTEGER)=1 AND (COALESCE(approval_id,'')='' OR approval_status IN ('Missing','Denied','Pending'))) q
+SELECT 'T02' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT credit_id record_id,
+        account_id,
+        customer_id,
+        agent_id,
+        credit_amount amount,
+        ABS(credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments
+    WHERE credit_status='Posted'
+        AND CAST(approval_required_flag AS INTEGER)=1
+        AND (COALESCE(approval_id, '')='' OR approval_status IN ('Missing', 'Denied', 'Pending'))
+) q
 UNION ALL
-SELECT 'T03' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN approvals a ON c.approval_id=a.approval_id WHERE c.credit_status='Posted' AND a.approval_status='Approved' AND julianday(date(a.approval_decision_date))-julianday(date(c.posting_date))>1) q
+SELECT 'T03' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN approvals a ON c.approval_id=a.approval_id
+    WHERE c.credit_status='Posted'
+        AND a.approval_status='Approved'
+        AND julianday(date(a.approval_decision_date))-julianday(date(c.posting_date))>1
+) q
 UNION ALL
-SELECT 'T04' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,MAX(ABS(c.credit_amount-c.approved_amount),ABS(c.credit_amount-a.approved_amount)) direct_amount FROM credits_adjustments c LEFT JOIN approvals a ON c.approval_id=a.approval_id WHERE c.credit_status='Posted' AND c.approval_status='Approved' AND (ABS(c.credit_amount-c.approved_amount)>0.01 OR ABS(c.credit_amount-a.approved_amount)>0.01)) q
+SELECT 'T04' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        MAX(ABS(c.credit_amount-c.approved_amount), ABS(c.credit_amount-a.approved_amount)) direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN approvals a ON c.approval_id=a.approval_id
+    WHERE c.credit_status='Posted'
+        AND c.approval_status='Approved'
+        AND (ABS(c.credit_amount-c.approved_amount)>0.01 OR ABS(c.credit_amount-a.approved_amount)>0.01)
+) q
 UNION ALL
-SELECT 'T05' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,ABS(c.credit_amount-ch.total_charge_amount) direct_amount FROM credits_adjustments c JOIN charges ch ON c.original_charge_id=ch.charge_id WHERE c.credit_status='Posted' AND c.credit_amount>ch.total_charge_amount) q
+SELECT 'T05' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        ABS(c.credit_amount-ch.total_charge_amount) direct_amount
+    FROM credits_adjustments c
+    JOIN charges ch ON c.original_charge_id=ch.charge_id
+    WHERE c.credit_status='Posted'
+        AND c.credit_amount>ch.total_charge_amount
+) q
 UNION ALL
-SELECT 'T06' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH ranked AS (SELECT c.*,ROW_NUMBER() OVER(PARTITION BY account_id,original_charge_id,credit_amount,posting_date,reason_code ORDER BY credit_id) rn FROM credits_adjustments c WHERE credit_status='Posted') SELECT credit_id record_id,account_id,customer_id,agent_id,credit_amount amount,ABS(credit_amount) gross_amount,ABS(credit_amount) direct_amount FROM ranked WHERE rn>1) q
+SELECT 'T06' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH ranked AS (
+        SELECT c.*,
+            ROW_NUMBER() OVER(PARTITION BY account_id, original_charge_id, credit_amount, posting_date, reason_code ORDER BY credit_id) rn
+        FROM credits_adjustments c
+        WHERE credit_status='Posted'
+    )
+    SELECT credit_id record_id,
+        account_id,
+        customer_id,
+        agent_id,
+        credit_amount amount,
+        ABS(credit_amount) gross_amount,
+        ABS(credit_amount) direct_amount
+    FROM ranked
+    WHERE rn>1
+) q
 UNION ALL
-SELECT 'T07' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH sequenced AS (SELECT c.*,LAG(credit_id) OVER w prior_credit_id,LAG(credit_amount) OVER w prior_amount,LAG(posting_date) OVER w prior_date FROM credits_adjustments c WHERE credit_status='Posted' WINDOW w AS (PARTITION BY account_id,agent_id,reason_code,original_charge_id ORDER BY posting_date,credit_amount,credit_id)) SELECT credit_id record_id,account_id,customer_id,agent_id,credit_amount amount,ABS(credit_amount) gross_amount,0 direct_amount FROM sequenced WHERE prior_credit_id IS NOT NULL AND ABS(credit_amount-prior_amount)<=1.0 AND julianday(posting_date)-julianday(prior_date) BETWEEN 0 AND 3 AND NOT (credit_amount=prior_amount AND julianday(posting_date)=julianday(prior_date))) q
+SELECT 'T07' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH sequenced AS (
+        SELECT c.*,
+            LAG(credit_id) OVER w prior_credit_id,
+            LAG(credit_amount) OVER w prior_amount,
+            LAG(posting_date) OVER w prior_date
+        FROM credits_adjustments c
+        WHERE credit_status='Posted'
+        WINDOW w AS (PARTITION BY account_id, agent_id, reason_code, original_charge_id ORDER BY posting_date, credit_amount, credit_id)
+    )
+    SELECT credit_id record_id,
+        account_id,
+        customer_id,
+        agent_id,
+        credit_amount amount,
+        ABS(credit_amount) gross_amount,
+        0 direct_amount
+    FROM sequenced
+    WHERE prior_credit_id IS NOT NULL
+        AND ABS(credit_amount-prior_amount)<=1.0
+        AND julianday(posting_date)-julianday(prior_date) BETWEEN 0
+        AND 3
+        AND NOT (credit_amount=prior_amount AND julianday(posting_date)=julianday(prior_date))
+) q
 UNION ALL
-SELECT 'T08' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH groups AS (SELECT account_id,agent_id,posting_date,original_charge_id,COUNT(*) group_count,SUM(credit_amount) group_amount,MAX(agent_authority_limit) authority_limit,MAX(credit_amount) max_individual FROM credits_adjustments WHERE credit_status='Posted' GROUP BY account_id,agent_id,posting_date,original_charge_id HAVING COUNT(*)>1 AND SUM(credit_amount)>MAX(agent_authority_limit) AND MAX(credit_amount)<=MAX(agent_authority_limit)) SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN groups g USING(account_id,agent_id,posting_date,original_charge_id) WHERE c.credit_status='Posted') q
+SELECT 'T08' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH groups AS (
+        SELECT account_id,
+            agent_id,
+            posting_date,
+            original_charge_id,
+            COUNT(*) group_count,
+            SUM(credit_amount) group_amount,
+            MAX(agent_authority_limit) authority_limit,
+            MAX(credit_amount) max_individual
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY account_id, agent_id, posting_date, original_charge_id
+        HAVING COUNT(*)>1
+            AND SUM(credit_amount)>MAX(agent_authority_limit)
+            AND MAX(credit_amount)<=MAX(agent_authority_limit)
+    )
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN groups g USING(account_id, agent_id, posting_date, original_charge_id)
+    WHERE c.credit_status='Posted'
+) q
 UNION ALL
-SELECT 'T09' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,0 direct_amount FROM credits_adjustments c LEFT JOIN reason_codes r ON c.reason_code=r.reason_code WHERE r.reason_code IS NULL OR CAST(COALESCE(r.active_flag,0) AS INTEGER)<>1) q
+SELECT 'T09' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN reason_codes r ON c.reason_code=r.reason_code
+    WHERE r.reason_code IS NULL
+        OR CAST(COALESCE(r.active_flag, 0) AS INTEGER)<>1
+) q
 UNION ALL
-SELECT 'T10' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN reason_codes r ON c.reason_code=r.reason_code WHERE c.credit_status='Posted' AND c.credit_type<>r.credit_type) q
+SELECT 'T10' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN reason_codes r ON c.reason_code=r.reason_code
+    WHERE c.credit_status='Posted'
+        AND c.credit_type<>r.credit_type
+) q
 UNION ALL
-SELECT 'T11' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c LEFT JOIN cases_disputes ca ON c.case_id=ca.case_id WHERE c.credit_status='Posted' AND COALESCE(c.interaction_id,'')<>'' AND (COALESCE(c.case_id,'')='' OR ca.case_id IS NULL)) q
+SELECT 'T11' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN cases_disputes ca ON c.case_id=ca.case_id
+    WHERE c.credit_status='Posted'
+        AND COALESCE(c.interaction_id, '')<>''
+        AND (COALESCE(c.case_id, '')='' OR ca.case_id IS NULL)
+) q
 UNION ALL
-SELECT 'T12' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c LEFT JOIN interactions i ON c.interaction_id=i.interaction_id WHERE c.credit_status='Posted' AND COALESCE(c.case_id,'')<>'' AND (COALESCE(c.interaction_id,'')='' OR i.interaction_id IS NULL)) q
+SELECT 'T12' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN interactions i ON c.interaction_id=i.interaction_id
+    WHERE c.credit_status='Posted'
+        AND COALESCE(c.case_id, '')<>''
+        AND (COALESCE(c.interaction_id, '')='' OR i.interaction_id IS NULL)
+) q
 UNION ALL
-SELECT 'T13' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN cases_disputes ca ON c.case_id=ca.case_id JOIN interactions i ON c.interaction_id=i.interaction_id WHERE c.credit_status='Posted' AND (CAST(c.documentation_complete_flag AS INTEGER)<>1 OR CAST(ca.supporting_documentation_flag AS INTEGER)<>1)) q
+SELECT 'T13' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN cases_disputes ca ON c.case_id=ca.case_id
+    JOIN interactions i ON c.interaction_id=i.interaction_id
+    WHERE c.credit_status='Posted'
+        AND (CAST(c.documentation_complete_flag AS INTEGER)<>1 OR CAST(ca.supporting_documentation_flag AS INTEGER)<>1)
+) q
 UNION ALL
-SELECT 'T14' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN interactions i ON c.interaction_id=i.interaction_id WHERE c.credit_status='Posted' AND CAST(c.customer_notified_flag AS INTEGER)<>1) q
+SELECT 'T14' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN interactions i ON c.interaction_id=i.interaction_id
+    WHERE c.credit_status='Posted'
+        AND CAST(c.customer_notified_flag AS INTEGER)<>1
+) q
 UNION ALL
-SELECT 'T15' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN interactions i ON c.interaction_id=i.interaction_id WHERE c.credit_status='Posted' AND CAST(i.authentication_completed_flag AS INTEGER)<>1) q
+SELECT 'T15' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN interactions i ON c.interaction_id=i.interaction_id
+    WHERE c.credit_status='Posted'
+        AND CAST(i.authentication_completed_flag AS INTEGER)<>1
+) q
 UNION ALL
-SELECT 'T16' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT credit_id record_id,account_id,customer_id,agent_id,credit_amount amount,ABS(credit_amount) gross_amount,0 direct_amount FROM credits_adjustments WHERE credit_status='Posted' AND CAST(manual_override_flag AS INTEGER)=1 AND approval_status<>'Approved') q
+SELECT 'T16' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT credit_id record_id,
+        account_id,
+        customer_id,
+        agent_id,
+        credit_amount amount,
+        ABS(credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments
+    WHERE credit_status='Posted'
+        AND CAST(manual_override_flag AS INTEGER)=1
+        AND approval_status<>'Approved'
+) q
 UNION ALL
-SELECT 'T17' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT credit_id record_id,account_id,customer_id,agent_id,credit_amount amount,ABS(credit_amount) gross_amount,0 direct_amount FROM credits_adjustments WHERE credit_status='Posted' AND CAST(after_hours_flag AS INTEGER)=1 AND (approval_status<>'Approved' OR CAST(documentation_complete_flag AS INTEGER)<>1)) q
+SELECT 'T17' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT credit_id record_id,
+        account_id,
+        customer_id,
+        agent_id,
+        credit_amount amount,
+        ABS(credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments
+    WHERE credit_status='Posted'
+        AND CAST(after_hours_flag AS INTEGER)=1
+        AND (approval_status<>'Approved' OR CAST(documentation_complete_flag AS INTEGER)<>1)
+) q
 UNION ALL
-SELECT 'T18' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,0 direct_amount FROM credits_adjustments c LEFT JOIN agents a ON c.agent_id=a.agent_id WHERE COALESCE(a.employment_status,'')<>'Active') q
+SELECT 'T18' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN agents a ON c.agent_id=a.agent_id
+    WHERE COALESCE(a.employment_status, '')<>'Active'
+) q
 UNION ALL
-SELECT 'T19' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,0 direct_amount FROM credits_adjustments c LEFT JOIN approvals a ON c.approval_id=a.approval_id WHERE c.agent_id=c.supervisor_id OR c.agent_id=a.supervisor_id) q
+SELECT 'T19' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    LEFT JOIN approvals a ON c.approval_id=a.approval_id
+    WHERE c.agent_id=c.supervisor_id
+        OR c.agent_id=a.supervisor_id
+) q
 UNION ALL
-SELECT 'T20' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,0 direct_amount FROM credits_adjustments c JOIN accounts ac ON c.account_id=ac.account_id WHERE c.customer_id<>ac.customer_id) q
+SELECT 'T20' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        CASE WHEN c.credit_status='Posted' THEN ABS(c.credit_amount) ELSE 0 END gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN accounts ac ON c.account_id=ac.account_id
+    WHERE c.customer_id<>ac.customer_id
+) q
 UNION ALL
-SELECT 'T24' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH posted AS (SELECT interaction_id,COUNT(*) linked_credit_count,SUM(credit_amount) linked_credit_amount FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,COALESCE(i.promised_amount,0) amount,ABS(COALESCE(i.promised_amount,0)) gross_amount,0 direct_amount FROM interactions i LEFT JOIN posted p ON i.interaction_id=p.interaction_id WHERE i.promised_action IN ('Issue credit','Process refund','Apply promotion') AND CAST(i.actual_action_completed_flag AS INTEGER)<>1 AND COALESCE(p.linked_credit_count,0)=0) q
+SELECT 'T24' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count,
+            SUM(credit_amount) linked_credit_amount
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        COALESCE(i.promised_amount, 0) amount,
+        ABS(COALESCE(i.promised_amount, 0)) gross_amount,
+        0 direct_amount
+    FROM interactions i
+    LEFT JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE i.promised_action IN ('Issue credit', 'Process refund', 'Apply promotion')
+        AND CAST(i.actual_action_completed_flag AS INTEGER)<>1
+        AND COALESCE(p.linked_credit_count, 0)=0
+) q
 UNION ALL
-SELECT 'T25' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH posted AS (SELECT interaction_id,COUNT(*) linked_credit_count,SUM(credit_amount) linked_credit_amount FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,p.linked_credit_amount amount,ABS(p.linked_credit_amount) gross_amount,ABS(CAST(i.promised_amount AS REAL)-p.linked_credit_amount) direct_amount FROM interactions i JOIN posted p ON i.interaction_id=p.interaction_id WHERE i.promised_action IN ('Issue credit','Process refund','Apply promotion') AND CAST(i.actual_action_completed_flag AS INTEGER)=1 AND COALESCE(i.promised_amount,'')<>'' AND ABS(CAST(i.promised_amount AS REAL)-p.linked_credit_amount)>1.0) q
+SELECT 'T25' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count,
+            SUM(credit_amount) linked_credit_amount
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        p.linked_credit_amount amount,
+        ABS(p.linked_credit_amount) gross_amount,
+        ABS(CAST(i.promised_amount AS REAL)-p.linked_credit_amount) direct_amount
+    FROM interactions i
+    JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE i.promised_action IN ('Issue credit', 'Process refund', 'Apply promotion')
+        AND CAST(i.actual_action_completed_flag AS INTEGER)=1
+        AND COALESCE(i.promised_amount, '')<>''
+        AND ABS(CAST(i.promised_amount AS REAL)-p.linked_credit_amount)>1.0
+) q
 UNION ALL
-SELECT 'T26' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH posted AS (SELECT interaction_id,COUNT(*) linked_credit_count,SUM(credit_amount) linked_credit_amount,MAX(posting_date) latest_posting_date FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,COALESCE(i.promised_amount,p.linked_credit_amount) amount,ABS(COALESCE(i.promised_amount,p.linked_credit_amount)) gross_amount,0 direct_amount FROM interactions i JOIN posted p ON i.interaction_id=p.interaction_id WHERE i.promised_action IN ('Issue credit','Process refund','Apply promotion') AND CAST(i.actual_action_completed_flag AS INTEGER)=1 AND COALESCE(i.promised_completion_date,'')<>'' AND date(p.latest_posting_date)>date(i.promised_completion_date)) q
+SELECT 'T26' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count,
+            SUM(credit_amount) linked_credit_amount,
+            MAX(posting_date) latest_posting_date
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        COALESCE(i.promised_amount, p.linked_credit_amount) amount,
+        ABS(COALESCE(i.promised_amount, p.linked_credit_amount)) gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE i.promised_action IN ('Issue credit', 'Process refund', 'Apply promotion')
+        AND CAST(i.actual_action_completed_flag AS INTEGER)=1
+        AND COALESCE(i.promised_completion_date, '')<>''
+        AND date(p.latest_posting_date)>date(i.promised_completion_date)
+) q
 UNION ALL
-SELECT 'T27' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH tf AS (SELECT interaction_id,MAX(CASE WHEN speaker='Customer' AND CAST(contains_refund_request_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_refund_flag,MIN(account_id) account_id,MIN(customer_id) customer_id,MIN(agent_id) agent_id FROM transcripts GROUP BY interaction_id), posted AS (SELECT interaction_id,COUNT(*) linked_credit_count FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,0 amount,0 gross_amount,0 direct_amount FROM interactions i JOIN tf ON i.interaction_id=tf.interaction_id LEFT JOIN posted p ON i.interaction_id=p.interaction_id WHERE tf.customer_refund_flag=1 AND i.contact_reason IN ('Missing refund','Disputed charge','Unexpected late fee','Payment reversal') AND COALESCE(p.linked_credit_count,0)=0) q
+SELECT 'T27' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH tf AS (
+        SELECT interaction_id,
+            MAX(CASE WHEN speaker='Customer' AND CAST(contains_refund_request_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_refund_flag,
+            MIN(account_id) account_id,
+            MIN(customer_id) customer_id,
+            MIN(agent_id) agent_id
+        FROM transcripts
+        GROUP BY interaction_id
+    ), posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN tf ON i.interaction_id=tf.interaction_id
+    LEFT JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE tf.customer_refund_flag=1
+        AND i.contact_reason IN ('Missing refund', 'Disputed charge', 'Unexpected late fee', 'Payment reversal')
+        AND COALESCE(p.linked_credit_count, 0)=0
+) q
 UNION ALL
-SELECT 'T28' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH tf AS (SELECT interaction_id,MAX(CAST(contains_promise_flag AS INTEGER)) contains_promise FROM transcripts GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,COALESCE(i.promised_amount,0) amount,ABS(COALESCE(i.promised_amount,0)) gross_amount,0 direct_amount FROM interactions i JOIN tf ON i.interaction_id=tf.interaction_id WHERE tf.contains_promise=1 AND CAST(i.actual_action_completed_flag AS INTEGER)<>1) q
+SELECT 'T28' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH tf AS (
+        SELECT interaction_id,
+            MAX(CAST(contains_promise_flag AS INTEGER)) contains_promise
+        FROM transcripts
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        COALESCE(i.promised_amount, 0) amount,
+        ABS(COALESCE(i.promised_amount, 0)) gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN tf ON i.interaction_id=tf.interaction_id
+    WHERE tf.contains_promise=1
+        AND CAST(i.actual_action_completed_flag AS INTEGER)<>1
+) q
 UNION ALL
-SELECT 'T29' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH tf AS (SELECT interaction_id,MAX(CAST(contains_compliance_language_flag AS INTEGER)) contains_compliance FROM transcripts GROUP BY interaction_id), posted AS (SELECT interaction_id,COUNT(*) linked_credit_count,SUM(credit_amount) linked_credit_amount FROM credits_adjustments WHERE credit_status='Posted' GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,p.linked_credit_amount amount,ABS(p.linked_credit_amount) gross_amount,0 direct_amount FROM interactions i JOIN tf ON i.interaction_id=tf.interaction_id JOIN posted p ON i.interaction_id=p.interaction_id WHERE CAST(i.authentication_completed_flag AS INTEGER)<>1 AND tf.contains_compliance<>1) q
+SELECT 'T29' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH tf AS (
+        SELECT interaction_id,
+            MAX(CAST(contains_compliance_language_flag AS INTEGER)) contains_compliance
+        FROM transcripts
+        GROUP BY interaction_id
+    ), posted AS (
+        SELECT interaction_id,
+            COUNT(*) linked_credit_count,
+            SUM(credit_amount) linked_credit_amount
+        FROM credits_adjustments
+        WHERE credit_status='Posted'
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        p.linked_credit_amount amount,
+        ABS(p.linked_credit_amount) gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN tf ON i.interaction_id=tf.interaction_id
+    JOIN posted p ON i.interaction_id=p.interaction_id
+    WHERE CAST(i.authentication_completed_flag AS INTEGER)<>1
+        AND tf.contains_compliance<>1
+) q
 UNION ALL
-SELECT 'T30' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH tf AS (SELECT interaction_id,MAX(CASE WHEN speaker='Customer' AND CAST(contains_refund_request_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_refund_flag,MAX(CASE WHEN speaker='Customer' AND CAST(contains_dispute_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_dispute_flag FROM transcripts GROUP BY interaction_id) SELECT i.interaction_id record_id,i.account_id,i.customer_id,i.agent_id,0 amount,0 gross_amount,0 direct_amount FROM interactions i JOIN tf ON i.interaction_id=tf.interaction_id WHERE (tf.customer_refund_flag=1 OR tf.customer_dispute_flag=1) AND (LOWER(i.agent_notes) LIKE '%accepted all charges%' OR LOWER(i.agent_notes) LIKE '%no billing concern%' OR LOWER(i.agent_notes) LIKE '%accepted standard explanation%')) q
+SELECT 'T30' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH tf AS (
+        SELECT interaction_id,
+            MAX(CASE WHEN speaker='Customer' AND CAST(contains_refund_request_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_refund_flag,
+            MAX(CASE WHEN speaker='Customer' AND CAST(contains_dispute_flag AS INTEGER)=1 THEN 1 ELSE 0 END) customer_dispute_flag
+        FROM transcripts
+        GROUP BY interaction_id
+    )
+    SELECT i.interaction_id record_id,
+        i.account_id,
+        i.customer_id,
+        i.agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM interactions i
+    JOIN tf ON i.interaction_id=tf.interaction_id
+    WHERE (tf.customer_refund_flag=1 OR tf.customer_dispute_flag=1)
+        AND (LOWER(i.agent_notes) LIKE '%accepted all charges%' OR LOWER(i.agent_notes) LIKE '%no billing concern%' OR LOWER(i.agent_notes) LIKE '%accepted standard explanation%')
+) q
 UNION ALL
-SELECT 'T31' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT interaction_id record_id,account_id,customer_id,agent_id,0 amount,0 gross_amount,0 direct_amount FROM interactions WHERE CASE contact_reason WHEN 'Disputed charge' THEN instr(lower(summary),'disputed charge')=0 WHEN 'Missing refund' THEN instr(lower(summary),'missing refund')=0 WHEN 'Unexpected late fee' THEN instr(lower(summary),'unexpected late fee')=0 WHEN 'Service interruption' THEN instr(lower(summary),'service interruption')=0 WHEN 'Promotion not applied' THEN instr(lower(summary),'promotion not applied')=0 WHEN 'Payment reversal' THEN instr(lower(summary),'payment reversal')=0 WHEN 'Equipment fee' THEN instr(lower(summary),'equipment fee')=0 WHEN 'High bill' THEN instr(lower(summary),'high bill')=0 WHEN 'Installation fee' THEN instr(lower(summary),'installation fee')=0 ELSE 0 END) q
+SELECT 'T31' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT interaction_id record_id,
+        account_id,
+        customer_id,
+        agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM interactions
+    WHERE CASE contact_reason WHEN 'Disputed charge' THEN instr(lower(summary), 'disputed charge')=0 WHEN 'Missing refund' THEN instr(lower(summary), 'missing refund')=0 WHEN 'Unexpected late fee' THEN instr(lower(summary), 'unexpected late fee')=0 WHEN 'Service interruption' THEN instr(lower(summary), 'service interruption')=0 WHEN 'Promotion not applied' THEN instr(lower(summary), 'promotion not applied')=0 WHEN 'Payment reversal' THEN instr(lower(summary), 'payment reversal')=0 WHEN 'Equipment fee' THEN instr(lower(summary), 'equipment fee')=0 WHEN 'High bill' THEN instr(lower(summary), 'high bill')=0 WHEN 'Installation fee' THEN instr(lower(summary), 'installation fee')=0 ELSE 0 END
+) q
 UNION ALL
-SELECT 'T32' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH base AS (SELECT *,LOWER(TRIM(agent_notes)) note_norm FROM interactions), stats AS (SELECT note_norm,COUNT(*) row_count,COUNT(DISTINCT case_id) case_count,COUNT(DISTINCT account_id) account_count,COUNT(DISTINCT agent_id) agent_count FROM base WHERE note_norm NOT IN ('','customer accepted all charges and reported no billing concern.','reviewed profile; customer accepted standard explanation. no further action.') GROUP BY note_norm HAVING COUNT(*)>1 AND COUNT(DISTINCT case_id)>1 AND (COUNT(DISTINCT account_id)=1 OR COUNT(DISTINCT agent_id)=1)) SELECT b.interaction_id record_id,b.account_id,b.customer_id,b.agent_id,0 amount,0 gross_amount,0 direct_amount FROM base b JOIN stats s ON b.note_norm=s.note_norm) q
+SELECT 'T32' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH base AS (
+        SELECT *,
+            LOWER(TRIM(agent_notes)) note_norm
+        FROM interactions
+    ), stats AS (
+        SELECT note_norm,
+            COUNT(*) row_count,
+            COUNT(DISTINCT case_id) case_count,
+            COUNT(DISTINCT account_id) account_count,
+            COUNT(DISTINCT agent_id) agent_count
+        FROM base
+        WHERE note_norm NOT IN ('', 'customer accepted all charges and reported no billing concern.', 'reviewed profile; customer accepted standard explanation. no further action.')
+        GROUP BY note_norm
+        HAVING COUNT(*)>1
+            AND COUNT(DISTINCT case_id)>1
+            AND (COUNT(DISTINCT account_id)=1 OR COUNT(DISTINCT agent_id)=1)
+    )
+    SELECT b.interaction_id record_id,
+        b.account_id,
+        b.customer_id,
+        b.agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM base b
+    JOIN stats s ON b.note_norm=s.note_norm
+) q
 UNION ALL
-SELECT 'T33' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT case_id record_id,account_id,customer_id,assigned_agent_id agent_id,COALESCE(disputed_amount,0) amount,ABS(COALESCE(disputed_amount,0)) gross_amount,0 direct_amount FROM cases_disputes WHERE case_status='Closed' AND (COALESCE(resolution_code,'')='' OR COALESCE(resolution_summary,'')='')) q
+SELECT 'T33' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT case_id record_id,
+        account_id,
+        customer_id,
+        assigned_agent_id agent_id,
+        COALESCE(disputed_amount, 0) amount,
+        ABS(COALESCE(disputed_amount, 0)) gross_amount,
+        0 direct_amount
+    FROM cases_disputes
+    WHERE case_status='Closed'
+        AND (COALESCE(resolution_code, '')='' OR COALESCE(resolution_summary, '')='')
+) q
 UNION ALL
-SELECT 'T34' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN charges ch ON c.original_charge_id=ch.charge_id JOIN products_services p ON ch.product_service_id=p.product_service_id WHERE c.credit_type='Promotional adjustment' AND p.product_category='Promotion' AND COALESCE(p.effective_start_date,'')<>'' AND (date(c.credit_date)<date(p.effective_start_date) OR (COALESCE(p.effective_end_date,'')<>'' AND date(c.credit_date)>date(p.effective_end_date)))) q
+SELECT 'T34' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN charges ch ON c.original_charge_id=ch.charge_id
+    JOIN products_services p ON ch.product_service_id=p.product_service_id
+    WHERE c.credit_type='Promotional adjustment'
+        AND p.product_category='Promotion'
+        AND COALESCE(p.effective_start_date, '')<>''
+        AND (date(c.credit_date)<date(p.effective_start_date) OR (COALESCE(p.effective_end_date, '')<>'' AND date(c.credit_date)>date(p.effective_end_date)))
+) q
 UNION ALL
-SELECT 'T35' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.credit_id record_id,c.account_id,c.customer_id,c.agent_id,c.credit_amount amount,ABS(c.credit_amount) gross_amount,0 direct_amount FROM credits_adjustments c JOIN cases_disputes ca ON c.case_id=ca.case_id WHERE c.credit_type='Service-interruption credit' AND (ca.dispute_category<>'Service interruption' OR CAST(ca.complaint_validated_flag AS INTEGER)<>1 OR CAST(ca.supporting_documentation_flag AS INTEGER)<>1)) q
+SELECT 'T35' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.credit_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.agent_id,
+        c.credit_amount amount,
+        ABS(c.credit_amount) gross_amount,
+        0 direct_amount
+    FROM credits_adjustments c
+    JOIN cases_disputes ca ON c.case_id=ca.case_id
+    WHERE c.credit_type='Service-interruption credit'
+        AND (ca.dispute_category<>'Service interruption' OR CAST(ca.complaint_validated_flag AS INTEGER)<>1 OR CAST(ca.supporting_documentation_flag AS INTEGER)<>1)
+) q
 UNION ALL
-SELECT 'T36' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT p.payment_id record_id,p.account_id,p.customer_id,'' agent_id,p.payment_amount amount,ABS(p.payment_amount) gross_amount,0 direct_amount FROM payments p LEFT JOIN payments orig ON p.original_payment_id=orig.payment_id WHERE CAST(p.reversed_flag AS INTEGER)=1 AND COALESCE(p.original_payment_id,'')<>'' AND orig.payment_id IS NULL) q
+SELECT 'T36' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT p.payment_id record_id,
+        p.account_id,
+        p.customer_id,
+        '' agent_id,
+        p.payment_amount amount,
+        ABS(p.payment_amount) gross_amount,
+        0 direct_amount
+    FROM payments p
+    LEFT JOIN payments orig ON p.original_payment_id=orig.payment_id
+    WHERE CAST(p.reversed_flag AS INTEGER)=1
+        AND COALESCE(p.original_payment_id, '')<>''
+        AND orig.payment_id IS NULL
+) q
 UNION ALL
-SELECT 'T37' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT c.charge_id record_id,c.account_id,c.customer_id,c.created_by_agent_id agent_id,c.total_charge_amount amount,ABS(c.total_charge_amount) gross_amount,0 direct_amount FROM charges c LEFT JOIN charges orig ON c.original_charge_id=orig.charge_id WHERE CAST(c.reversal_flag AS INTEGER)=1 AND (COALESCE(c.original_charge_id,'')='' OR orig.charge_id IS NULL)) q
+SELECT 'T37' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT c.charge_id record_id,
+        c.account_id,
+        c.customer_id,
+        c.created_by_agent_id agent_id,
+        c.total_charge_amount amount,
+        ABS(c.total_charge_amount) gross_amount,
+        0 direct_amount
+    FROM charges c
+    LEFT JOIN charges orig ON c.original_charge_id=orig.charge_id
+    WHERE CAST(c.reversal_flag AS INTEGER)=1
+        AND (COALESCE(c.original_charge_id, '')='' OR orig.charge_id IS NULL)
+) q
 UNION ALL
-SELECT 'T38' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (WITH ranked AS (SELECT c.*,ROW_NUMBER() OVER(PARTITION BY account_id,product_service_id,total_charge_amount,posting_date,charge_type ORDER BY charge_id) rn FROM charges c WHERE charge_status='Posted') SELECT charge_id record_id,account_id,customer_id,created_by_agent_id agent_id,total_charge_amount amount,ABS(total_charge_amount) gross_amount,ABS(total_charge_amount) direct_amount FROM ranked WHERE rn>1) q
+SELECT 'T38' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    WITH ranked AS (
+        SELECT c.*,
+            ROW_NUMBER() OVER(PARTITION BY account_id, product_service_id, total_charge_amount, posting_date, charge_type ORDER BY charge_id) rn
+        FROM charges c
+        WHERE charge_status='Posted'
+    )
+    SELECT charge_id record_id,
+        account_id,
+        customer_id,
+        created_by_agent_id agent_id,
+        total_charge_amount amount,
+        ABS(total_charge_amount) gross_amount,
+        ABS(total_charge_amount) direct_amount
+    FROM ranked
+    WHERE rn>1
+) q
 UNION ALL
-SELECT 'T39' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT account_id record_id,account_id,customer_id,'' agent_id,ABS(reconciliation_difference) amount,ABS(reconciliation_difference) gross_amount,ABS(reconciliation_difference) direct_amount FROM account_reconciliations WHERE ABS(reconciliation_difference)>0.01) q
+SELECT 'T39' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT account_id record_id,
+        account_id,
+        customer_id,
+        '' agent_id,
+        ABS(reconciliation_difference) amount,
+        ABS(reconciliation_difference) gross_amount,
+        ABS(reconciliation_difference) direct_amount
+    FROM account_reconciliations
+    WHERE ABS(reconciliation_difference)>0.01
+) q
 UNION ALL
-SELECT 'T40' AS test_id, record_id AS record_id, COALESCE(account_id,'') AS account_id, COALESCE(customer_id,'') AS customer_id, COALESCE(agent_id,'') AS agent_id, CAST(amount AS REAL) AS transaction_amount, CAST(gross_amount AS REAL) AS gross_flagged_amount, CAST(direct_amount AS REAL) AS direct_measurable_amount FROM (SELECT account_id record_id,account_id,customer_id,'' agent_id,0 amount,0 gross_amount,0 direct_amount FROM accounts WHERE current_balance < -500 OR past_due_balance > ABS(current_balance)+1000) q;
+SELECT 'T40' AS test_id,
+    record_id AS record_id,
+    COALESCE(account_id, '') AS account_id,
+    COALESCE(customer_id, '') AS customer_id,
+    COALESCE(agent_id, '') AS agent_id,
+    CAST(amount AS REAL) AS transaction_amount,
+    CAST(gross_amount AS REAL) AS gross_flagged_amount,
+    CAST(direct_amount AS REAL) AS direct_measurable_amount
+FROM (
+    SELECT account_id record_id,
+        account_id,
+        customer_id,
+        '' agent_id,
+        0 amount,
+        0 gross_amount,
+        0 direct_amount
+    FROM accounts
+    WHERE current_balance < -500
+        OR past_due_balance > ABS(current_balance)+1000
+) q;
