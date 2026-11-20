@@ -1,0 +1,122 @@
+[
+  {
+    "call_id": "MC0076",
+    "q1": {"answer": "Yes (firm)", "amount": 102.92, "type": "Credit", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $102.92 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$102.92 late fee despite autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $102.92 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Summary, notes, promised action, amount ($102.92) and disposition all match the applied credit.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "Great, I can see it. Thank you.", "confidence": "High"},
+    "one_line_summary": "Autopay late fee confirmed as company error; agent applied a $102.92 credit during the call and the record matches."
+  },
+  {
+    "call_id": "MC0077",
+    "q1": {"answer": "Yes (conditional)", "amount": 26.37, "type": "Other", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $26.37 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Full $131.84 monthly bill despite two-day service outage", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "My service was out for two days and I'm still billed $131.84 for the month.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Promised action", "coaching": "Yes", "explanation": "Promised action says 'Issue credit', but the agent said they could not apply it and only submitted an adjustment request for review; summary, notes, amount and disposition (Credit requested) match.", "confidence": "Medium"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $26.37 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Outage billing complaint; agent submitted a $26.37 adjustment request pending review, but the record's promised action says 'Issue credit'."
+  },
+  {
+    "call_id": "MC0078",
+    "q1": {"answer": "Yes (firm)", "amount": 7.24, "type": "Promotion", "turn": 6, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $7.24 discount, and it's on the account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Missing $7.24 monthly discount", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "My $7.24 monthly discount isn't on this bill.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Record shows promotion reapplied for $7.24, consistent with the call.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "Thank you, that's what I needed.", "confidence": "High"},
+    "one_line_summary": "Missing discount after renewal; agent reapplied the $7.24 promotion and the record matches."
+  },
+  {
+    "call_id": "MC0079",
+    "q1": {"answer": "Yes (firm)", "amount": 87.47, "type": "Credit", "turn": 5, "evidence_quote": "You're right, that was our error. I've applied a $87.47 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$87.47 late fee despite autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $87.47 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Amount", "coaching": "Yes", "explanation": "Promised amount is recorded as $104.73, but the agent applied $87.47 (summary and notes say $87.47).", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 6, "evidence_quote": "Great, I can see it. Thank you.", "confidence": "High"},
+    "one_line_summary": "Autopay late fee credited for $87.47, but the promised amount field wrongly shows $104.73."
+  },
+  {
+    "call_id": "MC0080",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$129.85 late fee despite autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $129.85 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Record says charge explained as valid, no credit offered, no promise; matches the call.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 5, "evidence_quote": "I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time.", "confidence": "High"},
+    "one_line_summary": "Late fee explained as valid due to declined autopay; customer accepted, no credit, record matches."
+  },
+  {
+    "call_id": "MC0081",
+    "q1": {"answer": "Yes (firm)", "amount": 92.96, "type": "Credit", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $92.96 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$92.96 late fee despite autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $92.96 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "All record fields reflect the $92.96 credit applied on the call.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 8, "evidence_quote": "Great, I can see it. Thank you.", "confidence": "High"},
+    "one_line_summary": "Autopay late fee confirmed as company error; $92.96 credit applied and record matches."
+  },
+  {
+    "call_id": "MC0082",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $57.92 charge", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "There's a $57.92 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Record accurately states no cause found, no action taken, no promise, no resolution.", "confidence": "High"},
+    "q4": {"answer": "Not resolved", "turn": 8, "evidence_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.", "confidence": "High"},
+    "one_line_summary": "Customer disputed an unrecognized $57.92 charge and asked for a credit; agent took no next step and the issue is unresolved."
+  },
+  {
+    "call_id": "MC0083",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Credit", "turn": 6, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $134.60 charge", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "There's a $134.60 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Record shows billing review opened for possible credit with follow-up in 3 business days; no amount was stated, consistent with $0.00.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 6, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "one_line_summary": "Unrecognized $134.60 charge; agent opened a billing review (conditional credit, no amount) with follow-up in three business days."
+  },
+  {
+    "call_id": "MC0084",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Credit", "turn": 7, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$119.55 installation fee for installation that never happened", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $119.55 for an installation that never happened.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Record shows billing review opened for possible credit, billing to contact customer; matches the call.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "one_line_summary": "Disputed $119.55 installation fee; agent opened a billing review (conditional credit, no amount) pending follow-up."
+  },
+  {
+    "call_id": "MC0085",
+    "q1": {"answer": "Yes (conditional)", "amount": 129.26, "type": "Other", "turn": 6, "evidence_quote": "I can't apply it myself, but I'm submitting a $129.26 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $129.26 charge", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "There's a $129.26 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Summary, notes, amount ($129.26) and disposition (Credit requested) match; promised action 'Investigate' is consistent with a request pending billing review.", "confidence": "Medium"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 6, "evidence_quote": "I can't apply it myself, but I'm submitting a $129.26 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Unrecognized $129.26 charge; agent submitted a $129.26 adjustment request pending billing review."
+  },
+  {
+    "call_id": "MC0086",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$23.42 late fee despite autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $23.42 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes say the customer 'reported no billing concern', but the customer called to dispute the $23.42 late fee.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time.", "confidence": "High"},
+    "one_line_summary": "Late fee explained as valid; customer accepted, but notes wrongly claim the customer reported no billing concern."
+  },
+  {
+    "call_id": "MC0087",
+    "q1": {"answer": "Yes (firm)", "amount": 74.54, "type": "Credit", "turn": 6, "evidence_quote": "You're right, that was our error. I've applied a $74.54 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Duplicate $74.54 charge", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "I was charged $74.54 twice on this bill.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Amount", "coaching": "Yes", "explanation": "Promised amount is recorded as $113.72, but the agent applied $74.54 (summary and notes say $74.54).", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "Great, I can see it. Thank you.", "confidence": "High"},
+    "one_line_summary": "Duplicate charge credited for $74.54, but the promised amount field wrongly shows $113.72."
+  },
+  {
+    "call_id": "MC0088",
+    "q1": {"answer": "Yes (firm)", "amount": 26.70, "type": "Credit", "turn": 8, "evidence_quote": "You're right, that was our error. I've applied a $26.70 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Duplicate $26.70 charge", "customer_asked_for_credit": "Yes", "turn": 2, "evidence_quote": "I was charged $26.70 twice on this bill.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Promised action", "coaching": "Yes", "explanation": "Promised action says 'No promise' and amount $0.00, but the agent applied a $26.70 credit (summary, notes and disposition reflect the credit).", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 9, "evidence_quote": "Great, I can see it. Thank you.", "confidence": "High"},
+    "one_line_summary": "Duplicate charge credited for $26.70, but promised action/amount fields say no promise and $0.00."
+  },
+  {
+    "call_id": "MC0089",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Full $61.92 monthly bill despite two-day service outage", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "My service was out for two days and I'm still billed $61.92 for the month.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Record accurately states no cause found, no action taken, no promise, no resolution.", "confidence": "High"},
+    "q4": {"answer": "Not resolved", "turn": 5, "evidence_quote": "I'm not able to see why that charge is there, and I don't have a way to change it from my screen. You may want to call back later.", "confidence": "High"},
+    "one_line_summary": "Outage billing complaint; agent took no next step and the issue is unresolved."
+  },
+  {
+    "call_id": "MC0090",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Unrecognized $132.30 charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $132.30 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Missing", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Agent notes are blank.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "That charge is the new streaming add-on that was added on the account last month. It's billed correctly, and you can remove it anytime.", "confidence": "High"},
+    "one_line_summary": "Unrecognized charge explained as a valid streaming add-on; customer accepted, but agent notes are blank."
+  }
+]

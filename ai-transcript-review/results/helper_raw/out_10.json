@@ -1,0 +1,122 @@
+[
+  {
+    "call_id": "MC0136",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$109.61 late fee while on autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $109.61 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields accurately reflect that the late fee was explained as valid and no credit was offered.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 5, "evidence_quote": "I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time.", "confidence": "High"},
+    "one_line_summary": "Customer disputed an autopay late fee; agent explained the bank declined the payment so the fee is valid; customer accepted."
+  },
+  {
+    "call_id": "MC0137",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Credit", "turn": 6, "evidence_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.", "confidence": "Medium"},
+    "q2": {"answer": "Yes", "disputed_item": "$159.30 late fee while on autopay", "customer_asked_for_credit": "Yes", "turn": 3, "evidence_quote": "I'd like that refunded.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Summary and notes correctly record that the customer asked for a credit and the agent said they would look into it; no amount was stated.", "confidence": "Medium"},
+    "q4": {"answer": "Unclear", "turn": 6, "evidence_quote": "Let me see what I can do about a credit on that. I'll make a note on the account.", "confidence": "Medium"},
+    "one_line_summary": "Customer asked for a refund of an autopay late fee; agent made a vague promise to see what could be done about a credit."
+  },
+  {
+    "call_id": "MC0138",
+    "q1": {"answer": "Yes (conditional)", "amount": null, "type": "Credit", "turn": 8, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Billed $108.78 for the month despite a two-day service outage", "customer_asked_for_credit": "Yes", "turn": 3, "evidence_quote": "Can you take that off the bill?", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes say the agent 'Could not confirm service outage', but the agent only said they could not confirm a credit yet; nothing in the call says the outage could not be confirmed.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 8, "evidence_quote": "I can't confirm a credit yet, but I've opened a billing review on this charge. The billing team will contact you within three business days.", "confidence": "High"},
+    "one_line_summary": "Customer asked for an outage credit; agent opened a billing review with contact in three business days, but notes wrongly say the outage could not be confirmed."
+  },
+  {
+    "call_id": "MC0139",
+    "q1": {"answer": "Yes (firm)", "amount": 89.71, "type": "Promotion", "turn": 6, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $89.71 discount, and it's on the account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Missing $89.71 monthly discount", "customer_asked_for_credit": "Yes", "turn": 3, "evidence_quote": "Can you credit that back?", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, promised action and $89.71 amount all match the reapplied discount.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 6, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $89.71 discount, and it's on the account now.", "confidence": "High"},
+    "one_line_summary": "Customer's $89.71 discount was missing after renewal; agent reapplied it on the call."
+  },
+  {
+    "call_id": "MC0140",
+    "q1": {"answer": "Yes (firm)", "amount": 13.57, "type": "Promotion", "turn": 6, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $13.57 discount, and it's on the account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Missing $13.57 monthly discount", "customer_asked_for_credit": "Yes", "turn": 3, "evidence_quote": "I'd like that refunded.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary, promised action and $13.57 amount all match the reapplied discount.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 6, "evidence_quote": "The promotion dropped off when your plan renewed. I've reapplied the $13.57 discount, and it's on the account now.", "confidence": "High"},
+    "one_line_summary": "Customer's $13.57 discount was missing after renewal; agent reapplied it on the call."
+  },
+  {
+    "call_id": "MC0141",
+    "q1": {"answer": "Yes (firm)", "amount": 56.87, "type": "Credit", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $56.87 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$56.87 duplicate charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I was charged $56.87 twice on this bill.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields match the $56.87 credit applied on the call.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $56.87 credit, and it shows on your account now.", "confidence": "High"},
+    "one_line_summary": "Customer reported a $56.87 duplicate charge; agent confirmed the error and applied a $56.87 credit."
+  },
+  {
+    "call_id": "MC0142",
+    "q1": {"answer": "Yes (firm)", "amount": 94.34, "type": "Credit", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $94.34 credit, and it shows on your account now.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$94.34 unrecognized charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $94.34 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields match the $94.34 credit applied on the call.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "You're right, that was our error. I've applied a $94.34 credit, and it shows on your account now.", "confidence": "High"},
+    "one_line_summary": "Customer reported a $94.34 unrecognized charge; agent confirmed the error and applied a $94.34 credit."
+  },
+  {
+    "call_id": "MC0143",
+    "q1": {"answer": "Yes (conditional)", "amount": 5.38, "type": "Other", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $5.38 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "Billed $35.89 for the month despite a two-day service outage", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "My service was out for two days and I'm still billed $35.89 for the month.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields match the $5.38 adjustment request and the five-business-day email.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $5.38 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Customer reported a two-day outage; agent submitted a $5.38 adjustment request with an email expected within five business days."
+  },
+  {
+    "call_id": "MC0144",
+    "q1": {"answer": "Yes (conditional)", "amount": 119.30, "type": "Other", "turn": 8, "evidence_quote": "I can't apply it myself, but I'm submitting a $119.30 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$119.30 unrecognized charge", "customer_asked_for_credit": "Yes", "turn": 3, "evidence_quote": "Can you take that off the bill?", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields match the $119.30 adjustment request and the five-business-day email.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 8, "evidence_quote": "I can't apply it myself, but I'm submitting a $119.30 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Customer asked to remove a $119.30 unrecognized charge; agent submitted a $119.30 adjustment request pending billing review."
+  },
+  {
+    "call_id": "MC0145",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$126.92 late fee while on autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $126.92 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields accurately reflect that the late fee was explained as valid and no credit was offered.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 5, "evidence_quote": "I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time.", "confidence": "High"},
+    "one_line_summary": "Customer disputed an autopay late fee; agent explained the bank declined the payment so the fee is valid; customer accepted."
+  },
+  {
+    "call_id": "MC0146",
+    "q1": {"answer": "Unclear", "amount": null, "type": "None", "turn": 6, "evidence_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "Low"},
+    "q2": {"answer": "Yes", "disputed_item": "$43.55 unrecognized charge", "customer_asked_for_credit": "Yes", "turn": 3, "evidence_quote": "I'd like that refunded.", "confidence": "High"},
+    "q3": {"answer": "Contradicts", "field_at_issue": "Notes", "coaching": "Yes", "explanation": "Notes say the customer accepted all charges and reported no billing concern with no action needed, but the customer disputed a $43.55 charge, asked for a refund, and the agent promised a callback by Thursday.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 6, "evidence_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "High"},
+    "one_line_summary": "Customer disputed a $43.55 unrecognized charge and asked for a refund; agent escalated to billing operations with a Thursday callback, but notes claim no concern was raised."
+  },
+  {
+    "call_id": "MC0147",
+    "q1": {"answer": "Yes (conditional)", "amount": 116.36, "type": "Other", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $116.36 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$116.36 late fee while on autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $116.36 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields match the $116.36 adjustment request and the five-business-day email.", "confidence": "High"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I can't apply it myself, but I'm submitting a $116.36 adjustment request to billing now. You'll get an email once it's reviewed, usually within five business days.", "confidence": "High"},
+    "one_line_summary": "Customer disputed an autopay late fee; agent submitted a $116.36 adjustment request pending billing review."
+  },
+  {
+    "call_id": "MC0148",
+    "q1": {"answer": "Yes (firm)", "amount": 105.26, "type": "Refund", "turn": 7, "evidence_quote": "I've processed a refund of $105.26 to your card. It will show in five to seven business days.", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$105.26 modem charge after equipment was returned", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "I returned the modem last month, but I'm still being charged $105.26 for it.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields match the $105.26 refund processed to the card with a 5-7 business day timeline.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 7, "evidence_quote": "I've processed a refund of $105.26 to your card. It will show in five to seven business days.", "confidence": "Medium"},
+    "one_line_summary": "Customer was still charged $105.26 for a returned modem; agent processed a $105.26 refund to the card."
+  },
+  {
+    "call_id": "MC0149",
+    "q1": {"answer": "No", "amount": null, "type": "None", "turn": null, "evidence_quote": "", "confidence": "High"},
+    "q2": {"answer": "Yes", "disputed_item": "$79.06 late fee while on autopay", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $79.06 late fee, but I'm on autopay.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes, summary and record fields accurately reflect that the late fee was explained as valid and no credit was offered.", "confidence": "High"},
+    "q4": {"answer": "Resolved", "turn": 5, "evidence_quote": "I see what happened. The autopay attempt on the due date was declined by the bank, so the fee is valid. Updating the card on file will prevent it next time.", "confidence": "High"},
+    "one_line_summary": "Customer disputed an autopay late fee; agent explained the bank declined the payment so the fee is valid; customer accepted."
+  },
+  {
+    "call_id": "MC0150",
+    "q1": {"answer": "Unclear", "amount": null, "type": "None", "turn": 7, "evidence_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "Low"},
+    "q2": {"answer": "Yes", "disputed_item": "$20.70 unrecognized charge", "customer_asked_for_credit": "No", "turn": 2, "evidence_quote": "There's a $20.70 charge on my bill that I don't recognize.", "confidence": "High"},
+    "q3": {"answer": "Match", "field_at_issue": "None", "coaching": "No", "explanation": "Notes and summary match the call: charge needs confirmation from billing operations, callback by Thursday, and no credit was mentioned by the agent.", "confidence": "Medium"},
+    "q4": {"answer": "Resolved - follow-up pending", "turn": 7, "evidence_quote": "I need to confirm this with the billing operations team before I can explain it. I'll call you back by Thursday with an answer.", "confidence": "High"},
+    "one_line_summary": "Customer reported a $20.70 unrecognized charge; agent escalated to billing operations and scheduled a Thursday callback."
+  }
+]
