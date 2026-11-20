@@ -1,6 +1,6 @@
 # Case Study: AI Review of Customer-Care Calls
 
-*Draft, Nov 16, 2026. All data is synthetic. Orivanta Home Services is a fictional company.*
+*All data is synthetic. Orivanta Home Services is a fictional company.*
 
 ## 1. The problem
 

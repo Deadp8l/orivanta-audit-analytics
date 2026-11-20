@@ -8,14 +8,14 @@ An AI reviewer that reads synthetic customer-care calls, checks them against a w
 
 ## Headline (rubric v1.3, 150 calls)
 
+**Measured on the calls the rubric was tuned on.** These numbers show agreement on the tuning set, not accuracy on new calls. See the case study's limits section.
+
 | Check | Keyword rules | Claude |
 |---|---|---|
 | Planted problems caught | 32% (16 of 50) | 100% (50 of 50) |
 | All problems in my labels caught (69 calls) | 23% | 100% |
 | False alarms on clean calls | 0 | 0 |
 | Human-review decision agrees with my labels | 83% | 100% |
-
-The rubric was refined on these same 150 calls, so these numbers show agreement on the tuning set, not accuracy on new calls. See the case study's limits section.
 
 ## What's here
 - `CASE_STUDY.md`: the problem, rubric, evaluation, what the disagreements taught me, and limits
@@ -24,7 +24,7 @@ The rubric was refined on these same 150 calls, so these numbers show agreement 
 - `ai_review/run_claude_review.py`: Claude reviewer (`claude-opus-5-5`, structured JSON output, one request per call)
 - `ai_review/evaluate.py`: scores either reviewer against the reference labels
 - `ai_review/collect_helper_reviews.py`: collects the v1.2 helper-session outputs in `results/helper_raw/`
-- `Orivanta_Matched_Labeling_Sheet_BILLY.xlsx`: reference labels for all 150 calls, manually reviewed by Billy
+- `reference_labels.xlsx`: reference labels for all 150 calls, manually reviewed by Billy
 - `data/`: 150 matched synthetic calls (records and transcripts) and the answer key of planted problems. The key was kept closed while labeling and is used only to report which planted problems were caught.
 - `generate_matched_calls.py`: the script that generated the calls (it reproduces the calls in `data/` exactly). Labeling later found 5 calls where the generated notes said the customer asked about a credit when they hadn't, but the generated key marked the notes as correct; the key in `data/` has those corrections.
 - `results/`: predictions, scores and every disagreement

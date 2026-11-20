@@ -15,8 +15,8 @@ from openpyxl import load_workbook
 
 from common import DATA, RESULTS, ROOT, review_flags
 
-REFERENCE = ROOT / "Orivanta_Matched_Labeling_Sheet_BILLY.xlsx"  # Billy's own labels, all 150 calls
-KEY = DATA / "Orivanta_Matched_Answer_Key_DO_NOT_OPEN.csv"  # used only for planted-problem types
+REFERENCE = ROOT / "reference_labels.xlsx"  # Billy's own labels, all 150 calls
+KEY = DATA / "planted_problems_key.csv"  # used only for planted-problem types
 
 SHEET_MAP = {
     "q1_answer": "Q1 Promise", "q1_amount": "Q1 Amount", "q2_answer": "Q2 Complaint",
