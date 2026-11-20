@@ -88,7 +88,7 @@ def evaluate(name):
     routed = sum(1 for c in ids if pred[c]["needs_human_review"] == "Yes")
 
     lines = [f"# Evaluation: {name}", "", f"Calls scored: {len(ids)} of {len(ref)}", "",
-             "## Agreement with the reference labels (labeled by Billy)", "",
+             "## Agreement with the reference labels (manually reviewed by Billy)", "",
              "| Check | Agreement |", "|---|---|"]
     lines += [f"| {k} | {ok}/{n} ({ok / n:.0%}) |" for k, (ok, n) in acc.items()]
     lines += ["", "## Problem detection (Q3 not Match)", "",

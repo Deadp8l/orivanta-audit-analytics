@@ -1,4 +1,4 @@
-> **Historical snapshot (Nov 11, 2026):** scored against Billy's labels before 14 Q3 labels were changed on Nov 16. Rerunning `evaluate.py` will overwrite it with scores against the current labels.
+> **Historical snapshot (Nov 11, 2026):** scored against my labels before 14 Q3 labels were changed on Nov 16. Rerunning `evaluate.py` will overwrite it with scores against the current labels.
 
 # Baseline vs claude_helpers
 
